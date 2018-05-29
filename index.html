@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <meta name="description" content="陳巧萱的個人作品集網站。擅長前端網頁開發與設計，熟悉HTML、CSS、Javascript和JQuery語法之應用，熱愛切版並以CSS3製作特效，知悉如何修改WordPress模板以達到客製化需求。">
+    <meta name="keywords" content="個人作品集,陳巧萱,CiaoSyuanChen,前端網頁設計,前端網頁開發,網頁設計師">
+    <link rel="icon" href="img/icon/icon-home-red.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <ul id="pc-menu">
+                    <!--<li id="nav-indicator"></li>-->
+                    <li data-id="about">
+                        <img src="img/icon/icon-home.png" alt=""> 關於我
+                    </li>
+                    <li data-id="skill">
+                        <img src="img/icon/icon-home.png" alt=""> 技能
+                    </li>
+                    <li data-id="work">
+                        <img src="img/icon/icon-home.png" alt=""> 網站作品
+                    </li>
+                    <li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 更多作品
+                    </li>
+                    <!--<li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 心路歷程
+                    </li>
+                    <li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 此站製作過程
+                    </li>-->
+                </ul>
+                <div id="mb-menu">
+                    <span>MENU</span>
+                    <div class="mb-menu">
+                        <ul>
+                            <li data-id="about">關於我</li>
+                            <li data-id="skill">技能</li>
+                            <li data-id="work">網站作品</li>
+                            <li data-id="more">更多作品</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="sub-area">
+                    <p>歡迎來到巧萱的個人作品集</p>
+                    <span>
+                        我是一位網頁前端開發設計師
+                        <br> 希望您喜歡我的作品
+                        <br> 祝您有個愉快的一天！
+                    </span>
+                    <a href="#contact">
+                        <div id="sub-area-contact">聯絡我</div>
+                    </a>
+                    <img id="pintoo" src="img/icon/icon-home-red.png" alt="陳巧萱個人作品集網站">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper">
+        <div class="section scrolltion" id="about">
+            <!--經歷/自我介紹-->
+            <div class="container">
+                <div class="area-name" id="area-text-left">
+                    <p>About</p>
+                    <span>介紹我自己</span>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div id="slider-about">
+                                <div class="photo">
+                                    <img src="img/about-3-rgb.jpeg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="sub-tit">
+                                        —與網頁的相遇
+                                    </p>
+                                    <p>
+                                        我的名字是陳巧萱（CiaoSyuan,Chen）於106年（2017年）06月畢業於國立臺中科技大學的多媒體設計系。 大三在網頁公司實習時開啟了我對網頁製作的興趣與熱忱， 寫網頁就像是木雕工，需要靠經驗和時間的累積， 一點一滴地雕琢，而在研究技術與實踐技術的過程中讓我非常有成就感，因而踏上了這條永遠學不完的不歸路。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="slider-about">
+                                <div class="photo">
+                                    <img src="img/about-2-rgb.jpeg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="sub-tit">—關於我的專業與經歷</p>
+                                    <p>
+                                        在業界有約1年的網頁開發的製作經驗， 擅長切版並熱愛以CSS3製作特效。 熟悉HTML、CSS、Javascript和JQuery語法之應用知悉如何修改WordPress模板並依照其需求修改樣式達成所需外貌， 有多樣作品皆以WordPress為基準製作。
+                                        出社會約1年左右至現今累積有13項的作品，在網頁前端開發這個領域不斷的學習的新技術提升自己的能力。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="slider-about">
+                                <div class="photo">
+                                    <img src="img/about-4-rgb.jpeg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="sub-tit">—關於我的興趣</p>
+                                    除了寫網頁以外，我最喜歡的事情就是看電影和玩線上遊戲了，看點電影可以快速了解一個國家的文化特色和語言， 玩遊戲是最好放鬆心情的休閒活動。出遊時，比起拍人我更喜歡 拍風景並將這些拍下來的照片後製成明信片在過節時送給自己的親朋好友聯絡情誼。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <p>→</p>
+                </div>
+                <div class="swiper-button-prev">
+                    <p>←</p>
+                </div>
+            </div>
+        </div>
+        <div class="section scrolltion" id="skill">
+            <!--會什麼技能-->
+            <div class="container">
+                <div class="area-name">
+                    <p>Skills</p>
+                    <span>擅長的工具與技能</span>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-html-red2.png" alt="">
+                                    <p>HTML/HTML5</p>
+                                    <p rel="sk01" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-css2.png" alt="">
+                                    <p>CSS/CSS3</p>
+                                    <p rel="sk02" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-rwd.png" alt="">
+                                    <p>RWD</p>
+                                    <p rel="sk03" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-jq-red.png" alt="">
+                                    <p>jQuery</p>
+                                    <p rel="sk04" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
+                                    <p>JavaScript</p>
+                                    <p rel="sk05" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-ps-red.png" alt="PhotoShop" title="PhotoShop">
+                                    <p>PhotoShop</p>
+                                    <p rel="sk06" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-ai-red.png" alt="">
+                                    <p>Illustrator</p>
+                                    <p rel="sk07" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-bs2.png" alt="">
+                                    <p>Bootstrap</p>
+                                    <p rel="sk08" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon-list">
+                                <div class="icon">
+                                    <img src="img/icon/icon-wp2.png" alt="">
+                                    <p>Wordpress</p>
+                                    <p rel="sk09" class="btn-skill">詳細</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <p>→</p>
+                </div>
+                <div class="swiper-button-prev">
+                    <p>←</p>
+                </div>
+                <div class="skill-con" id="sk01">
+                    <div class="photo">
+                        <img src="img/icon/icon-html-red2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>HTML / HTML5</p>
+                        <p>熟練度：★★★★★ </p>
+                        <p>用於編寫網頁架構和元素與插入媒體（Ex：影片和圖片等）。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk02">
+                    <div class="photo">
+                        <img src="img/icon/icon-css2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>CSS / CSS3</p>
+                        <p>熟練度：★★★★★ </p>
+                        <p>Cascading Style Sheets（層疊樣式表），可替HTML添加樣式（顏色、大小等）。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk03">
+                    <div class="photo">
+                        <img src="img/icon/icon-rwd.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>RWD（Responsive Web Design）</p>
+                        <p>熟練度：★★★★☆ </p>
+                        <p>響應式網頁設計，可讓網頁式應於各個解析度的設備（Ex：電腦和手機）。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk04">
+                    <div class="photo">
+                        <img src="img/icon/icon-jq-red.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>jQuery</p>
+                        <p>熟練度：★★★★☆ </p>
+                        <p>JavaScript函式庫，簡化HTML與JavaScript之間的操作，在製作網站時更快速方便。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk05">
+                    <div class="photo">
+                        <img src="img/icon/icon-js-red.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>JavaScript</p>
+                        <p>熟練度：★★★☆☆ </p>
+                        <p>一種高階式語言，物件導向的直譯語言，可以撰寫不同的功能增加更多與使用者的互動性。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk06">
+                    <div class="photo">
+                        <img src="img/icon/icon-ps-red.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>PhotoShop</p>
+                        <p>熟練度：★★★★☆ </p>
+                        <p>影像處理軟體，點陣圖，可用於製作Banner等圖片，切版時經常使用。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk07">
+                    <div class="photo">
+                        <img src="img/icon/icon-ai-red.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Illustrator</p>
+                        <p>熟練度：★★★☆☆ </p>
+                        <p>影像處理軟體，向量圖檔，可用來設計網頁版型和圖示。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk08">
+                    <div class="photo">
+                        <img src="img/icon/icon-bs2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Bootstrap</p>
+                        <p>熟練度：★★★☆☆ </p>
+                        <p>CSS的框架，有寫好的功能和樣式只需要套用其類別即可使用。</p>
+                    </div>
+                </div>
+                <div class="skill-con" id="sk09">
+                    <div class="photo">
+                        <img src="img/icon/icon-wp2.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Wordpress</p>
+                        <p>熟練度：★★★★☆ </p>
+                        <p>豐富的插件和模板，擁有文章編輯的系統，可以與前端設計搭配製作出擁有後台的網站。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section scrolltion" id="work">
+            <!--有哪些作品(近期的作品)-->
+            <div class="container">
+                <div class="area-name" id="area-text-left">
+                    <p>Website</p>
+                    <span>精選的作品</span>
+                </div>
+                <div class="box-area">
+                    <div class="box-work-big box-work">
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/g2e/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">博奕別</p>
+                                <h3 class="work-tit">德勝集團</h3>
+                                <p class="work-cate">AI人工智能彩票整合平台系統</p>
+                                <div class="flex-list">
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-wp2.png" alt="wordpress" title="wordpress">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-jq-red.png" alt="jQuery" title="jQuery">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-html-red2.png" alt="HTML5/HTML" title="HTML5/HTML">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-css2.png" alt="CSS3/CSS" title="CSS3/CSS">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
+                                    </div>
+                                </div>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                        <div class="deck">
+                        </div>
+                    </div>
+                    <div class="box-work box-work-small">
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dafa-act/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">金融別</p>
+                                <h3 class="work-tit">大發金融</h3>
+                                <p class="work-cate">金融界最權威配資平台 在線股票配資炒股</p>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/stock/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">金融別</p>
+                                <h3 class="work-tit">錢進牛股</h3>
+                                <p class="work-cate">每日牛股推薦 明天股市走勢如何未來10倍牛股</p>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-area">
+                    <div class="box-work box-work-small">
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/crown/1.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">飯店別</p>
+                                <h3 class="work-tit">新濠天地</h3>
+                                <p class="work-cate">澳門綜合娛樂度假首選</p>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dot/1.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">金融別</p>
+                                <h3 class="work-tit">點點盈</h3>
+                                <p class="work-cate">業界領先的股票投資諮詢服務綜合平台</p>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-work-big box-work">
+                        <div class="inside">
+                            <p class="point">詳細</p>
+                            <img src="img/work/ug/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">博奕別</p>
+                                <h3 class="work-tit">Ultra EGaming奧創娛樂</h3>
+                                <p class="work-cate">博彩娛樂城平台包網 API接口服務</p>
+                                <div class="flex-list">
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-wp2.png" alt="wordpress" title="wordpress">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-jq-red.png" alt="jQuery" title="jQuery">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-html-red2.png" alt="HTML5/HTML" title="HTML5/HTML">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-css2.png" alt="CSS3/CSS" title="CSS3/CSS">
+                                    </div>
+                                    <div class="flex-box">
+                                        <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
+                                    </div>
+                                </div>
+                                <div class="btn-workmore">查看網站</div>
+                            </div>
+                        </div>
+                        <div class="deck"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section scrolltion" id="more">
+            <div class="container">
+                <div class="more-bg">
+                    <!--更多的作品-->
+                    <a href="work-list.html">
+                        <p id="btn-more">查看更多作品</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section" id="making">
+            <div class="container">
+                這個網站的製作過程
+            </div>
+        </div>-->
+        <div class="section" id="contact">
+            <div class="container">
+                <div class="area">
+                    <div class="ch-area ft-mb" id="myphoto">
+                        <img src="img/my.jpeg" alt="陳巧萱個人作品集網站">
+                    </div>
+                    <div class="ch-area ft-mb">
+                        <h3 class="tit">
+                            <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 此網站為個人作品集展示，若有任何問題歡迎來信詢問：
+                        </h3>
+                        <div class="btn-contact">
+                            <a href="https://www.cakeresume.com/s--PTHroRJCJgSYy39aR_v23w--/cho-ciao" target="blank">履歷表</a>
+                        </div>
+                        <div class="btn-contact">
+                            <a href="mailto:vitaaachen@gmail.com">vitaaachen@gmail.com</a>
+                        </div>
+                        <div class="btn-contact">
+                            <a href="javascript(0);" target="blank">Wechat : caio_shun</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>支援瀏覽器 Chrome / IE+9 / FireFox / Opera</p>
+            <p id="copyright">© CiaoSyuan,Chen 2018. All Rights Reserved</p>
+            <p id="gotop">▲TOP</p>
+        </div>
+    </div>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiperSkill = new Swiper('#skill .swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 50,
+            slidesPerGroup: 1,
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1025: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+            },
+            navigation: {
+                nextEl: '#skill .swiper-button-next',
+                prevEl: '#skill .swiper-button-prev',
+            },
+        });
+        var swiperAbout = new Swiper('#about .swiper-container', {
+            autoHeight: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            effect: 'fade',
+            navigation: {
+                nextEl: '#about .swiper-button-next',
+                prevEl: '#about .swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作品內容 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <meta name="description" content="陳巧萱的個人作品集網站。擅長前端網頁開發與設計，熟悉HTML、CSS、Javascript和JQuery語法之應用，熱愛切版並以CSS3製作特效，知悉如何修改WordPress模板以達到客製化需求。">
+    <meta name="keywords" content="個人作品集,陳巧萱,CiaoSyuanChen,前端網頁設計,前端網頁開發,網頁設計師">
+    <link rel="icon" href="img/icon/icon-home-red.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<style>
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .swiper-slide::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #FFF;
+        transform: scale(0.9);
+        opacity: 1;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .swiper-slide:hover:before {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    .swiper-slide p {
+        padding: 10px 0;
+    }
+
+    .swiper-wrapper {
+        width: 90%;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    #work-content {
+        background: url(img/work-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #work-content::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    #work-content .pic {
+        text-align: center;
+    }
+
+    #work-content .pic img {
+        width: 60%;
+    }
+
+    #work-content .name {
+        display: flex;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #work-content .kind {
+        padding: 5px;
+        background: #6f0202;
+        color: #FFF;
+        font-size: 18px;
+        margin-right: 10px;
+        display: none;
+    }
+
+    .sort {
+        overflow: hidden;
+        padding: 30px 10px 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .sort-ch {
+        float: left;
+        width: 70px;
+        padding: 5px;
+        margin: 5px;
+        background: #969696;
+        color: #FFF;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .text {
+        padding: 10px;
+        line-height: 30px;
+    }
+
+    #btn-go {
+        position: relative;
+        float: right;
+        color: #FFF;
+        background: #6f0202;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .back-worklist {
+        position: relative;
+        width: 60%;
+        text-align: right;
+        margin: 10px auto;
+    }
+
+    .back-worklist a {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #slider-otherwork {
+        padding: 100px 0;
+    }
+
+    .more-work {
+        background: #eee;
+    }
+
+    .mb {
+        display: none;
+    }
+
+    @media only screen and (max-width:1025px) {
+        .flex-list {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    @media only screen and (max-width:769px) {
+        .flex-list {
+            width: 95%;
+            margin: auto;
+        }
+        #work-content .pic img {
+            width: 80%;
+        }
+        .back-worklist {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width:426px) {
+        .flex-list {
+            display: flex;
+            flex-direction: column;
+        }
+        #work-content .pic img {
+            width: 100%;
+        }
+        .back-worklist {
+            width: 100%;
+        }
+        .mb {
+            display: block;
+        }
+        .pc {
+            display: none;
+        }
+        #btn-go {
+            float: none;
+            margin: 0 auto 40px;
+        }
+        #work-content .name {
+            font-size: 40px;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .area-name {
+            top: -100px;
+        }
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="sub-area">
+                    <p>歡迎來到我的世界：）</p>
+                    <span>
+                        Thanks for your visiting!
+                        <br> My name is CiaoSyuan,Chen.This is my portfolio.
+                        <br> Wish you have a good journey and fun!
+                    </span>
+                    <a href="#contact">
+                        <div id="sub-area-contact">ContactMe</div>
+                    </a>
+                    <img id="pintoo" src="img/icon/icon-home-red.png" alt="陳巧萱個人作品集網站">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper">
+        <div class="section" id="work-content">
+            <!--經歷/自我介紹-->
+            <div class="container">
+                <div class="area-name" id="area-text-left">
+                    <p>Content</p>
+                    <span>作品內容</span>
+                </div>
+                <div class="flex-list">
+                    <div class="flex-box">
+                        <div class="name">
+                            <span class="kind">網站</span>
+                            <p>百家樂娛樂城</p>
+                        </div>
+                        <div class="sort">
+                            <div class="sort-ch">網站</div>
+                            <div class="sort-ch">獨立站點</div>
+                            <div class="sort-ch">金融</div>
+                            <div class="sort-ch">活動網站</div>
+                        </div>
+                        <div class="text">
+                            <p>我負責這項作品的網頁視覺設計和前端製作，並參與網頁規劃的討論。</p>
+                            <p>在設計的時候因為切版的人是自己所以會很清楚知道這一個區塊要怎麼製作，節省了不少磨合時間。</p>
+                            <p>設計理念：以賭場和百家樂遊戲給人的感覺為主要方向，第一個區塊是牌桌的感覺，第二個區塊因為需要放置較多寫實的圖片所以背景使用簡單的幾何圖形來陪襯，第三個區塊是賭場夜景的感覺延伸下來的第四個區塊是背景刷暗的牌桌最後連到頁尾。</p>
+                            <p>排版設計方面，希望以最直接的方式讓使用者知道有什麼遊戲可以選擇，所以直接用排列式的圖片呈現。</p>
+                        </div>
+                        <a href="#">
+                            <div id="btn-go">查看網站</div>
+                        </a>
+                    </div>
+                    <div class="flex-box">
+                        <div class="back-worklist pc">
+                            <a href="work-list.html">回作品列表→</a>
+                        </div>
+                        <div class="pic">
+                            <img src="img/work/baccarat/a.png" alt="">
+                        </div>
+                        <div class="back-worklist mb">
+                            <a href="work-list.html">回作品列表→</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-work">
+            <div class="container">
+                <div id="slider-otherwork">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/ug/0.png" alt="Ultra EGaming奧創娛樂">
+                                </a>
+                                <p>Ultra EGaming奧創娛樂</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/dafa-act/1.png" alt="大發金服">
+                                </a>
+                                <p>大發金服</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/tiger/0.png" alt="88老虎">
+                                </a>
+                                <p>88老虎</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/ug-ad/0.png" alt="UltraEGaming 廣告專案">
+                                </a>
+                                <p>UltraEGaming 廣告專案</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/dot/0.png" alt="點點盈">
+                                </a>
+                                <p>點點盈</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="img/work/g2e/0.png" alt="AI人工智能彩票整合平台系統">
+                                </a>
+                                <p>AI人工智能彩票整合平台系統</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <p>→</p>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <p>←</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section scrolltion" id="more">
+            <div class="container">
+                <div class="more-bg">
+                    <a href="index.html">
+                        <p id="btn-more">回首頁</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="contact">
+            <div class="container">
+                <div class="area">
+                    <div class="ch-area ft-mb">
+                        <div id="myphoto">
+                            <img src="img/my.jpeg" alt="陳巧萱個人作品集網站">
+                        </div>
+                    </div>
+                    <div class="ch-area ft-mb">
+                        <h3 class="tit">
+                            <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 此網站僅供簡單的自我介紹與作品展示，若有其他需求與問題歡迎來信：
+                        </h3>
+                        <div class="btn-contact">vitaaachen@gmail.com</div>
+                        <div class="btn-contact">LINE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>支援瀏覽器 Chrome / IE+9 / FireFox / Opera</p>
+            <p id="copyright">© CiaoSyuan,Chen 2018. All Rights Reserved</p>
+            <p id="gotop">▲TOP</p>
+        </div>
+    </div>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('#slider-otherwork .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                426: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

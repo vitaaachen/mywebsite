@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作品列表 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <meta name="description" content="陳巧萱的個人作品集網站。擅長前端網頁開發與設計，熟悉HTML、CSS、Javascript和JQuery語法之應用，熱愛切版並以CSS3製作特效，知悉如何修改WordPress模板以達到客製化需求。">
+    <meta name="keywords" content="個人作品集,陳巧萱,CiaoSyuanChen,前端網頁設計,前端網頁開發,網頁設計師">
+    <link rel="icon" href="img/icon/icon-home-red.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<style>
+    #work-list {
+        background: url(img/work-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .work-sort {
+        margin: 0 auto 100px;
+    }
+
+    .work-sort ul {
+        display: flex;
+    }
+
+    .work-sort ul li {
+        flex: auto;
+        padding: 5px;
+        border: 1px solid #6f0202;
+        background: #6f0202;
+        color: #FFF;
+        margin: 5px;
+        text-align: center;
+        transition: all 0.2s linear;
+    }
+
+    .work-sort ul li:hover {
+        background: transparent;
+        color: #6f0202;
+    }
+
+    .work-sort .tit {
+        background: #000;
+        color: #FFF;
+        padding: 5px;
+        position: relative;
+        width: 100px;
+        height: 100%;
+        margin: 5px;
+        text-align: center;
+    }
+
+    /*.box-work .inside*/
+
+    .box-work {
+        display: block;
+        width: 100%;
+    }
+
+    .box-work .inside {
+        height: 210px;
+        width: 370px;
+        float: left;
+        margin: 0 30px 30px 0;
+        opacity: 0.95;
+    }
+
+    .box-work .inside .info .dec-tit {
+        font-size: 22px;
+        margin: 0 5% 0;
+        padding-bottom: 10px;
+        border-bottom: none;
+    }
+
+    .box-work .inside .info .btn-workmore {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: auto !important;
+        padding: 5px 20px !important;
+        margin-top: 0 !important;
+        border-radius: 20px !important;
+    }
+
+    .con-cate {
+        margin: 10px auto 20px;
+        overflow: hidden;
+    }
+
+    .con-cate span {
+        color: #FFF;
+        padding: 5px;
+        width: 25%;
+        margin: 5px;
+        float: left;
+        border: 1px solid #FFF;
+        font-size: 14px;
+    }
+
+    .con-cate p {
+        margin: 15px 0;
+        color: #FFF
+    }
+
+    .box-work .inside .info {
+        /*opacity: 1;*/
+    }
+
+    .option-set {
+        margin: 10px 0;
+    }
+
+    .option-set p {
+        display: inline-block;
+        background: #6f0202;
+        color: #FFF;
+        padding: 5px 50px;
+    }
+
+    .option-set input {
+        display: none;
+    }
+
+    input[type="checkbox"]+label {
+        padding: 5px 20px;
+        border: 1px solid #6f0202;
+        background: rgba(255, 255, 255, 0.5);
+        color: #6f0202;
+    }
+
+    input[type="checkbox"]+label:hover {
+        color: #FFF;
+        background: #6f0202;
+    }
+
+    input[type="checkbox"]:checked+label {
+        color: #FFF;
+        background: #6f0202;
+    }
+
+    @media only screen and (max-width:1199px) {
+        .box-work {
+            width: 800px;
+            margin: auto;
+        }
+    }
+
+    @media only screen and (max-width:769px) {
+        .box-work {
+            width: 400px;
+        }
+    }
+
+    @media only screen and (max-width:426px) {
+        .work-sort,
+        .con-cate {
+            display: none;
+        }
+        .con-cate {
+            margin: 0;
+        }
+        .box-work .inside {
+            width: 310px;
+            height: 180px;
+        }
+        .box-work {
+            width: 320px;
+        }
+        .box-work .inside .info .btn-workmore {
+            bottom: 70px;
+            right: 100px;
+        }
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <ul id="pc-menu">
+                    <li id="nav-indicator"></li>
+                    <li data-id="about">
+                        <img src="img/icon/icon-home.png" alt=""> 關於我
+                    </li>
+                    <li data-id="skill">
+                        <img src="img/icon/icon-home.png" alt=""> 技能
+                    </li>
+                    <li data-id="work">
+                        <img src="img/icon/icon-home.png" alt=""> 網站作品
+                    </li>
+                    <li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 更多作品
+                    </li>
+                    <!--<li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 心路歷程
+                    </li>
+                    <li data-id="more">
+                        <img src="img/icon/icon-home.png" alt=""> 此站製作過程
+                    </li>-->
+                </ul>
+                <div id="mb-menu">
+                    <span>MENU</span>
+                    <div class="mb-menu">
+                        <ul>
+                            <li data-id="about">關於我</li>
+                            <li data-id="skill">技能</li>
+                            <li data-id="work">網站作品</li>
+                            <li data-id="more">更多作品</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="sub-area">
+                    <p>歡迎來到我的世界：）</p>
+                    <span>
+                        Thanks for your visiting!
+                        <br> My name is CiaoSyuan,Chen.This is my portfolio.
+                        <br> Wish you have a good journey and fun!
+                    </span>
+                    <a href="#contact">
+                        <div id="sub-area-contact">ContactMe</div>
+                    </a>
+                    <img id="pintoo" src="img/icon/icon-home-red.png" alt="陳巧萱個人作品集網站">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper">
+        <div class="section" id="work-list">
+            <!--經歷/自我介紹-->
+            <div class="container">
+                <div class="area-name" id="area-text-left">
+                    <p>All Website</p>
+                    <span>作品列表</span>
+                </div>
+                <div class="work-sort" id="options">
+                    <div class="option-set" data-group="kind">
+                        <p>作品類別</p>
+                        <input type="checkbox" value="" id="kind-all" class="all" />
+                        <label for="kind-all">全部</label>
+                        <input type="checkbox" value=".kind1" id="kind1" />
+                        <label for="kind1">網站</label>
+                        <input type="checkbox" value=".kind2" id="kind2" />
+                        <label for="kind2">影片</label>
+                        <input type="checkbox" value=".kind3" id="kind3" />
+                        <label for="kind3">遊戲</label>
+                        <input type="checkbox" value=".kind4" id="kind4" />
+                        <label for="kind4">平面</label>
+                        <input type="checkbox" value=".kind5" id="kind5" />
+                        <label for="kind5">攝影</label>
+                    </div>
+                    <div class="option-set" data-group="industry">
+                        <p>網站類別</p>
+                        <input type="checkbox" value="" id="industry-all" class="all" />
+                        <label for="industry-all">全部</label>
+                        <input type="checkbox" value=".industry1" id="industry1" />
+                        <label for="industry1">博弈</label>
+                        <input type="checkbox" value=".industry2" id="industry2" />
+                        <label for="industry2">金融</label>
+                        <input type="checkbox" value=".industry3" id="industry3" />
+                        <label for="industry3">飯店</label>
+                        <input type="checkbox" value=".industry4" id="industry4" />
+                        <label for="industry4">直播</label>
+                    </div>
+                </div>
+                <div class="box-area">
+                    <!--<p id="filter-display"></p>-->
+                    <div class="box-work" id="container">
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dafa-act/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">大發金服 活動頁</p>
+                                <div class="con-cate">
+                                    <span>獨立站點</span>
+                                    <span>金融</span>
+                                    <span>活動網站</span>
+                                </div>
+                                <a href="work-con.html">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">詳細</p>
+                            <img src="img/work/g2e/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">AI人工智能彩票整合平台系統</p>
+                                <div class="con-cate">
+                                    <span>Wordpress</span>
+                                    <span>博奕</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry3">
+                            <p class="point">詳細</p>
+                            <img src="img/work/crown/1.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">新濠天地</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>飯店</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">詳細</p>
+                            <img src="img/work/ug/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">Ultra EGaming奧創娛樂</p>
+                                <div class="con-cate">
+                                    <span>Wordpress</span>
+                                    <span>博奕</span>
+                                    <span>資訊網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dot/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">點點盈</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>金融</span>
+                                    <span>資訊網站</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/stock/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">錢進牛股</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>金融</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">詳細</p>
+                            <img src="img/work/tiger/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">88老虎</p>
+                                <div class="con-cate">
+                                    <span>Wordpress</span>
+                                    <span>博奕</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">詳細</p>
+                            <img src="img/work/ug-ad/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">UltraEGaming 廣告專案</p>
+                                <div class="con-cate">
+                                    <span>Wordpress</span>
+                                    <span>博奕</span>
+                                    <span>活動網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dafa-mip/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">大發金服 導覽頁</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>金融</span>
+                                    <span>目錄網站</span>
+                                    <span>MIP</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/dafa/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">大發金服 文章推廣</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>金融</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">詳細</p>
+                            <img src="img/work/financial/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">錢進牛股 金融論壇</p>
+                                <div class="con-cate">
+                                    <span>Discuz論壇</span>
+                                    <span>金融</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">詳細</p>
+                            <img src="img/work/baccarat/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">百家樂娛樂城</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>博奕</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry4">
+                            <p class="point">詳細</p>
+                            <img src="img/work/bird/0.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">鳳凰國際</p>
+                                <div class="con-cate">
+                                    <span>Wordpress</span>
+                                    <span>直播</span>
+                                    <span>形象網站</span>
+                                    <span>RWD</span>
+                                </div>
+                                <a href="">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section scrolltion" id="more">
+            <div class="container">
+                <div class="more-bg">
+                    <a href="index.html">
+                        <p id="btn-more">回首頁</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="contact">
+            <div class="container">
+                <div class="area">
+                    <div class="ch-area ft-mb">
+                        <div id="myphoto">
+                            <img src="img/my.jpeg" alt="陳巧萱個人作品集網站">
+                        </div>
+                    </div>
+                    <div class="ch-area ft-mb">
+                        <h3 class="tit">
+                            <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 此網站僅供簡單的自我介紹與作品展示，若有其他需求與問題歡迎來信：
+                        </h3>
+                        <div class="btn-contact">vitaaachen@gmail.com</div>
+                        <div class="btn-contact">LINE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>支援瀏覽器 Chrome / IE+9 / FireFox / Opera</p>
+            <p id="copyright">© CiaoSyuan,Chen 2018. All Rights Reserved</p>
+            <p id="gotop">▲TOP</p>
+        </div>
+    </div>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiperSkill = new Swiper('#skill .swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 50,
+            slidesPerGroup: 1,
+            autoplay: true,
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1025: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+            },
+            navigation: {
+                nextEl: '#skill .swiper-button-next',
+                prevEl: '#skill .swiper-button-prev',
+            },
+        });
+        var swiperAbout = new Swiper('#about .swiper-container', {
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            effect: 'fade',
+            navigation: {
+                nextEl: '#about .swiper-button-next',
+                prevEl: '#about .swiper-button-prev',
+            },
+        });
+    </script>
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
