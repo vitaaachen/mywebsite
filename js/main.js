@@ -1,16 +1,6 @@
 
 $(document).ready(function () {
 
-
-    $(".menu ul li,.mb-menu li").click(function () {
-        $(this).addClass("menu-active");
-        $(this).siblings().removeClass("menu-active");
-        var name = $(this).attr("data-id");
-        var id = "#" + name;
-        var top = $(id).first().offset().top;
-        $('html, body').animate({ scrollTop: top - 150 + 'px' }, 900);
-    });
-
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if (scrollVal > 68) {
@@ -44,7 +34,7 @@ $(document).ready(function () {
     var sectionIds = {};
     $(".scrolltion").each(function () {
         var $this = $(this);
-        sectionIds[$this.attr("id")] = $this.first().offset().top - 320;
+        sectionIds[$this.attr("id")] = $this.offset().top;
     });
 
 
@@ -52,15 +42,44 @@ $(document).ready(function () {
     console.log(Nowscrren);*/
     $(window).scroll(function (event) {
         var scrolled = $(this).scrollTop();
-        /*for (key in sectionIds) {
-            if (scrolled >= sectionIds[key]) {
-                $(".menu ul li").removeClass("menu-active");
-                var c = $("[data-id=" + key + "]");
-                c.addClass("menu-active");
-            }
-        }*/
 
+        var nowScrolled = 0;
+        var moveTarget = undefined;
+        $(".scrolltion").each(function () {
+            var targetScrolled = $(this).offset().top - 300;
+
+            if (scrolled >= targetScrolled) {
+                if (targetScrolled > nowScrolled) {
+                    nowScrolled = targetScrolled;
+                    moveTarget = this;
+                }
+            }
+        });
+
+        if (moveTarget != undefined) {
+            $(".menu ul li").removeClass("menu-active");
+            var c = $("[data-id=" + $(moveTarget).attr("id") + "]");
+            c.addClass("menu-active");
+            //console.log("key"+$(moveTarget).attr("id"));
+            //console.log("sectionIds[key]"+sectionIds[key]);
+            //console.log("scrolled"+scrolled);
+        } else {
+            $(".menu ul li").removeClass("menu-active");
+        }
+        //}
     });
+
+
+    $(".menu ul li,.mb-menu li").click(function () {
+        $(this).addClass("menu-active");
+        $(this).siblings().removeClass("menu-active");
+        var name = $(this).attr("data-id");
+        var id = "#" + name;
+        var top = $(id).first().offset().top;
+        $('html, body').animate({ scrollTop: top - 150 + 'px' }, 900);
+    });
+
+
 
 });
 
