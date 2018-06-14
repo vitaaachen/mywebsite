@@ -83,14 +83,6 @@
         padding: 10px;
     }
 
-    #work-content .kind {
-        padding: 5px;
-        background: #6f0202;
-        color: #FFF;
-        font-size: 18px;
-        margin-right: 10px;
-        display: none;
-    }
 
     .sort {
         overflow: hidden;
@@ -271,14 +263,13 @@
                 <div class="flex-list">
                     <div class="flex-box">
                         <div class="name">
-                            <span class="kind">網站</span>
-                            <p>百家樂娛樂城</p>
+                            <p id="porject-name">百家樂娛樂城</p>
                         </div>
                         <div class="sort">
-                            <div class="sort-ch">網站</div>
-                            <div class="sort-ch">獨立站點</div>
-                            <div class="sort-ch">金融</div>
-                            <div class="sort-ch">形象網站</div>
+                            <div id="category0" class="sort-ch">網站</div>
+                            <div id="category1" class="sort-ch">獨立站點</div>
+                            <div id="category2" class="sort-ch">金融</div>
+                            <div id="category3" class="sort-ch">形象網站</div>
                         </div>
                         <div class="text">
                             <p class="con-tit">
@@ -394,7 +385,7 @@
     <script src="js/footer.js"></script>
     <script src="js/swiper.js"></script>
     <script>
-        var swiper = new Swiper('#slider-otherwork .swiper-container', {
+        var swiper = new Swiper('#slider-otherwork>.swiper-container', {
             slidesPerView: 4,
             spaceBetween: 20,
             loop: true,
