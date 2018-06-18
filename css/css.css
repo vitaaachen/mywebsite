@@ -722,9 +722,6 @@ a{
     .box-work .inside{
         height: 200px;
     }
-    .box-work .inside .info .dec-tit{
-        display: none;
-    }
     .box-work-big .inside .info .dec-tit{
         display: none;
     }
