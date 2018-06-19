@@ -2,17 +2,10 @@
 <html lang="zh-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/head.js"></script>
     <title>作品內容 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
-    <meta name="description" content="陳巧萱的個人作品集網站。擅長前端網頁開發與設計，熟悉HTML、CSS、Javascript和JQuery語法之應用，熱愛切版並以CSS3製作特效，知悉如何修改WordPress模板以達到客製化需求。">
-    <meta name="keywords" content="個人作品集,陳巧萱,CiaoSyuanChen,前端網頁設計,前端網頁開發,網頁設計師">
-    <link rel="icon" href="img/icon/icon-home-red.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/css.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
 <style>
     .swiper-slide img {
@@ -90,14 +83,6 @@
         padding: 10px;
     }
 
-    #work-content .kind {
-        padding: 5px;
-        background: #6f0202;
-        color: #FFF;
-        font-size: 18px;
-        margin-right: 10px;
-        display: none;
-    }
 
     .sort {
         overflow: hidden;
@@ -159,6 +144,29 @@
         display: none;
     }
 
+    .con-tit {
+        font-weight: bold;
+    }
+
+    .con-text {
+        font-size: 15px;
+    }
+
+    #skill-img {
+        justify-content: start;
+    }
+
+    #skill-img>.flex-box {
+        flex: 0 1 auto;
+    }
+
+    #skill-img img {
+        width: 30px;
+        margin: 0 5px 0 0;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
     @media only screen and (max-width:1025px) {
         .flex-list {
             width: 90%;
@@ -183,6 +191,12 @@
         .flex-list {
             display: flex;
             flex-direction: column;
+        }
+        #skill-img img {
+            width: 20px;
+        }
+        #skill-img {
+            flex-direction: row;
         }
         #work-content .pic img {
             width: 100%;
@@ -213,6 +227,41 @@
 </style>
 
 <body>
+    <script src="js/val-project.js"></script>
+    <script src="js/fill.js"></script>
+    <script>
+        $(document).ready(function(){
+            var data = getData();
+            
+            if (data == undefined) {
+                return;
+            }
+            var skills = data["d-val-skill"];
+
+            for (var i = 0; i < skills.length; i++) {
+                var skill = skills[i];
+
+                var image = skill["image"];
+                var title = skill["title"];
+
+                var diva ='<div class="flex-box">';
+                var image = '<img src="' + image +'" alt="'+ title +'" title="' + title +'">';
+                var divb ='</div>';
+                
+                $("#skill-img").append(diva + image + divb);
+            }
+        });
+
+        function getData(){
+            for (let i = 0; i < valPorject.length; i++) {
+                if (targetValue == i.toString()) {
+                    return valPorject[i];
+                }
+            }
+
+            return undefined;
+        }
+    </script>
     <div class="header">
         <div class="container">
             <div class="logo">
@@ -249,22 +298,45 @@
                 <div class="flex-list">
                     <div class="flex-box">
                         <div class="name">
-                            <span class="kind">網站</span>
-                            <p>百家樂娛樂城</p>
+                            <p id="val-porject">百家樂娛樂城</p>
                         </div>
                         <div class="sort">
-                            <div class="sort-ch">網站</div>
-                            <div class="sort-ch">獨立站點</div>
-                            <div class="sort-ch">金融</div>
-                            <div class="sort-ch">活動網站</div>
+                            <div id="val-category0" class="sort-ch">網站</div>
+                            <div id="val-category1" class="sort-ch">獨立站點</div>
+                            <div id="val-category2" class="sort-ch">金融</div>
+                            <div id="val-category3" class="sort-ch">形象網站</div>
                         </div>
                         <div class="text">
-                            <p>我負責這項作品的網頁視覺設計和前端製作，並參與網頁規劃的討論。</p>
-                            <p>在設計的時候因為切版的人是自己所以會很清楚知道這一個區塊要怎麼製作，節省了不少磨合時間。</p>
-                            <p>設計理念：以賭場和百家樂遊戲給人的感覺為主要方向，第一個區塊是牌桌的感覺，第二個區塊因為需要放置較多寫實的圖片所以背景使用簡單的幾何圖形來陪襯，第三個區塊是賭場夜景的感覺延伸下來的第四個區塊是背景刷暗的牌桌最後連到頁尾。</p>
-                            <p>排版設計方面，希望以最直接的方式讓使用者知道有什麼遊戲可以選擇，所以直接用排列式的圖片呈現。</p>
+                            <p class="con-tit">
+                                <i class="fas fa-chevron-circle-right"></i> 使用/支援技術：</p>
+                            <div class="flex-list" id="skill-img">
+                                <div class="flex-box" id="val-skill0"> 
+                                    <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
+                                </div>
+                                <div class="flex-box" id="val-skill1">
+                                    <img src="img/icon/icon-wp2.png" alt="wordpress" title="wordpress">
+                                </div>
+                                <div class="flex-box" id="val-skill2">
+                                    <img src="img/icon/icon-jq-red.png" alt="jQuery" title="jQuery">
+                                </div>
+                                <div class="flex-box" id="val-skill3">
+                                    <img src="img/icon/icon-html-red2.png" alt="HTML5/HTML" title="HTML5/HTML">
+                                </div>
+                                <div class="flex-box" id="val-skill4">
+                                    <img src="img/icon/icon-css2.png" alt="CSS3/CSS" title="CSS3/CSS">
+                                </div>
+                                <div class="flex-box" id="val-skill5">
+                                    <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
+                                </div>
+                            </div>
+                            <p class="con-tit">
+                                <i class="fas fa-chevron-circle-right"></i> 負責項目：</p>
+                            <p class="con-text" data-name="responsible" id="val-charge">網頁視覺設計 / 網頁開發（切版,功能,特效等）。</p>
+                            <p class="con-tit">
+                                <i class="fas fa-chevron-circle-right"></i> 專案心得：</p>
+                            <p class="con-text" data-name="experience" id="val-exp">這個專案的視覺和網站開發是由我獨立製作，並配合企劃的理念製成。企劃的原因為目前博弈業的網站都是仿站和雜亂的站點居多，想要做一個乾淨整齊的形象網站，推廣自己旗下的遊戲並提供教學技巧文章，提升此網站的實用性。</p>
                         </div>
-                        <a href="#">
+                        <a id="val-link" href="#">
                             <div id="btn-go">查看網站</div>
                         </a>
                     </div>
@@ -343,38 +415,16 @@
                 </div>
             </div>
         </div>
-        <div class="section" id="contact">
-            <div class="container">
-                <div class="area">
-                    <div class="ch-area ft-mb">
-                        <div id="myphoto">
-                            <img src="img/my.jpeg" alt="陳巧萱個人作品集網站">
-                        </div>
-                    </div>
-                    <div class="ch-area ft-mb">
-                        <h3 class="tit">
-                            <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 此網站僅供簡單的自我介紹與作品展示，若有其他需求與問題歡迎來信：
-                        </h3>
-                        <div class="btn-contact">vitaaachen@gmail.com</div>
-                        <div class="btn-contact">LINE</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <script src="js/contact.js"></script>
     </div>
-    <div class="footer">
-        <div class="container">
-            <p>支援瀏覽器 Chrome / IE+9 / FireFox / Opera</p>
-            <p id="copyright">© CiaoSyuan,Chen 2018. All Rights Reserved</p>
-            <p id="gotop">▲TOP</p>
-        </div>
-    </div>
+    <script src="js/footer.js"></script>
     <script src="js/swiper.js"></script>
     <script>
-        var swiper = new Swiper('#slider-otherwork .swiper-container', {
+        var swiper = new Swiper('#slider-otherwork>.swiper-container', {
             slidesPerView: 4,
             spaceBetween: 20,
             loop: true,
+            autoplay: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
