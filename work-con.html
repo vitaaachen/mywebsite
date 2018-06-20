@@ -230,9 +230,9 @@
     <script src="js/val-project.js"></script>
     <script src="js/fill.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             var data = getData();
-            
+
             if (data == undefined) {
                 return;
             }
@@ -244,15 +244,15 @@
                 var image = skill["image"];
                 var title = skill["title"];
 
-                var diva ='<div class="flex-box">';
-                var image = '<img src="' + image +'" alt="'+ title +'" title="' + title +'">';
-                var divb ='</div>';
-                
+                var diva = '<div class="flex-box">';
+                var image = '<img src="' + image + '" alt="' + title + '" title="' + title + '">';
+                var divb = '</div>';
+
                 $("#skill-img").append(diva + image + divb);
             }
         });
 
-        function getData(){
+        function getData() {
             for (let i = 0; i < valPorject.length; i++) {
                 if (targetValue == i.toString()) {
                     return valPorject[i];
@@ -296,7 +296,7 @@
                     <span>作品內容</span>
                 </div>
                 <div class="flex-list">
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-right">
                         <div class="name">
                             <p id="val-porject">百家樂娛樂城</p>
                         </div>
@@ -310,7 +310,7 @@
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 使用/支援技術：</p>
                             <div class="flex-list" id="skill-img">
-                                <div class="flex-box" id="val-skill0"> 
+                                <div class="flex-box" id="val-skill0">
                                     <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
                                 </div>
                                 <div class="flex-box" id="val-skill1">
@@ -340,7 +340,7 @@
                             <div id="btn-go">查看網站</div>
                         </a>
                     </div>
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-left">
                         <div class="back-worklist pc">
                             <a href="work-list.html">回作品列表→</a>
                         </div>
@@ -408,7 +408,7 @@
         </div>
         <div class="section scrolltion" id="more">
             <div class="container">
-                <div class="more-bg">
+                <div class="more-bg" data-aos="zoom-in">
                     <a href="index.html">
                         <p id="btn-more">回首頁</p>
                     </a>
