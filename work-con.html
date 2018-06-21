@@ -93,7 +93,7 @@
 
     .sort-ch {
         float: left;
-        width: 70px;
+        width: 75px;
         padding: 5px;
         margin: 5px;
         background: #969696;
@@ -230,29 +230,58 @@
     <script src="js/val-project.js"></script>
     <script src="js/fill.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             var data = getData();
-            
+
             if (data == undefined) {
                 return;
             }
-            var skills = data["d-val-skill"];
 
+            //使用技術
+            var skills = data["d-val-skill"];
             for (var i = 0; i < skills.length; i++) {
                 var skill = skills[i];
-
                 var image = skill["image"];
                 var title = skill["title"];
-
-                var diva ='<div class="flex-box">';
-                var image = '<img src="' + image +'" alt="'+ title +'" title="' + title +'">';
-                var divb ='</div>';
-                
+                var diva = '<div class="flex-box">';
+                var image = '<img src="' + image + '" alt="' + title + '" title="' + title + '">';
+                var divb = '</div>';
                 $("#skill-img").append(diva + image + divb);
             }
+
+            //專案名字
+            var project = data["d-val-porject"];
+            $("#val-porject").append(project);
+
+            //專案分類
+            var categorys = data["d-val-category"];
+            for (var i = 0; i < categorys.length; i++) {
+                var category = categorys[i];
+                var diva = '<div class="sort-ch">';
+                var categoryCh = category["category"];
+                var divb = '</div>';
+                $("#val-category").append(diva + categoryCh + divb);
+            }
+
+            //負責項目
+            var charge = data["d-val-charge"];
+            $("#val-charge").append(charge);
+
+            //專案心得
+            var exp = data["d-val-exp"];
+            $("#val-exp").append(exp);
+
+            //網站連結
+            var link = data["d-val-link"];
+            $("#val-link").attr("href", link)
+
+            //網站圖片
+            var cover = data["d-val-cover"];
+            $("#val-cover").attr("src", cover)
+
         });
 
-        function getData(){
+        function getData() {
             for (let i = 0; i < valPorject.length; i++) {
                 if (targetValue == i.toString()) {
                     return valPorject[i];
@@ -296,56 +325,34 @@
                     <span>作品內容</span>
                 </div>
                 <div class="flex-list">
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-right">
                         <div class="name">
-                            <p id="val-porject">百家樂娛樂城</p>
+                            <p id="val-porject"></p>
                         </div>
-                        <div class="sort">
-                            <div id="val-category0" class="sort-ch">網站</div>
-                            <div id="val-category1" class="sort-ch">獨立站點</div>
-                            <div id="val-category2" class="sort-ch">金融</div>
-                            <div id="val-category3" class="sort-ch">形象網站</div>
+                        <div class="sort" id="val-category">
                         </div>
                         <div class="text">
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 使用/支援技術：</p>
                             <div class="flex-list" id="skill-img">
-                                <div class="flex-box" id="val-skill0"> 
-                                    <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
-                                </div>
-                                <div class="flex-box" id="val-skill1">
-                                    <img src="img/icon/icon-wp2.png" alt="wordpress" title="wordpress">
-                                </div>
-                                <div class="flex-box" id="val-skill2">
-                                    <img src="img/icon/icon-jq-red.png" alt="jQuery" title="jQuery">
-                                </div>
-                                <div class="flex-box" id="val-skill3">
-                                    <img src="img/icon/icon-html-red2.png" alt="HTML5/HTML" title="HTML5/HTML">
-                                </div>
-                                <div class="flex-box" id="val-skill4">
-                                    <img src="img/icon/icon-css2.png" alt="CSS3/CSS" title="CSS3/CSS">
-                                </div>
-                                <div class="flex-box" id="val-skill5">
-                                    <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
-                                </div>
                             </div>
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 負責項目：</p>
-                            <p class="con-text" data-name="responsible" id="val-charge">網頁視覺設計 / 網頁開發（切版,功能,特效等）。</p>
+                            <p class="con-text" data-name="responsible" id="val-charge"></p>
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 專案心得：</p>
-                            <p class="con-text" data-name="experience" id="val-exp">這個專案的視覺和網站開發是由我獨立製作，並配合企劃的理念製成。企劃的原因為目前博弈業的網站都是仿站和雜亂的站點居多，想要做一個乾淨整齊的形象網站，推廣自己旗下的遊戲並提供教學技巧文章，提升此網站的實用性。</p>
+                            <p class="con-text" data-name="experience" id="val-exp"></p>
                         </div>
-                        <a id="val-link" href="#">
+                        <a id="val-link" href="" target="blank">
                             <div id="btn-go">查看網站</div>
                         </a>
                     </div>
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-left">
                         <div class="back-worklist pc">
                             <a href="work-list.html">回作品列表→</a>
                         </div>
                         <div class="pic">
-                            <img src="img/work/baccarat/a.png" alt="">
+                            <img id="val-cover" src="">
                         </div>
                         <div class="back-worklist mb">
                             <a href="work-list.html">回作品列表→</a>
@@ -408,7 +415,7 @@
         </div>
         <div class="section scrolltion" id="more">
             <div class="container">
-                <div class="more-bg">
+                <div class="more-bg" data-aos="zoom-in">
                     <a href="index.html">
                         <p id="btn-more">回首頁</p>
                     </a>
