@@ -34,6 +34,7 @@
     .swiper-slide:hover:before {
         opacity: 0;
         transform: scale(1);
+        display: none;
     }
 
     .swiper-slide p {
@@ -62,7 +63,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.3);
     }
 
     #work-content .pic {
@@ -70,12 +71,12 @@
     }
 
     #work-content .pic img {
-        width: 60%;
+        width: 90%;
     }
 
     #work-content .name {
         display: flex;
-        font-size: 50px;
+        font-size: 42px;
         display: flex;
         align-items: center;
         font-weight: bold;
@@ -109,27 +110,59 @@
 
     #btn-go {
         position: relative;
-        float: right;
         color: #FFF;
         background: #6f0202;
-        width: 100px;
+        width: 200px;
         height: 30px;
         line-height: 30px;
         text-align: center;
         font-size: 15px;
         cursor: pointer;
+        padding: 5px;
+        margin: 40px 0 0 10px;
+        transition: all 0.5s ease;
+        border: 2px solid;
+    }
+
+    #btn-go::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        background: #2d2d2d;
+        bottom: 0;
+        left: 0;
+        transition: all 0.2s ease;
+    }
+
+    #btn-go:hover {
+        background: transparent;
+        color: #6f0202;
+        border: 2px solid;
+    }
+
+    #btn-go:hover:before {
+        width: 100%;
     }
 
     .back-worklist {
         position: relative;
-        width: 60%;
+        width: 90%;
         text-align: right;
         margin: 10px auto;
+        transition: all 0.3s ease;
     }
 
     .back-worklist a {
         cursor: pointer;
         font-weight: bold;
+        font-size: 15px;
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .back-worklist a:hover {
+        letter-spacing: 5px;
     }
 
     #slider-otherwork {
@@ -146,6 +179,7 @@
 
     .con-tit {
         font-weight: bold;
+        margin-top: 20px;
     }
 
     .con-text {
@@ -211,7 +245,6 @@
             display: none;
         }
         #btn-go {
-            float: none;
             margin: 0 auto 40px;
         }
         #work-content .name {
@@ -222,6 +255,16 @@
         }
         .area-name {
             top: -100px;
+        }
+        .sort-ch {
+            width: 62px;
+            font-size: 10px;
+            margin: 3px;
+        }
+        .back-worklist a {
+            background: #6f0202;
+            color: #FFF;
+            padding: 5px 5px 5px 30px;
         }
     }
 </style>
@@ -274,6 +317,7 @@
             //網站連結
             var link = data["d-val-link"];
             $("#val-link").attr("href", link)
+            $("#val-pic-link").attr("href", link)
 
             //網站圖片
             var cover = data["d-val-cover"];
@@ -349,13 +393,19 @@
                     </div>
                     <div class="flex-box" data-aos="zoom-in-left">
                         <div class="back-worklist pc">
-                            <a href="work-list.html">回作品列表→</a>
+                            <a href="work-list.html">回作品列表
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
                         </div>
                         <div class="pic">
-                            <img id="val-cover" src="">
+                            <a id="val-pic-link" href="">
+                                <img id="val-cover" src="">
+                            </a>
                         </div>
                         <div class="back-worklist mb">
-                            <a href="work-list.html">回作品列表→</a>
+                            <a href="work-list.html">回作品列表
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -367,41 +417,43 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=3">
                                     <img src="img/work/ug/0.png" alt="Ultra EGaming奧創娛樂">
+                                    <p>Ultra EGaming奧創娛樂</p>
                                 </a>
-                                <p>Ultra EGaming奧創娛樂</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=0">
                                     <img src="img/work/dafa-act/1.png" alt="大發金服">
+                                    <p>大發金服 活動頁</p>
                                 </a>
-                                <p>大發金服</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=6">
                                     <img src="img/work/tiger/0.png" alt="88老虎">
+                                    <p>88老虎</p>
                                 </a>
-                                <p>88老虎</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=7">
                                     <img src="img/work/ug-ad/0.png" alt="UltraEGaming 廣告專案">
+                                    <p>UltraEGaming 廣告專案</p>
                                 </a>
-                                <p>UltraEGaming 廣告專案</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=4">
                                     <img src="img/work/dot/0.png" alt="點點盈">
+                                    <p>點點盈</p>
                                 </a>
-                                <p>點點盈</p>
                             </div>
+
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=1">
                                     <img src="img/work/g2e/0.png" alt="AI人工智能彩票整合平台系統">
+                                    <p>AI人工智能彩票整合平台系統</p>
                                 </a>
-                                <p>AI人工智能彩票整合平台系統</p>
                             </div>
+
                         </div>
                     </div>
                     <div class="swiper-button-next">
