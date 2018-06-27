@@ -6,5 +6,7 @@ document.write('<meta name="keywords" content="個人作品集,陳巧萱,CiaoSyu
 document.write('<link rel="icon" href="img/icon/icon-home-red.png" type="image/x-icon" />');
 document.write('<link rel="stylesheet" href="css/swiper.css">');
 document.write('<link rel="stylesheet" href="css/css.css">');
+document.write('<link rel="stylesheet" href="css/aos.css">');
 document.write('<script src="https://code.jquery.com/jquery-3.3.1.js"></script>');
 document.write('<script src="js/main.js"></script>');
+document.write('<script src="js/aos.js"></script>');

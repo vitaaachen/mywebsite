@@ -81,8 +81,7 @@ a{
     width: 100%;
     height:600px;
     position: relative;
-    /*background: url(https://www.todopaisajes.com/1920x1080/sabana-africana.jpg);*/
-    background: url(../img/banner-1.jpeg);
+    background: url(../img/banner-2.jpeg);
     background-size: cover;
     background-position:top;
     background-attachment: fixed;
@@ -97,6 +96,15 @@ a{
     left: 0;
     opacity: 0.1;
 }
+.typingline{
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+}
 .sub-area{
     position: relative;
     top: 150px;
@@ -107,6 +115,21 @@ a{
     box-shadow: 2px 1px 7px #1d1b1b;
     padding:  20px;
     box-sizing:  border-box;
+
+}
+.sub-area .tit{
+    font-size: 27px;
+    margin: 20px 0 0 0;    
+    color: #6f0202;
+    font-weight: bold;
+}
+.sub-area .sub-tit{
+    color: #6f0202;
+    font-size: 18px;
+    font-weight: bold;
+}
+.sub-area .con{
+    font-size: 18px;
     font-style:  italic;
     border-radius:10px;
 }
@@ -119,6 +142,7 @@ a{
 .sub-area span{
     font-size: 18px;
     font-weight: bold;
+
     line-height: 30px;
 }
 #sub-area-contact{
@@ -251,7 +275,7 @@ a{
     background: url(../img/about-1.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     transition:  all 0.3s ease;
 }
 .skill-con{
@@ -312,7 +336,8 @@ a{
     background: url(../img/work-bg.png);
     background-size:cover;
     background-repeat:no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
+
 }
 .box-work{
     display: flex;
@@ -570,6 +595,17 @@ a{
     position:  absolute;
     bottom: 10px;
     right: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    font-size:  12px;
+    line-height: 20px;
+    border-radius: 30px;
+    text-align: center;
+    background:#1b1a1a;
+    opacity: 0;
+}
+.point i{
     width: 30px;
     height: 30px;
     padding: 5px;
@@ -578,6 +614,7 @@ a{
     border-radius: 30px;
     text-align: center;
     background:#02416f;
+
     color: #FFF;
 }
 #pc-menu img{
@@ -707,6 +744,9 @@ a{
     }
 }
 @media only screen and (max-width:426px){
+    .point{
+        opacity: 1;
+    }
     .skill-con .photo{
         display: none;
     }

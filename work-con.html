@@ -34,6 +34,7 @@
     .swiper-slide:hover:before {
         opacity: 0;
         transform: scale(1);
+        display: none;
     }
 
     .swiper-slide p {
@@ -62,7 +63,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.3);
     }
 
     #work-content .pic {
@@ -70,12 +71,12 @@
     }
 
     #work-content .pic img {
-        width: 60%;
+        width: 90%;
     }
 
     #work-content .name {
         display: flex;
-        font-size: 50px;
+        font-size: 42px;
         display: flex;
         align-items: center;
         font-weight: bold;
@@ -93,7 +94,7 @@
 
     .sort-ch {
         float: left;
-        width: 70px;
+        width: 75px;
         padding: 5px;
         margin: 5px;
         background: #969696;
@@ -109,27 +110,60 @@
 
     #btn-go {
         position: relative;
-        float: right;
         color: #FFF;
         background: #6f0202;
-        width: 100px;
+        width: 200px;
         height: 30px;
         line-height: 30px;
         text-align: center;
         font-size: 15px;
         cursor: pointer;
+        padding: 5px;
+        margin: 40px 0 0 10px;
+        transition: all 0.5s ease;
+        border: 2px solid;
+    }
+
+    #btn-go::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        background: #2d2d2d;
+        bottom: 0;
+        left: 0;
+        transition: all 0.2s ease;
+    }
+
+    #btn-go:hover {
+        background: transparent;
+        color: #6f0202;
+        border: 2px solid;
+    }
+
+    #btn-go:hover:before {
+        width: 100%;
+
     }
 
     .back-worklist {
         position: relative;
-        width: 60%;
+        width: 90%;
         text-align: right;
         margin: 10px auto;
+        transition: all 0.3s ease;
     }
 
     .back-worklist a {
         cursor: pointer;
         font-weight: bold;
+        font-size: 15px;
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .back-worklist a:hover {
+        letter-spacing: 5px;
     }
 
     #slider-otherwork {
@@ -146,6 +180,7 @@
 
     .con-tit {
         font-weight: bold;
+        margin-top: 20px;
     }
 
     .con-text {
@@ -223,10 +258,86 @@
         .area-name {
             top: -100px;
         }
+        .sort-ch {
+            width: 62px;
+            font-size: 10px;
+            margin: 3px;
+        }
+        .back-worklist a {
+            background: #6f0202;
+            color: #FFF;
+            padding: 5px 5px 5px 30px;
+        }
     }
 </style>
 
 <body>
+    <script src="js/val-project.js"></script>
+    <script src="js/fill.js"></script>
+    <script>
+        $(document).ready(function () {
+            var data = getData();
+
+            if (data == undefined) {
+                return;
+            }
+
+            //使用技術
+            var skills = data["d-val-skill"];
+            for (var i = 0; i < skills.length; i++) {
+                var skill = skills[i];
+                var image = skill["image"];
+                var title = skill["title"];
+                var diva = '<div class="flex-box">';
+                var image = '<img src="' + image + '" alt="' + title + '" title="' + title + '">';
+                var divb = '</div>';
+                $("#skill-img").append(diva + image + divb);
+            }
+
+            //專案名字
+            var project = data["d-val-porject"];
+            $("#val-porject").append(project);
+
+            //專案分類
+            var categorys = data["d-val-category"];
+            for (var i = 0; i < categorys.length; i++) {
+                var category = categorys[i];
+                var diva = '<div class="sort-ch">';
+                var categoryCh = category["category"];
+                var divb = '</div>';
+                $("#val-category").append(diva + categoryCh + divb);
+            }
+
+            //負責項目
+            var charge = data["d-val-charge"];
+            $("#val-charge").append(charge);
+
+            //專案心得
+            var exp = data["d-val-exp"];
+            $("#val-exp").append(exp);
+
+            //網站連結
+            var link = data["d-val-link"];
+            $("#val-link").attr("href", link)
+            $("#val-pic-link").attr("href", link)
+
+            //網站圖片
+            var cover = data["d-val-cover"];
+            $("#val-cover").attr("src", cover)
+
+        });
+
+        function getData() {
+            for (let i = 0; i < valPorject.length; i++) {
+                if (targetValue == i.toString()) {
+                    return valPorject[i];
+                }
+            }
+
+            return undefined;
+        }
+    </script>
+
     <div class="header">
         <div class="container">
             <div class="logo">
@@ -261,59 +372,43 @@
                     <span>作品內容</span>
                 </div>
                 <div class="flex-list">
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-right">
                         <div class="name">
-                            <p id="porject-name">百家樂娛樂城</p>
+                            <p id="val-porject"></p>
                         </div>
-                        <div class="sort">
-                            <div id="category0" class="sort-ch">網站</div>
-                            <div id="category1" class="sort-ch">獨立站點</div>
-                            <div id="category2" class="sort-ch">金融</div>
-                            <div id="category3" class="sort-ch">形象網站</div>
+                        <div class="sort" id="val-category">
                         </div>
                         <div class="text">
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 使用/支援技術：</p>
                             <div class="flex-list" id="skill-img">
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-rwd.png" alt="RWD" title="RWD">
-                                </div>
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-wp2.png" alt="wordpress" title="wordpress">
-                                </div>
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-jq-red.png" alt="jQuery" title="jQuery">
-                                </div>
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-html-red2.png" alt="HTML5/HTML" title="HTML5/HTML">
-                                </div>
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-css2.png" alt="CSS3/CSS" title="CSS3/CSS">
-                                </div>
-                                <div class="flex-box">
-                                    <img src="img/icon/icon-js-red.png" alt="JavaScript" title="JavaScript">
-                                </div>
                             </div>
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 負責項目：</p>
-                            <p class="con-text" data-name="responsible">網頁視覺設計 / 網頁開發（切版,功能,特效等）。</p>
+                            <p class="con-text" data-name="responsible" id="val-charge"></p>
                             <p class="con-tit">
                                 <i class="fas fa-chevron-circle-right"></i> 專案心得：</p>
-                            <p class="con-text" data-name="experience">這個專案的視覺和網站開發是由我獨立製作，並配合企劃的理念製成。企劃的原因為目前博弈業的網站都是仿站和雜亂的站點居多，想要做一個乾淨整齊的形象網站，推廣自己旗下的遊戲並提供教學技巧文章，提升此網站的實用性。</p>
+                            <p class="con-text" data-name="experience" id="val-exp"></p>
                         </div>
-                        <a href="#">
+                        <a id="val-link" href="" target="blank">
                             <div id="btn-go">查看網站</div>
                         </a>
                     </div>
-                    <div class="flex-box">
+                    <div class="flex-box" data-aos="zoom-in-left">
                         <div class="back-worklist pc">
-                            <a href="work-list.html">回作品列表→</a>
+                            <a href="work-list.html">回作品列表
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
                         </div>
                         <div class="pic">
-                            <img src="img/work/baccarat/a.png" alt="">
+                            <a id="val-pic-link" href="">
+                                <img id="val-cover" src="">
+                            </a>
                         </div>
                         <div class="back-worklist mb">
-                            <a href="work-list.html">回作品列表→</a>
+                            <a href="work-list.html">回作品列表
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -325,40 +420,41 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=3">
                                     <img src="img/work/ug/0.png" alt="Ultra EGaming奧創娛樂">
+                                    <p>Ultra EGaming奧創娛樂</p>
                                 </a>
-                                <p>Ultra EGaming奧創娛樂</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=0">
                                     <img src="img/work/dafa-act/1.png" alt="大發金服">
+                                    <p>大發金服 活動頁</p>
                                 </a>
-                                <p>大發金服</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=6">
                                     <img src="img/work/tiger/0.png" alt="88老虎">
+                                    <p>88老虎</p>
                                 </a>
-                                <p>88老虎</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=7">
                                     <img src="img/work/ug-ad/0.png" alt="UltraEGaming 廣告專案">
+                                    <p>UltraEGaming 廣告專案</p>
                                 </a>
-                                <p>UltraEGaming 廣告專案</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=4">
                                     <img src="img/work/dot/0.png" alt="點點盈">
+                                    <p>點點盈</p>
                                 </a>
-                                <p>點點盈</p>
                             </div>
+
                             <div class="swiper-slide">
-                                <a href="">
+                                <a href="work-con.html?type=1">
                                     <img src="img/work/g2e/0.png" alt="AI人工智能彩票整合平台系統">
+                                    <p>AI人工智能彩票整合平台系統</p>
                                 </a>
-                                <p>AI人工智能彩票整合平台系統</p>
                             </div>
                         </div>
                     </div>
@@ -373,7 +469,7 @@
         </div>
         <div class="section scrolltion" id="more">
             <div class="container">
-                <div class="more-bg">
+                <div class="more-bg" data-aos="zoom-in">
                     <a href="index.html">
                         <p id="btn-more">回首頁</p>
                     </a>

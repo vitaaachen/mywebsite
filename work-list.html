@@ -4,6 +4,8 @@
 <head>
     <script src="js/head.js"></script>
     <title>作品列表 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
 <style>
     #work-list {
@@ -55,16 +57,13 @@
         margin: 5px;
         text-align: center;
     }
-
-    /*.box-work .inside*/
-
     .box-work {
         display: block;
         width: 100%;
     }
 
     .box-work .inside {
-        height: 210px;
+        height: 200px;
         width: 370px;
         float: left;
         margin: 0 30px 30px 0;
@@ -72,7 +71,7 @@
     }
 
     .box-work .inside .info .dec-tit {
-        font-size: 22px;
+        font-size: 17px;
         margin: 0 5% 0;
         padding-bottom: 10px;
         border-bottom: none;
@@ -106,10 +105,6 @@
     .con-cate p {
         margin: 15px 0;
         color: #FFF
-    }
-
-    .box-work .inside .info {
-        /*opacity: 1;*/
     }
 
     .option-set {
@@ -264,95 +259,124 @@
                         <input type="checkbox" value=".kind2" id="kind2" />
                         <label for="kind2">影片</label>
                         <input type="checkbox" value=".kind3" id="kind3" />
-                        <label for="kind3">遊戲</label>
+                        <!--<label for="kind3">遊戲</label>
                         <input type="checkbox" value=".kind4" id="kind4" />
                         <label for="kind4">平面</label>
                         <input type="checkbox" value=".kind5" id="kind5" />
-                        <label for="kind5">攝影</label>
+                        <label for="kind5">攝影</label>-->
                     </div>
                     <div class="option-set" data-group="industry">
                         <p>網站類別</p>
                         <input type="checkbox" value="" id="industry-all" class="all" />
                         <label for="industry-all">全部</label>
                         <input type="checkbox" value=".industry1" id="industry1" />
-                        <label for="industry1">博弈</label>
+                        <label for="industry1">娛樂</label>
                         <input type="checkbox" value=".industry2" id="industry2" />
                         <label for="industry2">金融</label>
                         <input type="checkbox" value=".industry3" id="industry3" />
                         <label for="industry3">飯店</label>
-                        <input type="checkbox" value=".industry4" id="industry4" />
-                        <label for="industry4">直播</label>
+                        <!--<input type="checkbox" value=".industry4" id="industry4" />
+                        <label for="industry4">直播</label>-->
+                        <input type="checkbox" value=".industry5" id="industry5" />
+                        <label for="industry5">商業</label>
                     </div>
                 </div>
                 <div class="box-area">
                     <!--<p id="filter-display"></p>-->
                     <div class="box-work" id="container">
-                        <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
-                            <img src="img/work/dafa-act/0.png" alt="">
+                        <div class="inside kind1 industry5">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/he-xin/cover.png" alt="">
                             <div class="info">
-                                <p class="dec-tit">大發金服 活動頁</p>
+                                <p class="dec-tit">和信智慧產權事務所</p>
                                 <div class="con-cate">
                                     <span>獨立站點</span>
-                                    <span>金融</span>
-                                    <span>活動網站</span>
+                                    <span>商業</span>
+                                    <span>形象網站</span>
                                 </div>
-                                <a href="work-con.html">
+                                <a href="work-con.html?type=13">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry1">
-                            <p class="point">詳細</p>
-                            <img src="img/work/g2e/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/signature/cover.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">皇璽會娛樂城</p>
+                                <div class="con-cate">
+                                    <span>獨立站點</span>
+                                    <span>娛樂</span>
+                                    <span>形象網站</span>
+                                </div>
+                                <a href="work-con.html?type=14">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry1">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/g2e/cover.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">AI人工智能彩票整合平台系統</p>
                                 <div class="con-cate">
                                     <span>Wordpress</span>
-                                    <span>博奕</span>
+                                    <span>娛樂</span>
                                     <span>形象網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=1">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry3">
-                            <p class="point">詳細</p>
-                            <img src="img/work/crown/1.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/crown/cover.png" alt="">
                             <div class="info">
-                                <p class="dec-tit">新濠天地</p>
+                                <p class="dec-tit">新濠皇璽會</p>
                                 <div class="con-cate">
                                     <span>獨立站</span>
                                     <span>飯店</span>
                                     <span>形象網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=2">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry1">
-                            <p class="point">詳細</p>
-                            <img src="img/work/ug/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/ug/cover.png" alt="">
                             <div class="info">
-                                <p class="dec-tit">Ultra EGaming奧創娛樂</p>
+                                <p class="dec-tit">Ultra EGaming 奧創娛樂</p>
                                 <div class="con-cate">
                                     <span>Wordpress</span>
-                                    <span>博奕</span>
+                                    <span>娛樂</span>
                                     <span>資訊網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=3">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
-                            <img src="img/work/dot/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/dot/cover.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">點點盈</p>
                                 <div class="con-cate">
@@ -360,13 +384,15 @@
                                     <span>金融</span>
                                     <span>資訊網站</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=4">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
                             <img src="img/work/stock/0.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">錢進牛股</p>
@@ -376,46 +402,70 @@
                                     <span>形象網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=5">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry1">
-                            <p class="point">詳細</p>
-                            <img src="img/work/tiger/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/tiger/cover.png" alt="">
                             <div class="info">
-                                <p class="dec-tit">88老虎</p>
+                                <p class="dec-tit">88老虎娛樂網</p>
                                 <div class="con-cate">
+                                    <span>獨立站</span>
                                     <span>Wordpress</span>
-                                    <span>博奕</span>
+                                    <span>娛樂</span>
                                     <span>形象網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=6">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry1">
-                            <p class="point">詳細</p>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
                             <img src="img/work/ug-ad/0.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">UltraEGaming 廣告專案</p>
                                 <div class="con-cate">
                                     <span>Wordpress</span>
-                                    <span>博奕</span>
+                                    <span>娛樂</span>
                                     <span>活動網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=7">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
-                            <img src="img/work/dafa-mip/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/dafa-act/cover.png" alt="">
+                            <div class="info">
+                                <p class="dec-tit">大發金服 活動頁</p>
+                                <div class="con-cate">
+                                    <span>獨立站點</span>
+                                    <span>金融</span>
+                                    <span>活動網站</span>
+                                </div>
+                                <a href="work-con.html?type=0">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind1 industry2">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/dafa-mip/cover.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">大發金服 導覽頁</p>
                                 <div class="con-cate">
@@ -424,14 +474,16 @@
                                     <span>目錄網站</span>
                                     <span>MIP</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=8">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
-                            <img src="img/work/dafa/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/dafa/cover.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">大發金服 文章推廣</p>
                                 <div class="con-cate">
@@ -439,13 +491,15 @@
                                     <span>金融</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=9">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry2">
-                            <p class="point">詳細</p>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
                             <img src="img/work/financial/0.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">錢進牛股 金融論壇</p>
@@ -453,44 +507,30 @@
                                     <span>Discuz論壇</span>
                                     <span>金融</span>
                                 </div>
-                                <a href="">
+                                <a href="work-con.html?type=10">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
                         <div class="inside kind1 industry1">
-                            <p class="point">詳細</p>
-                            <img src="img/work/baccarat/0.png" alt="">
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img src="img/work/baccarat/cover.png" alt="">
                             <div class="info">
                                 <p class="dec-tit">百家樂娛樂城</p>
                                 <div class="con-cate">
                                     <span>獨立站</span>
-                                    <span>博奕</span>
+                                    <span>娛樂</span>
                                     <span>形象網站</span>
                                     <span>RWD</span>
                                 </div>
-                                <a href="work-con-baccarat.html">
+                                <a href="work-con.html?type=11">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>
                         </div>
-                        <div class="inside kind1 industry4">
-                            <p class="point">詳細</p>
-                            <img src="img/work/bird/0.png" alt="">
-                            <div class="info">
-                                <p class="dec-tit">鳳凰國際</p>
-                                <div class="con-cate">
-                                    <span>Wordpress</span>
-                                    <span>直播</span>
-                                    <span>形象網站</span>
-                                    <span>RWD</span>
-                                </div>
-                                <a href="">
-                                    <div class="btn-workmore">了解更多</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="inside kind1 industry4">
+                        <div class="inside kind2 kind3 kind4 kind5">
                             <img src="img/work/work-coming-soon.jpg" alt="">
                             <div class="info">
                                 <p class="dec-tit">敬啟期待</p>
@@ -502,7 +542,7 @@
         </div>
         <div class="section scrolltion" id="more">
             <div class="container">
-                <div class="more-bg">
+                <div class="more-bg" data-aos="zoom-in">
                     <a href="index.html">
                         <p id="btn-more">回首頁</p>
                     </a>
