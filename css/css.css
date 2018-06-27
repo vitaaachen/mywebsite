@@ -115,8 +115,7 @@ a{
     box-shadow: 2px 1px 7px #1d1b1b;
     padding:  20px;
     box-sizing:  border-box;
-    /*font-style:  italic;*/
-    /*border-radius:10px;*/
+
 }
 .sub-area .tit{
     font-size: 27px;
@@ -131,6 +130,19 @@ a{
 }
 .sub-area .con{
     font-size: 18px;
+    font-style:  italic;
+    border-radius:10px;
+}
+.sub-area p{
+    font-size: 27px;
+    margin: 20px  0;    
+    color: #6f0202;
+    font-weight: bold;
+}
+.sub-area span{
+    font-size: 18px;
+    font-weight: bold;
+
     line-height: 30px;
 }
 #sub-area-contact{
@@ -325,6 +337,7 @@ a{
     background-size:cover;
     background-repeat:no-repeat;
     /*background-attachment: fixed;*/
+
 }
 .box-work{
     display: flex;
@@ -593,6 +606,15 @@ a{
     opacity: 0;
 }
 .point i{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    font-size:  14px;
+    line-height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    background:#02416f;
+
     color: #FFF;
 }
 #pc-menu img{
