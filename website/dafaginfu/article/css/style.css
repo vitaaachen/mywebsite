@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微軟正黑體";
+    box-sizing: border-box;
+}
+.wraper{
+    position: relative;
+    width:100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px 0 0 0;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+.logo{
+    overflow: auto;
+}
+.main{
+    float: left;
+}
+.sbmain{
+    float: right;
+}
+.pcHead .nav{
+    width: 100%;
+    line-height: 50px;
+    text-align: right;
+    padding-right: 135px;
+    font-weight: bold;
+    background: #bb0d22;
+    margin-top: 20px;
+    color: #e8b9bc;
+}
+#nowHere{
+    color: #FFF;
+}
+.section{
+    position: relative;
+    width: 100%;
+    background: #f3f3f3;
+}
+#titleArea{
+    text-align: center;
+}
+#titleArea .date img{
+    width: 22px;
+    position: relative;
+    top: 4px;
+}
+.sort{
+    border-bottom: 2px solid #bb0d22;
+    width: 70px;
+    margin: 0 auto 20px auto;
+    padding: 20px 0 2px 0;
+    color: #858585;
+}
+.date{
+    margin: 20px 0;
+    color: #858585;
+}
+.date span{
+    margin:10px;
+}
+#redtext{
+    color: #bb0d22;
+}
+.sns-icon{
+    background: lightgray;
+    border-radius: 30px;
+    line-height: 50px;
+    margin: 0 5px;
+    width: 49px;
+    height: 49px;
+    padding:10px;
+}
+#sns01:hover{
+    background: #d42a2a;
+}
+#sns02:hover{
+    background: #f4c23f;
+}
+#sns03:hover{
+    background: #2ec100;
+}
+.sns{
+    position: relative;
+    padding: 40px 0;
+}
+.article{
+    width:100%;
+    position: relative;
+    padding: 50px 0;
+}
+.article p{
+    font-size: 16.5px;
+    line-height:35px;
+    color: #000;
+}
+.listNum{
+    margin-left: 13px;
+}
+.listNum p{
+    text-indent:-13px;
+}
+.article img{
+    width: 100%;
+}
+#redtextB{
+    font-weight: bold;
+    color: #bb0d22;
+    font-size: 20px;
+}
+.introText{
+    border: 2px solid #bb0d22;
+    padding: 40px;
+    font-style:oblique;
+    font-weight: bold;
+}
+.grayarea{
+    padding: 40px;
+    background: #f3f3f3;
+    font-style:oblique;       
+}
+#editor a{
+    text-decoration: none;
+    color: #bb0d22;
+    font-weight: bold;
+}
+.respondItem{
+    overflow: auto;
+    padding-top: 40px;
+}
+#respondTool{
+    float: left;
+}
+#respondTool a{
+    text-decoration: none;
+    color: #858585;
+}
+#respondDetail{
+    float: right;
+}
+#respondDetail img{
+    width: 22px;
+    position:relative;
+    top:4px;
+}
+.textarea{
+    width: 100%;
+    height: 200px;
+    background: #FFF;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    color: #858585;
+}
+.respond .sns{
+    text-align: center;
+}
+.btnPost{
+    margin: 20px 0 0 0;
+}
+.btnPost img{
+    width: 100%;
+}
+#respondArea{
+    background: #e4e6e5;
+}
+.reply{
+    padding: 50px 0;
+}
+.comment{
+    background: #FFF;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 30px 30px 30px;
+    margin: 20px 0;
+    line-height:20px;
+}
+.commentItem{
+    overflow: auto;
+}
+.fromData{
+    float: left;
+    margin: 20px 0;
+}
+.fromData a{
+    color: #3379b7;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 5px;
+}
+.fromData span{
+    color: #858585;
+}
+.score{
+    float: right;
+}
+.score img{
+    width: 22px;
+}
+.floor{
+    float: right;
+    margin: 10px 0;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    background: #c3c3c3;
+    color:#FFF;
+    text-align: center;
+}
+.score img{
+    position: relative;
+    top:4px;
+}
+.score a{
+    text-decoration: none;
+    color: #858585;
+}
+.commentsRely{
+    padding: 10px 30px;
+    line-height: 20px;
+}
+#dashed{
+    border-bottom:1px dashed  #c3c3c3;
+    margin:30px 30px 10px 30px;
+}
+#moreComment{
+    background: #555555;
+    width:100%;
+    color: #FFF;
+    text-align:center;
+    line-height:50px;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#moreComment:hover{
+    background: #bb0d22;
+}
+.btnPost{
+    background: #bb0d22;
+    width:100%;
+    color: #FFF;
+    text-align:center;
+    line-height:50px;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnPost img{
+    width:22px;
+    position: relative;
+    top:4px;
+    left:-5px;
+}
+.footer{
+    background: #222222;
+    border-top: 4px solid #bb0d22;
+    text-align: center;
+    color: #FFF;
+}
+.weCheat{
+    background: url(../img/wechat-bg.png);
+    width:360px;
+    height:80px;
+    margin: 40px auto 10px auto;
+}
+.weCheat img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 9px;
+}
+.weCheat span{
+    font-size: 28px;
+    line-height: 40px;
+    color: #FFF;
+    padding-left: 5px;
+}
+#cheatId{
+    padding-top:12px;
+}
+.copyright{
+    padding:40px 0 30px 0;
+    color: #c3c3c3;
+    font-size: 14px;
+}
+.wechatText{
+    margin-top: 20px;
+}
+.mbHead , .mbWecheat{
+    display: none;
+}
+.Imgdivider{
+    display: block;
+    height: 60px;
+    position: relative;
+}
+@media only screen and (max-width: 789px) {
+    #respondArea {
+        display: none;
+    }
+    .weCheat , .wechatText , .score , .floor{
+        display: none;
+    }
+    .article{
+        text-align: center;
+    }
+    .introText{
+        padding: 20px;
+    }
+    .pcHead{
+        display: none;
+    }
+    .container , #titleArea{
+        padding: 0 10px;
+    }
+    .commentsRely{
+        padding: 0 20px;
+    }
+    .mbHead{
+        display: initial;
+    }
+    .mbHead .logo{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .mbHead .nav{
+        position: relative;
+        width: 100%;
+    }
+    .mbHead .nav img{
+        width: 100%;
+    }
+    .mbWecheat{
+        display:block;
+        background: #2ec100;
+        text-align: center;
+        font-size:18px;
+        color:#FFF;
+        font-weight:bold;
+        line-height:30px;
+        padding:30px 10px;
+    }
+    .wechatNum{
+        background: url(../img/wechat-bg-mb.png);
+        width:255px;
+        height:60px;
+        margin: 0 auto;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .wechatNum span{
+        font-size: 28px;
+        line-height: 40px;
+        color: #FFF;
+        padding-left: 5px;
+    }
+    .wechatNum img{
+        width: 30px;
+        position:relative;
+        top: 4px;
+    }
+    .Imgdivider{
+        height: 15px;
+    }
+}

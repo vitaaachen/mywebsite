@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>大發活動頁</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js.js"></script>
+	<style type="text/css">
+	*{
+		margin:0px auto;
+		padding:0px;
+	}
+	.head-background{
+		background:url(image/section01-1.png) center no-repeat;
+		width:100%;
+		height:648px;
+	}
+	.center_ren{
+		background:url(image/section01-2.png) center no-repeat;
+		width:100%;
+		height:564px;
+		text-align: center;
+		margin-top: -4px;
+		font-family: "微軟正黑體";
+	}
+	.center_ren ul{
+		padding-top:70px;
+		font-size: 30px;
+		color: #54411c;
+		width: 568px;
+		margin: 0 auto;
+		font-weight: 700;
+		list-style:none;
+	}
+	.center_ren li{
+		margin-top:29px;	 
+		height: 72px;
+		line-height: 72px;
+		font-size: 20px;
+		
+	}
+	.center_gz li{
+		margin-top:10px;	 
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+	.center_gz li span{
+		color:red;
+	}
+	.center_ren ul li .wordred {
+		width: 271px;
+		color: #e11010;
+		font-size: 48px;
+		letter-spacing: 24px;
+		text-align: right;
+		display: inline-block;
+		float: left;
+	}
+	.color-rede1 {
+		color: #e11010;
+	}
+	span{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+		font: inherit;
+	}
+	.center_ren .word1 {
+		width: 150px;
+		padding-right: 19px;
+		text-align: right;
+		float: left;	
+	}
+	.center_ren ul li .word3 {
+		float: left;
+		display: inline-block;
+	}
+	.center_bm{
+		position: relative;
+		margin-top: -3px;
+		width:100%;
+		height:1163px;
+		background: url(image/section02-2.png) center no-repeat;
+		/*background: #fedc62;*/
+	}
+	.center_content{
+		width: 760px;
+		margin: auto;
+		padding-top: 313px;
+		font-family: "微軟正黑體";
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+	.center_content p{
+		margin: 6px 0;
+	}
+	.center_content table{
+		margin: 8px 0 20px 89px;	
+		text-align: center;
+		width: 300px;
+	}
+	.table-style{
+		border: 1px solid #a84200;
+		height: 35px; 
+	}
+	.center_lq{
+		width:629px;
+		height:80px;
+		position:relative;
+		margin: 63px auto;
+		background: url(image/btn.png) center no-repeat;
+		background-size: 100%; 
+	}
+</style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false"> 
+	<div class="head-background"></div>
+	<div class="center_ren">
+		<ul>
+			<li>
+				<span class="word1">总计已有</span>
+				<span class="wordred stat-number" id="nowpeo"></span>
+				<span class="word3">人参与</span>
+			</li>
+			<li>今日<span class="color-rede1">2018</span>元免费操盘资金</li>
+			<li>
+				<span class="word1">还剩余</span>
+				<span class="wordred stat-number" id="nownum"></span>
+				<span class="word3">人份</span>
+			</li>
+		</ul>
+		<a href=""><div class="center_lq"></div></a>
+	</div>
+	<div class="center_bm">
+		<!--<img src="image/section02-3.png">-->
+		<div class="center_content">
+			<p>活动名称：亲爱的！我把资金给你送来了！</p>
+			<p>活动时间：即日起</p>
+			<p>活动说明：不用再犹豫！来大发金服就对了！我们保证给您最佳的配资体验，最好的配资服务。</p>
+			<p style="padding-left: 88px;">现在起，您只需交100元保证金，即可再获得2018操盘资金！共2,188操盘资金，盈利</p>
+			<p style="padding-left: 88px;">全归您，亏损我们扛，让我们当您的靠山！</p>
+			<div class="tableinfo">
+				<table>
+					<tr style="background:#a84200;color: #FFF;">
+						<td class="table-style">体验金</td>
+					</tr>
+					<tr style="background:#FFF;color: #000;">
+						<td class="table-style">¥2,018</td>
+					</tr>
+				</table>
+			</div>
+			<p>条件及限制：</p>
+			<div style="padding-left: 78px; ">
+				<p>▲限首次配资客户。</p>
+				<p>▲需交100元保证金，赠送2,018元实盘资金。结束时不论是否亏损，100元全额返还，</p>
+				<p style="padding-left: 19px;">盈利全归您！</p>
+				<p>▲免费操盘资金仅限使用2个交易日，第2个交易日只能卖出不能买入，如第2个交易日</p>
+				<p style="padding-left: 19px;">未卖出股票，系统将在14:00后执行自动卖出指令，不保证卖出价格。</p>
+				<p>▲需自行向客服申请，全部盈利仅限于购买沪深A股(打新)，并限于7天内使用。</p>
+				<p>▲本活动最终解释权归大发金服所有，并保留修改以上条款的最终权利。</p>
+			</div>
+		</div>
+		<a href=""><div class="center_lq" style="margin-top: 132px;"></div></a>
+	</div>
+
+</body>
+</html>

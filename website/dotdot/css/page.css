@@ -1,0 +1,285 @@
+.head{
+	background: rgb(57, 62, 75);
+}
+a{
+	text-decoration: none;
+	color: #007bfe;
+}
+/*footer*/
+.footer_con{
+	padding: 26px 0 !important;
+}
+.footer{
+	z-index: 0!important;
+	min-width: 1200px;
+	position: relative!important;
+}
+/*login*/ /*resgister*/
+.layout{
+	background: url(../image/loginbg.png);
+	min-width: 1200px;
+	margin: auto;
+	height: 623px;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+#login{
+	position: absolute;
+    right: 15%;
+    top: 20%;
+    padding: 1%;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+.inputarea input{
+	height: 46px;
+	width: 292px;
+	padding-left: 55px;
+	font-size: 14px;
+	border-radius: 4px;
+	border: 1px solid #d9d9d9;
+	color: gray;
+}
+#remind{
+	text-align: right;
+	font-size: 0.9em;
+	line-height: 2.5em;
+}
+#remind a{
+	text-decoration: none;
+	color: #000;
+}
+.submit{
+	width: 100%;
+	height: 48px;
+	background: #fc3042;
+	color: #FFF;
+	font-size: 18px;
+	line-height: 48px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-top: 35px;
+}
+.logtitle{
+	font-size: 1.3em;
+	padding-left: 5px;
+	margin: 5px 0 30px 0;
+}
+.inputarea{
+	position: relative;
+}
+.icon{
+	position: absolute;
+	left: 15px;
+	top: 12px;
+}
+#VerifiCode{
+	position: absolute;
+	right: 0;
+	top: 1px;
+}
+.btn_bule{
+	background: #576c94;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	text-align: center;
+	line-height: 48px;
+	font-size: 14px;
+	color: #FFF;
+	width: 115px;
+	height: 48px;
+}
+/*sim*/
+.section{
+	position: relative;
+	overflow: auto;
+	margin-top: 30px;
+}
+.section h3{
+	margin:0;
+	font-weight: 500;
+}
+#rule,#competition{
+	float: left;
+	height: 250px;
+}
+#rule{
+	width: 70%;
+}
+#rule h3 , #competition h3{
+	margin: 0;
+    padding: 5px 30px 0 0;
+    line-height: 2.5em;
+    border-bottom: 1px solid #e8e8e8;
+    font-weight: 500;
+}
+#rule a{
+	float: right;
+}
+.gray_border{
+	border:1px solid #e8e8e8;
+	color: #363636;
+}
+.textarea p{
+	margin: 0;
+	padding:0;
+}
+.textarea{
+	padding: 10px 30px;
+    line-height: 2em;
+    font-size: 0.9em;
+}
+.mark{
+	border-left: 5px solid #ff712a;
+	padding-left:30px; 
+}
+#competition{
+	width: 27%;
+	margin-left: 30px;
+}
+#competition p{
+	font-size: 1em;
+    text-align: center;
+    margin-top: 50px;
+}
+#orange_btn{
+	background: #ff712a;
+	height: 44px;
+	width: 160px;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	font-size: 18px;
+	line-height: 44px;
+	margin: 20px auto;
+	border-radius: 6px;
+}
+#gain{
+	overflow: auto;
+	position: relative;
+	padding:0;
+	margin:0 0 30px 0;
+}
+#gain li{
+	list-style-type: none;
+	overflow: auto;
+	border-bottom:1px solid #f6f6f6 ;
+}
+#gain li div{
+	float: left;
+	line-height: 3em;
+	padding: 3px 20px;
+	width: 10%;
+	text-align: center;
+	font-size: 0.95em;	
+}
+#gain li div a:hover{
+	color: #095f8a;
+}
+.lightgraytext{
+	color: #807f7f;
+}
+#gain li div:nth-of-type(2){
+	width: 15%;
+	text-align: left;
+}
+#photo{
+	width: 40px;
+	border-radius: 100px;
+}
+.pagechoice{
+	text-align: right;
+	margin-bottom: 50px;
+	color: #fc5146;
+}
+.pagechoice span{
+	border: 1px solid #ddd;
+	font-size: 14px;
+	margin-left: 2px;
+	text-align: center;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+.pagechoice span:hover{
+	background: #fc5146;
+	color: #FFF;
+}
+.nowpagenum{
+	background: #fc5146;
+	color: #FFF;
+}
+/*subcribe*/
+.whitebg{
+	background: #FFF;
+	padding: 0 3% 1.5%;
+}
+.ch{
+	font-size: 1.2em;
+	margin-right: 50px;
+	padding-bottom: 2px;
+	color: #999;
+	cursor: pointer;
+}
+.activech{
+	border-bottom:3px solid  #fc5146;
+	color: #000;
+}
+.showarea{
+	text-align: center;
+	font-size: 1.3em;
+	height: 450px;
+}
+#red_btn{
+	background:#fc5146;
+	padding: 7px 30px;
+	color: #FFF;
+	width: 120px;
+	margin: 20px auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.master{
+	width: 29%;
+	padding: 1%;
+	overflow: auto;
+	border: 1px solid #ddd;
+	margin:2% 1%;
+	float: left;
+}
+.masterData,.masterDetail{
+	float: left;
+}
+.masterData{
+	width: 40%;
+	margin-left: 12px;
+}
+.masterDetail{
+	margin-top: 30px;
+}
+.text-gray{
+	color: #8c8c8c;
+}
+.text-red{
+	font-size: 1.1em;
+	color: #fc5146;
+}
+.ta{
+	width: 100px;
+	height: 38px;
+	font-size: 16px;
+	background: #f9f9f9;
+	border: 1px solid #e0e0e0;
+	line-height: 5em;
+	padding: 5px 10px;
+	margin-right: 20px;
+	color: #000;
+	border-radius: 4px;
+}
+#cerfshow{
+	left: 300px;
+}

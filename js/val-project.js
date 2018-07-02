@@ -14,7 +14,7 @@ var valPorject = [
         ],
         "d-val-charge": "網頁開發（切版,功能,特效等）。",//負責項目
         "d-val-exp": "這個網站比較有挑戰性的地方是滾動數字程式設定的部分，程式是設定每日的累積人數以及每日更新所剩數量，以 JavaScript 撰寫。此站為單頁式，配合視覺做出來的網站。不使用第三方套件寫出一個功能和特效是非常需要有一定基礎的，這個網站是很好的練習。",//專案心得
-        "d-val-link": "沒有",//查看網站
+        "d-val-link": "./website/dafaginfu/activity/a_dafa.html",//查看網站
         "d-val-cover": "./img/work/dafa-act/a.png",
     },
     {
@@ -96,7 +96,7 @@ var valPorject = [
         ],
         "d-val-charge": "切版,JQ和JS功能製作,卷軸動畫設定。",
         "d-val-exp": "這個專案是仿製網站的練習作品。學習如何製作出當滾輪滾動的時候播放動畫的效果，製作出一個比較精細的網站。隨然這個站沒有RWD稍嫌可惜，但是他每個區塊都算蠻細膩的，尤其是最牛金願的部分我處理到很多細節。",
-        "d-val-link": " ",
+        "d-val-link": "./website/dotdot/index.html",
         "d-val-cover": "./img/work/dot/a.png",
     },
     {
@@ -137,7 +137,7 @@ var valPorject = [
         ],
         "d-val-charge": "Wordpress 樣式環境調整,適應不同架構之網站調整,切版,外掛調用,JQ和JQ功能製作,網站管理。",
         "d-val-exp": "這個網站一共做了兩種架構，分別是 Wordpress 和獨立靜態網站。以 Wordpress 為後台來製作此站，需要調整 Wordpress 整體樣式後再串接外掛等功能來製作。另一個是獨立的靜態網站即是一般的寫法，兩種架構皆由我負責製作。手機版是直接跳去別的頁面，所以此網站並沒有RWD。為什麼會需要分成兩種架構的原因是，我們沒有後台人員，需要依靠 Wordpress 的功能來替網站做每日 Update。",
-        "d-val-link": "沒有",
+        "d-val-link": "./website/88tiger/index.html",
         "d-val-cover": "./img/work/tiger/a.png",
     },
     {
@@ -176,7 +176,7 @@ var valPorject = [
         ],
         "d-val-charge": "MIP技術研究,切版,優化網頁利於SEO。",
         "d-val-exp": "此站特別的地方是依照 SEO 部門的需求以 MIP（Mobile Instant Pages）語法架構下去切版製作，為了要讓大陸的手機瀏覽器能夠加速下載此網站。使用 MIP 架構切版有先研究1-3天的時間，了解此語法的規則並改用他們的方式來寫網站。雖然功能上有所限制，因為這個架構不接受客製化的 JS，但是以一般的網站來說這些語法還是夠用的。",
-        "d-val-link": "沒有",
+        "d-val-link": "./website/dafaginfu/mip/guide.html",
         "d-val-cover": "./img/work/dafa-mip/a.png",
     },
     {
@@ -192,7 +192,7 @@ var valPorject = [
         ],
         "d-val-charge": "HTML+CSS切版。",
         "d-val-exp": "推廣網站。此站是為了要推廣大發金服品牌所做的網頁，由視覺設計好頁面後再由我這邊做切版實體化的動作。因為是做大陸市場的關西，整個風格和物件皆以大陸那邊習慣為主。",
-        "d-val-link": "沒有",
+        "d-val-link": "./website/dafaginfu/article/article01-v2.html",
         "d-val-cover": "./img/work/dafa/a.png",
     },
     {

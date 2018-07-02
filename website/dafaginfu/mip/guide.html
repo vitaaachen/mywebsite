@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="UTF-8">
+    <title>大發導航網站</title>
+    <meta name="keywords" content=" ">
+    <meta name="description" content=" ">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <link rel="canonical" href="https://www.baidu.com">
+    <style mip-custom>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "微軟正黑體";
+    }
+    .wraper{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .container{
+        max-width: 1140px;
+        position: relative;
+        margin: auto;
+    }
+    .header{
+        text-align: center;
+        padding: 50px 0;
+    }
+    #header-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter:blur(0px) grayscale(30%) opacity(0.8);
+    }
+    .side-list{
+        display: flex
+    }
+    .side{
+        flex: 1;
+        padding: 10px;
+        margin: 20px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow:3px 2px 6px rgba(0,0,0,0.5);
+        border: 4px solid #FFF;
+    }
+    .side:hover{
+        border: 4px solid #c30d23;
+    }
+    .side:hover .go{
+        color: #c30d23;
+    }
+    .side p{
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .section{
+        background: #FFF;
+        border-top: 5px  #c30d23 solid;
+        width:100%;
+        box-shadow:0 4px 3px rgba(102, 102, 102, 0.1);
+        padding: 10px 50px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .section h2{
+        border-bottom: 1px solid gray;
+        padding: 80px 0 5px 10px;
+        font-size: 35px;
+        cursor: default;
+    }
+    .header h1{
+        text-shadow:2px 3px 1px #000;
+        color: #FFF;
+        font-size: 100px;
+        cursor: default;
+    }
+    #small-h1{
+        font-size:42px;
+    }
+    .go{
+        font-size: 18px!important;
+        font-weight: bolder;
+    }
+    #color01{
+        background:linear-gradient(to left,#77FF00,#FFF);
+    }
+    #color02{
+        background:linear-gradient(to left,#66DD00,#FFF);
+    }
+    #color03{
+        background:linear-gradient(to left,#EEEE00,#FFF);
+    }
+    #color04{
+        background:linear-gradient(to left,#FFBB66,#FFF);
+    }
+    #color05{
+        background:linear-gradient(to left,#EE7700,#FFF);
+    }
+    /*stock*/
+    .content-con{
+        padding: 20px 0;
+        border-bottom: 1px dashed lightgray;
+    }
+    .content-title{
+        font-size: 16px;
+        margin: 10px 0 0 0;
+        background: #c30d23;
+        color: #FFF;
+        width: 150px;
+        line-height: 30px;
+    }
+    #class-title{
+        background: #c30d23;
+        color: #FFF;
+        padding: 2px;
+    }
+    .content-con a , .g-ib {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+    .g-ib{
+        margin: 15px 0;
+    }
+    .content-con a:hover , .g-ib:hover{
+        color: #c30d23;
+        font-weight: bold;
+    }
+    .content-link{
+        list-style: none;
+        overflow: auto;
+        text-align: left;
+        padding-left:200px;
+    }
+    .content-link li{
+        float: left;
+        width: 20%;
+        margin: 5px 0;
+    }
+    /*stock-end*/
+    #dis{
+        display: none;
+    }
+    .footer{
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 1025px) {
+        .header h1{
+            font-size: 72px;
+        }
+        .header{
+            padding: 0;
+        }
+        .side{
+            float: left;
+            flex: none;
+            width:41%;
+        }
+        .side-list{
+            overflow: auto;
+            display: block;
+        }
+        .content-link li{
+            width: 33%;
+        }
+    }
+    @media only screen and (max-width: 426px) {
+        #route5{
+            display: none;
+        }
+        .side mip-img{
+            width: 100px!important;
+            height: 27px!important;
+        }
+        .header{
+            padding: 10px 0;
+        }
+        .header h1{
+            font-size: 54px;
+        }
+        #small-h1{
+            font-size: 36px;
+        }
+        #header-bg{
+            width: 250%;
+        }
+        .section{
+            padding: 20px;
+        }
+        .section h2{
+            padding:30px 0 5px 10px;
+            font-size: 24px;
+        }
+        .content-link li{
+            width:50%;
+        }
+        .content-title{
+            width:100%;
+        }
+        .content-link{
+            padding-left: 0;
+            text-align: center;
+        }
+        .side{
+            width: 36%;
+            margin: 10px 5px;
+        }
+        .content-link a , .g-ib a{
+            font-size:14px;
+        }
+        .side-list{
+            width:285px;
+            margin:auto;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <mip-img id="header-bg"
+            width="100%" 
+            height="auto"
+            src="img/banner_inside.jpg">
+        </mip-img>
+        <div class="container">
+            <div class="header">
+                <h1>大发金服</h1>
+                <h1 id="small-h1">便捷导航站</h1>
+            </div>
+            <div class="section">
+                 <!--<mip-img
+                    width="385" 
+                    height="105"
+                    src="img/logo.png">
+                </mip-img>-->
+                <div id="login">
+                    <h2>会员登入网站</h2>
+                    <div class="side-list">
+                        <div class="side">
+                            <a href="https://www.dafafin.com/registered" target="blank"><mip-img
+                                width="150" 
+                                height="40"
+                                src="img/logo-2.png">
+                            </mip-img>
+                            <p id="color01">路线1</p>
+                            <p class="go">立刻进入</p></a>
+                        </div>
+                        <div class="side">
+                            <a href="https://www.dafafin.com/registered" target="blank"><mip-img
+                                width="150" 
+                                height="40"
+                                src="img/logo-2.png">
+                            </mip-img>
+                            <p id="color02">路线2</p>
+                            <p class="go">立刻进入</p></a>
+                        </div>
+                        <div class="side">
+                            <a href="https://www.dafafin.com/registered" target="blank"><mip-img
+                                width="150" 
+                                height="40"
+                                src="img/logo-2.png">
+                            </mip-img>
+                            <p id="color03">路线3</p>
+                            <p class="go">立刻进入</p></a>
+                        </div>
+                        <div class="side">
+                            <a href="https://www.dafafin.com/registered" target="blank"><mip-img
+                                width="150" 
+                                height="40"
+                                src="img/logo-2.png">
+                            </mip-img>
+                            <p id="color04">路线4</p>
+                            <p class="go">立刻进入</p></a>
+                        </div>
+                        <div class="side" id="route5">
+                            <a href="https://www.dafafin.com/registered" target="blank"><mip-img
+                                width="150" 
+                                height="40"
+                                src="img/logo-2.png">
+                            </mip-img>
+                            <p id="color05">路线5</p>
+                            <p class="go">立刻进入</p></a>
+                        </div>
+                    </div>    
+                </div>   
+                <div id="stock">
+                    <h2>股票名站</h2>
+                    <div id="gupiaomingzhan" class="stock-mingzhan" monkey="news_finance_stocknew_sites">
+                            <div class="mod-content mod-first clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">财经资讯</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class=""><div><a href="http://www.eastmoney.com/" target="_blank" class="text-con" title="东方财富网">东方财富网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://finance.sina.com.cn/" target="_blank" class="text-con" title="新浪财经">新浪财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.stockstar.com/home.htm" target="_blank" class="text-con" title="证券之星">证券之星</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.hexun.com/" target="_blank" class="text-con" title="和讯财经">和讯财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cnstock.com/" target="_blank" class="text-con" title="中国证券网">中国证券网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cnfol.com/" target="_blank" class="text-con" title="中金在线">中金在线</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://guba.eastmoney.com/" target="_blank" class="text-con" title="股吧">股吧</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://finance.ifeng.com/" target="_blank" class="text-con" title="凤凰财经">凤凰财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.10jqka.com.cn/" target="_blank" class="text-con" title="同花顺">同花顺</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.gw.com.cn/" target="_blank" class="text-con" title="大智慧">大智慧</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cfi.net.cn/" target="_blank" class="text-con" title="中财网">中财网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.jrj.com.cn/" target="_blank" class="text-con" title="金融界">金融界</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://business.sohu.com/" target="_blank" class="text-con" title="搜狐财经">搜狐财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://fund.eastmoney.com/" target="_blank" class="text-con" title="天天基金网">天天基金网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://finance.qq.com/" target="_blank" class="text-con" title="腾讯财经">腾讯财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.zhihuangjin.com/" target="_blank" class="text-con" title="纸黄金">纸黄金</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.yicai.com/" target="_blank" class="text-con" title="第一财经">第一财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://money.163.com/" target="_blank" class="text-con" title="网易财经">网易财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cs.com.cn/" target="_blank" class="text-con" title="中国证券报">中国证券报</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.financeun.com/" target="_blank" class="text-con" title="中国金融网">中国金融网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.p5w.net/" target="_blank" class="text-con" title="全景网">全景网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.ftchinese.com/" target="_blank" class="text-con" title="FT中文网">FT中文网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.huagu.com/" target="_blank" class="text-con" title="华股财经">华股财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.2258.com/" target="_blank" class="text-con" title="2258财经网">2258财经网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://finance.china.com.cn/" target="_blank" class="text-con" title="中国网财经">中国网财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.caijing.com.cn/" target="_blank" class="text-con" title="财经网">财经网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.caixin.com/" target="_blank" class="text-con" title="财新网">财新网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.jfinfo.com/" target="_blank" class="text-con" title="丰华财经">丰华财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.imeigu.com/" target="_blank" class="text-con" title="i美股">i美股</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.stcn.com/" target="_blank" class="text-con" title="证券时报">证券时报</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://finance.takungpao.com/" target="_blank" class="text-con" title="大公财经">大公财经</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.yztz.com/" target="_blank" class="text-con" title="赢在投资">赢在投资</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://tieba.baidu.com/f?kw=%E7%99%BE%E5%BA%A6%E8%82%A1%E5%B8%82%E9%80%9A&amp;ie=utf-8" target="_blank" class="text-con" title="股市通官方吧">股市通官方吧</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.bashan.com/" target="_blank" class="text-con" title="巴山财经">巴山财经</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="mod-content  clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">数据行情</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class=""><div><a href="http://finance.sina.com.cn/realstock/index.shtml" target="_blank" class="text-con" title="新浪股市行情">新浪股市行情</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://quote.eastmoney.com/indexlist.html" target="_blank" class="text-con" title="东方财富网行情">东方财富网行情</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://data.eastmoney.com/xg/xg/default.html" target="_blank" class="text-con" title="新股申购与中签查询">新股申购与中签查询</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://quote.eastmoney.com/zs000001.html" target="_blank" class="text-con" title="上证指数">上证指数</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.boc.cn/sourcedb/whpj/" target="_blank" class="text-con" title="外汇牌价">外汇牌价</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://gold.hexun.com/hjxh/" target="_blank" class="text-con" title="今日黄金价格">今日黄金价格</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://gold.hexun.com/byxh/" target="_blank" class="text-con" title="白银价格">白银价格</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://fund.eastmoney.com/fund.html" target="_blank" class="text-con" title="基金净值查询">基金净值查询</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://quote.eastmoney.com/center/futures.html#_5" target="_blank" class="text-con" title="商品期货报价中心">商品期货报价中心</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://newstock.cfi.cn/" target="_blank" class="text-con" title="新股发行一览表">新股发行一览表</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.chinamoney.com.cn/" target="_blank" class="text-con" title="中国货币网">中国货币网</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="mod-content  clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">财经博客</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class=""><div><a href="http://blog.cnfol.com/" target="_blank" class="text-con" title="中金博客">中金博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/lm/finance/index.html" target="_blank" class="text-con" title="新浪财经博客">新浪财经博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.eastmoney.com/" target="_blank" class="text-con" title="东方财富网博客">东方财富网博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sohu.com/stock" target="_blank" class="text-con" title="搜狐财经博客">搜狐财经博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://fblog.hexun.com/" target="_blank" class="text-con" title="和讯财经博客">和讯财经博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.cnstock.com/" target="_blank" class="text-con" title="中国证券网博客">中国证券网博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/xuxiaoming8" target="_blank" class="text-con" title="徐小明博客">徐小明博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/shaminnong" target="_blank" class="text-con" title="老沙博客">老沙博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/yehong" target="_blank" class="text-con" title="叶弘博客">叶弘博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/huzhanhao" target="_blank" class="text-con" title="占豪新浪博客">占豪新浪博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/jsmedia" target="_blank" class="text-con" title="郎咸平博客">郎咸平博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/cannes" target="_blank" class="text-con" title="凯恩斯博客">凯恩斯博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/fengqiderizi" target="_blank" class="text-con" title="封起的日子">封起的日子</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://wangguoqiang.blog.cnstock.com/" target="_blank" class="text-con" title="王国强博客">王国强博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://blog.sina.com.cn/chenqian" target="_blank" class="text-con" title="牛刀博客">牛刀博客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://blog.sina.com.cn/ff88" target="_blank" class="text-con" title="淘金客">淘金客</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://blog.sina.com.cn/lm/stock/" target="_blank" class="text-con" title="新浪股票博客">新浪股票博客</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="mod-content  clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">证券机构</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class=""><div><a href="http://www.sse.com.cn/" target="_blank" class="text-con" title="上海证券交易所">上海证券交易所</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.szse.cn/" target="_blank" class="text-con" title="深圳证券交易所">深圳证券交易所</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.gtja.com/portal/" target="_blank" class="text-con" title="国泰君安">国泰君安</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.gf.com.cn/" target="_blank" class="text-con" title="广发证券">广发证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.chinastock.com.cn/" target="_blank" class="text-con" title="银河证券">银河证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.newone.com.cn/" target="_blank" class="text-con" title="招商证券">招商证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.guosen.com.cn/webd/index.jsp?sessionid=uid" target="_blank" class="text-con" title="国信证券">国信证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.htsc.com.cn/htzq/index/index.html" target="_blank" class="text-con" title="华泰证券">华泰证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.ebscn.com/" target="_blank" class="text-con" title="光大证券">光大证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.hx168.com.cn/hxzq/hxindex.html" target="_blank" class="text-con" title="华西证券">华西证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.foundersc.com/" target="_blank" class="text-con" title="方正证券">方正证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.essence.com.cn/essence/index.html" target="_blank" class="text-con" title="安信证券">安信证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.westsecu.com/xbzq/index.html?classid=000200010006" target="_blank" class="text-con" title="西部证券">西部证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.sywg.com/sw/index.html" target="_blank" class="text-con" title="申银万国">申银万国</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.hazq.com/" target="_blank" class="text-con" title="华安证券">华安证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cs.ecitic.com/" target="_blank" class="text-con" title="中信证券">中信证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.95579.com/" target="_blank" class="text-con" title="长江证券">长江证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.ghzq.com.cn/ghzq/index.html" target="_blank" class="text-con" title="国海证券">国海证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.zts.com.cn/" target="_blank" class="text-con" title="中泰证券">中泰证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.csrc.gov.cn/pub/newsite/" target="_blank" class="text-con" title="中国证监会">中国证监会</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.sge.sh/publish/sge/" target="_blank" class="text-con" title="上海黄金交易所">上海黄金交易所</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.shfe.com.cn/" target="_blank" class="text-con" title="上海期货交易所">上海期货交易所</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.sac.net.cn/" target="_blank" class="text-con" title="中国证券业协会">中国证券业协会</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.njzq.com.cn/" target="_blank" class="text-con" title="南京证券">南京证券</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://stock.pingan.com/" target="_blank" class="text-con" title="平安证券">平安证券</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="mod-content  clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">股市周边</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class=""><div><a href="http://www.cngold.org/" target="_blank" class="text-con" title="中国黄金投资网">中国黄金投资网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cninfo.com.cn/" target="_blank" class="text-con" title="巨潮资讯网">巨潮资讯网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://v.baidu.com/v?word=%CC%EC%C9%FA%CE%D2%B2%C6&amp;fr=ala9&amp;ct=301989888&amp;rn=20&amp;pn=0&amp;db=0&amp;s=8" target="_blank" class="text-con" title="天生我财">天生我财</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.silver.org.cn/" target="_blank" class="text-con" title="第一白银网">第一白银网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.dyhjw.com/" target="_blank" class="text-con" title="第一黄金网">第一黄金网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cofool.com/" target="_blank" class="text-con" title="模拟炒股">模拟炒股</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://xueqiu.com/" target="_blank" class="text-con" title="雪球网">雪球网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.55188.com/index.php" target="_blank" class="text-con" title="理想论坛">理想论坛</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://jingji.cntv.cn/" target="_blank" class="text-con" title="央视网经济">央视网经济</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.iceo.com.cn/" target="_blank" class="text-con" title="中国企业家">中国企业家</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://wallstreetcn.com/" target="_blank" class="text-con" title="华尔街见闻">华尔街见闻</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.eeo.com.cn/" target="_blank" class="text-con" title="经济观察网">经济观察网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.9666.cn/" target="_blank" class="text-con" title="牛仔网">牛仔网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.cb.com.cn/" target="_blank" class="text-con" title="中国经营报">中国经营报</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://futures.hexun.com/" target="_blank" class="text-con" title="和讯期货">和讯期货</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.nbd.com.cn/" target="_blank" class="text-con" title="每日经济新闻">每日经济新闻</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://jjckb.xinhuanet.com/" target="_blank" class="text-con" title="经济参考报">经济参考报</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://xue.baidu.com/v7268851-183047-995422.html" target="_blank" class="text-con" title="网上炒股入门">网上炒股入门</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.iqiyi.com/zongyi/cjly.html?src=aldzy" target="_blank" class="text-con" title="财经郎眼">财经郎眼</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.fx168.com/" target="_blank" class="text-con" title="fx168外汇宝">fx168外汇宝</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.zhijinwang.com/" target="_blank" class="text-con" title="纸金网">纸金网</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.p2peye.com/" target="_blank" class="text-con" title="网贷天眼">网贷天眼</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class=""><div><a href="http://www.ipo3.com/" target="_blank" class="text-con" title="犀牛之星">犀牛之星</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="mod-content  clearfix">
+                            <div class="content-con">
+                            <h3 class="content-title">炒股软件</h3>
+                            <ul class="content-link">
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.gw.com.cn/download.shtml" target="_blank" class="text-con" title="大智慧">大智慧</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://download.10jqka.com.cn/" target="_blank" class="text-con" title="同花顺">同花顺</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.stockstar.com/service/download_tjxpda.asp" target="_blank" class="text-con" title="证券之星">证券之星</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.emoney.cn/" target="_blank" class="text-con" title="益盟操盘手">益盟操盘手</a></div></h3>
+                            </li>
+                            <li>
+                            <h3 class="last-row"><div><a href="http://www.ql18.com.cn/" target="_blank" class="text-con" title="钱龙">钱龙</a></div></h3>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                </div> 
+                <div class="footer">
+                        <h2>猜你喜欢</h2>
+                        <div class="bottom-main" monkey="guesslikelink">
+                                <span class="youlike"></span>
+                                <div class="guesslike-industry" data-type="0" monkey="remen">
+                                <!--<a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn g-ib" alog-text="换一换" hidefocus="true"></a>
+                                <a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn changeBtnText g-ib" alog-text="换一换" hidefocus="true">换一换</a>-->
+                                <div class="guesslike-row g-ib show" data-type="0" data-screen="0">
+                                <span>
+                                <a id="class-title" class="js-changeLink g-ib g_red" target="blank" href="http://go.hao123.com/?tn=cnxh">热门</a>
+                                </span>   
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib g_red" target="blank" href="http://www.baidu.com/dianjin.php?url=af00000jnnlnitgZrEcOTh_8QYTr-doVEzBFuQOzs2PQmDrkCZMvQl1UeK77zzYXlYrGNlLIo42Stkj7Vvj-nRVHoagG-okf1g1ulPVQj-9JSs7OESDSr0M4l9hUrJP1T5NZrh_.7R_jFvIE-NvsRTxQq7XeG4mXyJe-ozNgtSSa9G4mLmFCR_meJllS8a9G4I2UM3PQjPLgKfYt_QrMAzONDkazO2OPMlZdmAm8gqOOp1dgIT7jHzs8BCFBCnf4mloS8a9G4pauVQDryrJO5SEtveGyFWA1IZWyAp7WFgvNq26.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYLnj0_mLKVgLDqnH0_mLwzgLwzujY1nak-Th-1uywxUyqbIyk-5Hc_ULNYugFxug9sgLw9u1Y_0ZPCULIxug9s5fK1pyfqPH6LPj9BrAD3PWc4P1fsPyDLnhcknywb0A-1gLIGThN_ugP15H00ugFsmvqbuHdfnWTLnfKWmgw-5HDsnjcsnj00TvNzIh-s5HDsQWcsra3vra3zP6KWThnqnWn1Pf" alog-custom="ind:,sal:,atd:2" data-cpc="link">炒金送红包</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%BA%B2%E5%AD%90%E9%89%B4%E5%AE%9A&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                亲子鉴定
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%8A%95%E8%B5%84%E5%B0%8F%E9%A1%B9%E7%9B%AE&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                投资小项目
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%80%A5%E9%9C%80%E5%80%9F%E9%92%B1&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                急需借钱
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%B7%A5%E8%B5%84%E8%B5%9A%E5%A4%A7%E9%92%B1&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                工资赚大钱
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E8%B2%94%E8%B2%85%E6%98%AF%E4%BB%80%E4%B9%88&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                貔貅是什么
+                                </a>
+                                </span>
+                                </div>
+                                <div id="dis"class="guesslike-row g-ib" data-type="0" data-screen="1">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%88%9B%E4%B8%9A%E5%8A%A0%E7%9B%9F%E7%BD%91&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                创业加盟网
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib g_red" target="blank" href="https://www.baidu.com/s?word=%E7%B2%BE%E5%93%81%E5%B0%8F%E6%88%B7%E5%9E%8B&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                精品小户型
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%B8%AA%E4%BA%BA%E4%BA%8C%E6%89%8B%E8%BD%A6&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                个人二手车
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%86%9C%E6%9D%91%E8%87%B4%E5%AF%8C%E7%BD%91&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                农村致富网
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E7%8E%A9%E5%85%B7%E6%89%B9%E5%8F%91&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                玩具批发
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%BB%8E%E9%9B%B6%E5%AD%A6%E5%8C%96%E5%A6%86&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                从零学化妆
+                                </a>
+                                </span>
+                                </div>
+                                <div id="dis" class="guesslike-row g-ib" data-type="0" data-screen="2">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%88%BF%E4%BB%B7%E4%BC%9A%E8%B7%8C%E5%90%97&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                房价会跌吗
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%86%9C%E6%9D%91%E7%94%B5%E5%95%86&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                农村电商
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib g_red" target="blank" href="https://www.baidu.com/s?word=%E5%85%BC%E8%81%8C%E6%89%8B%E5%B7%A5%E6%B4%BB&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                兼职手工活
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E7%B4%A7%E5%87%91%E8%BD%A6%E6%8E%92%E8%A1%8C&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                紧凑车排行
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%97%B6%E5%B0%9A%E5%A5%B3%E5%8C%85&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                时尚女包
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%8C%97%E4%BA%AC%E6%96%B0%E6%A5%BC%E7%9B%98&amp;tn=50000017_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                北京新楼盘
+                                </a>
+                                </span>
+                                </div>
+                                </div>
+                                <div class="guesslike-industry" data-type="1" monkey="gouwu">
+                                <!--<a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn g-ib" alog-text="换一换" hidefocus="true"></a>
+                                <a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn changeBtnText g-ib" alog-text="换一换" hidefocus="true">换一换</a>-->
+                                <div id="dis" class="guesslike-row g-ib show" data-type="1" data-screen="0">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000jv3E5xGekl-5rsD2hwh94CfCY2nSNIMHb5mCO0IetnCU2l6ofduiMT4C4Ung7y_QSERK321B3zSwwOfO6SvLlfS3gDQCd8x_6b-eTpsQ-IE20-kV0BaEhS-z-QPEao_Vm.7D_KSWKfsTbALL6uhC59CG1dmZgr1pDlg_kuOZFYtSeqAa964mTHAHWdeTH7I-MuvNeS1oGknNqPMZoWknNvUePLy5Dkg83qmTHAHWddmhnBknmvUCtps1f_I5WYe-0.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_mhd_gvkz5Hc_ULNYugFxug9sgLw9u1Y_0ZPCULIxug9s5fK1pyfqPH6LPj9BrADYPjD1nvndmWbYP1N-njIh0A-1gLIGThN_ugP15H00ugFsmvqbuHdfnWTLnfKWmgw-5HDsnj0znj00TvNzIh-s5HDsQWcsra3vri3zP6KWThnqPWf4rHT" alog-custom="ind:,sal:,atd:2" data-cpc="link">车主年货节</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af00000U36qWmb8dtMBkEGcUvXRWvNJg82tVuRC4-Y4s_WbJij0FKw8vcQnT5X4xeVbFVgI66kD0jfYpT0rYnO06mHlyC1gZT2tz8KoQ-RzG8GVNDTjx1LRVBZnUaRq06hAUPUn.Db_jswqo38ijE6CpXyPvap7QZeeQJtMZo6CpXgih4SjikaO2Oo6CpXy7MHWuxJBmOySr9zSVLgKfYtVKnv-BFYggKfYt_QCJamJjZl7xHuYdergqHqEGovQDkWu8WkojPakgvX5ZkR0.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_mhd_gvkz5Hc_ULNYugFxug9sgLw9u1Y_0ZPCULIxug9s5fK1pyfqPH6LPj9BrADYPjD1nvndmWbYP1N-njIh0A-1gLIGThN_ugP15H00ugFsmvqbuHdfnWTLnfKWmgw-5HDsnj0znj00TvNzIh-s5HDsQWcsra3vri3zP6KWThnqPWf4rHT" alog-custom="ind:,sal:,atd:2" data-cpc="link">瓷肌买即赠</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E8%BF%AA%E5%A5%A5%E9%A6%99%E6%B0%B4&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                迪奥香水
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%9C%8D%E8%A3%85%E6%89%B9%E5%8F%91&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                服装批发
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%BF%A1%E5%8F%B7%E6%94%BE%E5%A4%A7%E5%99%A8&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                信号放大器
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib g_red" target="blank" href="https://www.baidu.com/s?word=%E5%A4%A7%E7%89%8Ccc%E9%9C%9C&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                大牌cc霜
+                                </a>
+                                </span>
+                                </div>
+                                <div id="dis" class="guesslike-row g-ib" data-type="1" data-screen="1">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%BA%8C%E6%89%8B%E8%8B%B9%E6%9E%9C6&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                二手苹果6
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%9C%8D%E8%A3%85%E5%8A%A0%E7%9B%9F%E5%BA%97&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                服装加盟店
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%B5%B7%E5%8D%97%E9%BB%84%E8%8A%B1%E6%A2%A8&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                海南黄花梨
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E7%99%BD%E9%93%B6%E4%BB%B7%E6%A0%BC&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                白银价格
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%89%8B%E4%B8%B2%E4%BB%B7%E6%A0%BC&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                手串价格
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=2%E5%85%83%E5%BA%97%E8%B4%A7%E6%BA%90&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                2元店货源
+                                </a>
+                                </span>
+                                </div>
+                                <div class="guesslike-row g-ib" data-type="1" data-screen="2">
+                                <span>
+                                <a id="class-title" class="js-changeLink g-ib g_red" href="http://tejia.hao123.com/?tn=zjl" target="blank">购物</a>
+                                 </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib g_red" target="blank" href="https://www.baidu.com/s?word=%E7%BE%8E%E7%99%BD%E9%9D%A2%E8%86%9C&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                美白面膜
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%89%8B%E6%9C%BA%E4%B9%8B%E5%AE%B6&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                手机之家
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E7%83%AD%E9%97%A8%E6%89%8B%E6%9C%BA%E6%A6%9C&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                热门手机榜
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%A5%BD%E6%B5%B7%E5%8F%82%E4%B8%8D%E8%B4%B5&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                好海参不贵
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%A5%B3%E6%98%A5%E8%A3%85%E4%B8%8A%E6%96%B0&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                女春装上新
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib "target="blank"  href="https://www.baidu.com/s?word=%E6%97%B6%E5%B0%9A%E5%A5%B3%E5%8C%85%E5%8C%85&amp;tn=50000019_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                时尚女包包
+                                </a>
+                                </span>
+                                </div>
+                                </div>
+                                <div class="guesslike-industry" data-type="2" monkey="youxi">
+                                <!--<a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn g-ib" alog-text="换一换" hidefocus="true"></a>
+                                <a href="http://www.hao123.com/mini/index/cnxh.html?from=stocknew&amp;color=%232873bf#" class="changeBtn changeBtnText g-ib" alog-text="换一换" hidefocus="true">换一换</a>-->
+                                <div id="dis" class="guesslike-row g-ib" data-type="2" data-screen="0">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000K11qyWIHsZiNAP1WmEU89etpAW56E_r6OjuiYMAqKmcoEWB2Bm2fLO9g-oEJJO4RrI6SsRSILBixiJZABsqacxnMidhHDYSBmuGcgXvtP-dHZMAFuGnRAmbNUWO3_w_f0.DY_iRPNx-YpDfnLmFJn7HQJtMAAQCJ6o_oLyTdBmk_Lw3d9h9mLyur5mC0.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">蓝月传奇</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000jmABJ_LqahOOW0REs8YG1BjW2yfz0uBKkHVBvq6YiPu_-A1fnpCZMG47IZW0ljGrvuQx0_tqLtvp20YgOF4-yd9YvP7CTGmVJPGOFSWs6DviWj6Y0YWkbmEeBA4_VLLMC.7b_igLRPg-E3S5WTBaPva50l9JqSSFBEk3qPpknmvUCtps1f_Irl1I8R.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">装备兑RMB</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af00000BTfjaFtIQLztCpzKwnEk3_GnoqLgNEtI68NUqhe_oz-xMgyv6_Xc-mL7rdS-HPQVNqY8EtV7Qu5QPCYg-SzR5tJUz396ehG5HUuMWly6KzP9zEmtBp-bVyjkWgy0omrt.DY_iIZ--ICk3cl8ijZKZJW4qtUZZ_o_lYZIJmh7Bmk_Lw3d9h9mLUSMmC0.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">34级送屠龙</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000jz9SAPZSSM3h19cxQLWvk0TIfDwuLWOqgizmPNI3ley0eEPhxmezhDNHOAhMWfiLW2Jy1OXtqI6YQjuh8u6Hx7qKMVdmiVmv1equoT1XF6TrF8Lo-V8y_mcm5342rcfJY.7D_iwF3cO2egE3S5BBa881GzfQDkWu8WkojPak8LeSM_R0.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">冰雪传奇</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000j-oDn-Cni4c3W92q8TDwjKbcjGh-0XljbFAUo9fP02wBMjnC_VryGtpRYIKbFdSMC9IAPzV4le41IzsifO-rcalyPSyEhtwMyZMEwvfHdHafXtb_M-PySRgKi9xTxAB8D.DY_iIZ--ICk3cl8ijZKZJW4qtU7XHF3S5y6eVHDs_HAPhl5A_nYQAeWgvI26.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">装备SSSS级</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="http://www.baidu.com/dianjin.php?url=af0000atslHoJKpuebCR3yZQ0qT8Mt6hBYMkXTMMdn2SnfOs5XSPgLE0zp64EFORRpR-Oal6OFBkjDZnGvDq6xyCyxlIoUyRfm-qBWgsOaHhPFcZUkVD7mIxVBQQYfXMJ1TLnfT.Db_iRD4VyKL-ktRfwsNsuQPLWKvUSMFk4qtAFWkzyurMm_HAPhl5A_nYQZZGtU70.mgK85R4NHDs0mvYqn0K9UHYs0APsm1Yk0AdY5H00ULnq0Aw-IWdrNRkn0ZKzU1YL0APY5H00mv6qn0K8ugfqnfKLpyuG5HD0mgKsTv-b5ymdnjP9rAfL0AN3TjdWIZFxTHYknj0sQAPsUNqk5HDsQAPYT-qYThfqn10_ugFGTvNbgvdEuZN_uHYzQAqdIANzgvN3T7qYmyTqQ0K1pAqLgvN3TjY0Tv-b5HR3P1f3mW99P1FhmWfknhmsuyRLmW03mfKGTdqLpgF-UAN1T1Ys0ANzTAPEuARqRjcLP1D0mv7YuHYknj0sn10s0ZP-TMuGTjYkna3znj68PWT8PHT0mLFW5Hc4nHf3" alog-custom="ind:,sal:,atd:2" data-cpc="link">变态MU</a>
+                                </span>
+                                </div>
+                                <div id="dis" class="guesslike-row g-ib show" data-type="2" data-screen="1">
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E5%A4%A7%E9%9D%92%E4%BA%91&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                大青云
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E9%A1%B5%E6%B8%B8%E5%89%8D%E5%8D%81%E5%90%8D&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                页游前十名
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=98%E6%B8%B8%E6%88%8F%E5%B9%B3%E5%8F%B0&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                98游戏平台
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank"  href="https://www.baidu.com/s?word=%E5%B7%A8%E5%88%B6%E7%BD%91%E6%B8%B8&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                巨制网游
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank"  href="https://www.baidu.com/s?word=%E5%A4%A7%E5%9E%8B%E7%BD%91%E6%B8%B8&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                大型网游
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E7%BD%91%E6%B8%B8%E6%8E%92%E8%A1%8C%E6%A6%9C&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                网游排行榜
+                                </a>
+                                </span>
+                                </div>
+                                <div class="guesslike-row g-ib" data-type="2" data-screen="2">
+                                <span>
+                                <a id="class-title" class="js-changeLink g-ib g_red" href="http://game.hao123.com/" target="blank">游戏</a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E4%BC%A0%E5%A5%87%E7%BD%91%E9%A1%B5%E7%89%88&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                传奇网页版
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=2017%E6%96%B0%E4%BC%A0%E5%A5%87&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                2017新传奇
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=%E6%B8%B8%E6%88%8F%E5%BC%80%E6%9C%8D%E8%A1%A8&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                游戏开服表
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=37%E6%B8%B8%E6%88%8F&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                37游戏
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank" href="https://www.baidu.com/s?word=17%E5%A5%BD%E7%8E%A9%E5%A1%94%E9%98%B2&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                17好玩塔防
+                                </a>
+                                </span>
+                                <span class="guesslike-col g-ib">
+                                <a class="js-changeLink g-ib " target="blank"  href="https://www.baidu.com/s?word=%E6%83%8A%E4%B8%96%E6%B8%B8%E6%88%8F&amp;tn=50000016_hao_pg&amp;ie=utf-8" alog-custom="ind:,sal:,atd:" data-cpc="link">
+                                惊世游戏
+                                </a>
+                                </span>
+                                </div>
+                                </div>
+                                </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
+    <script src="https://mipcache.bdstatic.com/static/v1.0/mip-ad.js"></script>
+</body>
+
+</html>
