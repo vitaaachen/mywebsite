@@ -12,7 +12,7 @@
     cursor: default;
 }
 *,h1,h2,h3,h4,h5,p,span,a,li{
-    font-family: "微軟正黑體";
+    font-family: "Microsoft JhengHei";
     color: #2d2d2d;
 }
 ul li{
@@ -594,29 +594,23 @@ a{
 }
 .point{
     position:  absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    font-size:  12px;
-    line-height: 20px;
-    border-radius: 30px;
-    text-align: center;
-    background:#1b1a1a;
+    bottom: -24px;
+    right: -24px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
     opacity: 0;
+    border-color:transparent #1b1a1a transparent transparent;
+    border-style:solid solid solid solid;
+    border-width:60px 60px 0px 0px;
+    border-radius:50%;
 }
 .point i{
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    font-size:  14px;
-    line-height: 30px;
-    border-radius: 30px;
-    text-align: center;
-    background:#02416f;
-
     color: #FFF;
+    position: absolute;
+    bottom: 30px;
+    right: -24px;
+    font-size: 14px;
 }
 #pc-menu img{
     width:15px;
@@ -637,8 +631,43 @@ a{
     margin: 5px;
     opacity: 0.85;
 }
-
-
+.load{
+    position:  fixed;
+    z-index:  9999;
+    background:  #2d2d2d;
+    width:  100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader>.line:nth-last-child(1) {
+    animation: loadingC .6s .2s linear infinite;
+}
+.loader>.line:nth-last-child(2) {
+    animation: loadingC .6s .3s linear infinite;
+}
+.loader>.line:nth-last-child(3) {
+    animation: loadingC .6s .4s linear infinite;
+}
+.line{
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #FFF;
+}
+@keyframes loadingC {
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(0,15px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
 @media only screen and (max-width:1200px){
     .header,.wraper,.footer{
         overflow: hidden;
@@ -745,6 +774,9 @@ a{
     }
 }
 @media only screen and (max-width:426px){
+    .sub-area .tit{
+        font-size: 24px;
+    }
     .point{
         opacity: 1;
     }
@@ -764,6 +796,9 @@ a{
         height: 200px;
     }
     .box-work-big .inside .info .dec-tit{
+        display: none;
+    }
+    .box-work .inside .info .dec-tit{
         display: none;
     }
     .box-work-big .inside .info .work-tit{

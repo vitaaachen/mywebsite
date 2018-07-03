@@ -1,4 +1,4 @@
-document.write('<meta charset="UTF-8">');
+
 document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
 document.write('<meta http-equiv="X-UA-Compatible" content="ie=edge">');
 document.write('<meta name="description" content="陳巧萱的個人作品集展示網站。擅長前端網頁開發與設計，熟悉HTML、CSS、Javascript和JQuery語法之應用，熱愛切版並以CSS3製作特效，知悉如何修改WordPress模板以達到客製化需求。">');

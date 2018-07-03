@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
 
+    $(".load").fadeOut(1000);
+
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if (scrollVal > 68) {

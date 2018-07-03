@@ -126,7 +126,7 @@ var valPorject = [
             { "category": "網站" },
             { "category": "Wordpress" },
             { "category": "靜態獨立站" },
-            { "category": "博弈" },
+            { "category": "娛樂" },
             { "category": "形象網站" },
         ],
         "d-val-skill": [
@@ -145,7 +145,7 @@ var valPorject = [
         "d-val-category": [
             { "category": "網站" },
             { "category": "Wordpress" },
-            { "category": "博弈" },
+            { "category": "娛樂" },
             { "category": "活動網站" },
             { "category": "RWD" },
         ],
@@ -216,7 +216,7 @@ var valPorject = [
         "d-val-category": [
             { "category": "網站" },
             { "category": "靜態獨立站" },
-            { "category": "博弈" },
+            { "category": "娛樂" },
             { "category": "形象網站" },
             { "category": "RWD" },
         ],
