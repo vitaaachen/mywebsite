@@ -1,8 +1,6 @@
 
 $(document).ready(function () {
 
-    $(".load").fadeOut(1000);
-
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if (scrollVal > 68) {
@@ -81,6 +79,7 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: top - 150 + 'px' }, 900);
     });
 
+    $(".load").fadeOut(1000);
 
 
 });
