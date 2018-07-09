@@ -22,7 +22,7 @@ var valPorject = [
         "d-val-category": [
             { "category": "網站" },
             { "category": "Wordpress" },
-            { "category": "博奕" },
+            { "category": "娛樂" },
             { "category": "形象網站" },
         ],
         "d-val-skill": [
@@ -64,7 +64,7 @@ var valPorject = [
         "d-val-category": [
             { "category": "網站" },
             { "category": "Wordpress" },
-            { "category": "博奕" },
+            { "category": "娛樂" },
             { "category": "形象網站" },
         ],
         "d-val-skill": [
@@ -76,7 +76,7 @@ var valPorject = [
             { "image": "img/icon/icon-rwd.png", "title": "RWD" },
         ],
         "d-val-charge": "Wordpress 樣式環境調整,切版,外掛調用,JQ和JQ功能製作,網站管理與維護。",
-        "d-val-exp": "博奕資訊站，主要在推廣平台產品和發文章，這是我出社會後第一個大型專案，學習到跨部門溝通，例如：如何將自己的技術與不熟此領域的人溝通，互相傾聽彼此的建議以及互相幫忙配合來完成專案。這個站點使用許多Wordpress的外掛所以我也學習到如何使用各個插件串接。",
+        "d-val-exp": "娛樂奕資訊站，主要在推廣平台產品和發文章，這是我出社會後第一個大型專案，學習到跨部門溝通，例如：如何將自己的技術與不熟此領域的人溝通，互相傾聽彼此的建議以及互相幫忙配合來完成專案。這個站點使用許多Wordpress的外掛所以我也學習到如何使用各個插件串接。",
         "d-val-link": "https://www.ultraegaming.com",
         "d-val-cover": "./img/work/ug/a.png",
     },

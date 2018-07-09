@@ -79,8 +79,6 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: top - 150 + 'px' }, 900);
     });
 
-    $(".load").fadeOut(1000);
-
 
 });
 
