@@ -1,0 +1,180 @@
+
+	/*----手機----*/
+	*{
+		margin: 0px;
+		padding: 0px;
+		font-family: "Microsoft JhengHei";
+	}
+	a{
+		text-decoration: none;
+		color: #fff;
+	}
+	li,ul{
+		list-style-type:none; 
+	}
+	body{
+		background: #000;
+	}
+	/*****框架設定*****/
+	.header{
+		position: fixed;
+		width: 90%;
+		background: #000;
+		overflow: auto;
+		z-index: 2;
+		padding: 5%;
+
+	}
+	.wrapper{
+		position: relative;
+		width: 100%;
+		background: #000;
+		height:auto;
+		z-index:1;
+	}
+
+	/*****細節設定*****/
+	/*商標logo*/
+	#logo{
+		display: inline-block;
+		overflow: auto;
+	}
+	/*手機菜單圖示*/
+	#moblie_menu_icon{
+		display: inline-block;
+		float: right;
+	}
+	#moblie_menu_icon span{
+		display: block;
+		width: 40px;
+		height: 5px;
+		background: #FFF;
+		margin-bottom:8px; 
+	}
+	#moblie_menu{
+		display: none;
+		color: #FFF;
+		text-align: right;
+		z-index: 2;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: black;
+		margin-top:155px; 
+		letter-spacing:3px;
+	}
+	#moblie_menu p{
+		padding: 3%;
+	}
+
+	/*目錄*/
+	.nav{
+		position: relative;
+		width: 80%;
+		float: left;
+		padding: 2.3% 0 2.1% 0;
+		display: none;
+	}
+	.menu{
+		position: relative;
+		overflow: auto;
+	}
+	.menu li{
+		float: left;
+		padding-right:23px;
+	}
+	.menu a:hover{
+		color: #a99a6f;
+	}
+	.active a{
+		color: #a99a6f;
+	}
+	/*立即加入*/
+	.JoinNow{
+		display: inline-block;
+		position:absolute;
+		top: 100px;
+		right: 15px;
+		color: #FFF;
+		border: 1px #FFF solid;
+		padding: 10px;
+	}
+	/*細節選項*/
+	.sortHolder{
+		color: #FFF;
+		overflow: auto;
+		width: 100%;
+		background: #444;
+	}
+	.sortlist{
+		margin: auto;
+		text-align: center;
+	}
+	.sortlist li{
+		background: #444; 
+		padding: 3%;
+	}
+	.sortlist li:hover{
+		background:#242424;
+	}
+	#active_sort{
+		background:#242424;
+		color: #c1b486;
+	}
+	
+	/*----平板----*/
+	@media only screen and (min-width: 767px) {
+		.sortlist li{
+			padding: 2%;
+		}
+
+	}
+	/*----電腦----*/
+	@media only screen and (min-width: 1023px) {
+		#moblie_menu_icon{
+			display: none;
+		}
+		#logo{
+			float: left;
+		}
+		.nav{
+			display: initial;
+			float: left;
+			padding: 40px 10px 0 15px;
+		}
+		
+		.sortlist{
+			max-width: 900px;
+			margin: auto;
+			overflow: auto;
+		}
+		.sortlist li{
+			float: left;
+			text-align: center;
+			padding: 1% 8.5% 1% 8.5%;
+			border-right: 1px #242424 solid;
+		}
+		.bor-left{
+			border-left: 1px #242424 solid;
+		}
+		.header{
+			padding: 2% 5% 2% 5%;
+		}
+		.JoinNow{
+			right: 25px;
+		}
+	
+	}
+	/*超大解析度*/
+	@media only screen and (min-width: 1439px) {
+		.header{
+			padding: 2% 5% 2% 5%;
+		}
+		.JoinNow{
+			right: 35px;
+			top: 70px;
+		}
+
+
+	}
+	

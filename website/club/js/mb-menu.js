@@ -1,0 +1,10 @@
+document.write('<div id="moblie_menu"><p><a href="index.html">首頁</a></p>');
+document.write('<p><a href="promotions_food.html">優惠活動</a></p>');
+document.write('<p><a href="culb.html">酒店</a></p>');
+document.write('<p><a href="waterdance.html">水舞間</a></p>');
+document.write('<p><a href="shop.html">購物</a></p>');
+document.write('<p><a href="#">機票</a></p>');
+document.write('<p><a href="casino.html">賭場</a></p>');
+document.write('<p><a href="#">新濠皇璽會</a></p>');
+document.write('<p><a href="#">新濠影匯</a></p>');
+document.write('<p><a href="#">澳門自由行</a></p></div>');

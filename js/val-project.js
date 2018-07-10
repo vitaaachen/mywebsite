@@ -56,7 +56,7 @@ var valPorject = [
         ],
         "d-val-charge": "切版,JQ與JS製作。",
         "d-val-exp": "這是我到公司第一個製作的網站，因為只有我一個前端工程師，很多功能和細節都是自己慢慢摸索，也因為都是靠自己製作所以也學習到很多。像是搜尋資料的效率與獨立解決問題的方法，以前不懂得優化自己的工作速度，現在要做什麼功能都知道可以用方法可以最快完成目標，是收穫很多的一個專案。",
-        "d-val-link": "http://macaucityofdreams.com/",
+        "d-val-link": "./website/club/index.html",
         "d-val-cover": "./img/work/crown/a.png",
     },
     {
@@ -294,7 +294,7 @@ var valPorject = [
         ],
         "d-val-charge": "網站設計,素材統整,切版,特效製作,JQ設定。",
         "d-val-exp": "在製作這個網站的時候處理了一些細節，像是菜單滑動的時候考慮到高度過高可能會妨礙閱讀而縮小的調動與TOP前往最上層的按鈕在滑動的時候才出來等細節。有了這些經驗，讓我在製作網站的時候更能站在使用者的角度去製作網站，給使用者一個良好的網站體驗。",
-        "d-val-link": "http://sports888.com/",
+        "d-val-link": "website/iwni/index.html",
         "d-val-cover": "./img/work/signature/a.png",
     },
 ]

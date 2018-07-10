@@ -1,0 +1,59 @@
+/*category*/
+	.viewcategory{
+		/*第一個CSS都讀不到目前不知道原因*/
+		/*但是基本上已解決*/
+	}
+	.viewcategory{
+		position: relative;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.categoryItem{
+		cursor: pointer;
+		width: 100%;
+		position: relative;
+	}
+	#category_bg{
+		background-image:url(../image/mask_r.png); 
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		right: 0;
+	}
+	.categoryItem img{
+		max-width: 100%;
+	}
+	.categoryItem h1{
+		color: #FFF;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 7%;
+		z-index: 2;
+		font-weight: 100;
+	}
+	/*點擊後出現*/
+	.categoryfilter_show{
+		color: #FFF;
+		overflow: auto;
+		display: none;
+		margin:2% 0 3% 0;
+	}
+	.categoryfilter_show li{
+		padding: 10px;
+	}
+	/*----平板----*/
+	@media only screen and (min-width: 767px) {
+		#category_bg{
+			width: 55%;
+		}
+		.categoryfilter_show{
+			padding-left: 3%;
+		}
+		.categoryfilter_show li{
+			float: left;
+			width: 30%;
+		}
+	}
+

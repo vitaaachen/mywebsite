@@ -131,7 +131,7 @@ a{
 .sub-area .con{
     font-size: 18px;
     border-radius:10px;
-    color:#ad0000;
+    color:#3a3838;
 }
 .sub-area p{
     font-size: 27px;
@@ -226,9 +226,6 @@ a{
     bottom: 0;
     left: 0;
     opacity: 0;
-}
-.menu ul li:hover{
-    font-weight: bold;
 }
 .menu ul li:hover::before{
     width: 100%;
@@ -671,10 +668,10 @@ a{
 }
 .line{
     display:inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
+    width: 10px;
+    height: 10px;
     background: #FFF;
+    margin: 5px;
 }
 @keyframes loadingC {
     0% {

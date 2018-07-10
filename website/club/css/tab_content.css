@@ -1,0 +1,70 @@
+
+	.tab-name{
+
+	}
+	.tab-name{
+		color: #c1b486;
+		padding-bottom: 1%
+	}
+	.descBox{
+		color: #FFF;
+		padding: 3%;
+		box-sizing: border-box;
+		border-bottom: 1px #FFF solid;
+	}
+	.tabContent{
+		position: relative;
+		padding:3%;
+		max-width: 1200px;
+		line-height: 2em;
+		margin: auto;
+	}
+	.tab-pic img{
+		max-width: 100%;
+	}
+	.descBox p{
+		padding-bottom: 5%;
+		font-size: 0.9em;
+	}
+	.descBox span{
+		display: inline-block;
+		font-size: 0.9em;
+	}
+	.descBox h4{
+		color: #c1b486;
+	}
+	#no-border{
+		border-bottom: 0px;
+		overflow: auto;
+	}
+
+	@media only screen and (min-width: 1023px) {
+		.tab-pic img{
+			display: none;
+		}
+		.descBox p{
+			padding-bottom: 1%;
+			font-size: 0.9em;
+		}
+	}
+
+	@media only screen and (min-width: 1439px) {
+		.slideBox{
+			padding: 1%;
+			width: 25%;
+			float: left;
+			border-right: 1px #c1b486 solid;
+			color: #c1b486;
+		}
+		.tabContent{
+			padding: 1%;
+		}
+		.tab-name h1{
+			font-size: 3em;
+			line-height: 1.5em;
+		}
+		.tab-name h2{
+			font-size: 2em;
+		}
+	}
+

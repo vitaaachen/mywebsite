@@ -1,0 +1,61 @@
+
+	/*----手機----*/
+	/*****基本設定*****/
+	*{
+		margin: 0px;
+		padding: 0px;
+
+	}
+	a{
+		text-decoration: none;
+		color: #fff;
+	}
+	li,ul{
+		list-style-type:none; 
+	}
+	body{
+		background: #000;
+	}
+	/*頁尾設定*/
+	.row{
+		width: 80%;
+		margin: auto;
+		color: #FFF;
+		font-size: 0.7em;
+		text-align: center;
+	}
+	.row a,p{
+		padding:4px;
+	}
+	.row a:hover{
+		color: #a99a6f;
+	}
+	.row p{
+		margin-bottom: 6%;
+	}
+	.section_footer{
+		position: relative;
+		max-width: 1200px;
+		margin: 3% auto 0 auto;
+		overflow: hidden;
+		border-top:1px #FFF solid ;
+		padding:3% 3% 0 3%;
+	}
+	.awarBar_text{
+		display: inline-block;
+		color: #FFF;
+		font-size: 0.7em;
+	}
+	/*----電腦----*/
+	@media only screen and (min-width: 1023px) {
+		.awarBar{
+			display: inline-block;
+		}
+	}
+	/*超大解析度*/
+	@media only screen and (min-width: 1439px) {
+		.awarBar{
+			display: inline-block;
+		}
+	}
+	

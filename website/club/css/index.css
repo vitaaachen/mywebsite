@@ -1,0 +1,110 @@
+#slides{
+	position: relative;
+	height: 250px;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	box-sizing: border-box;
+	background: #333;
+	color: #000;
+	background-size:100% 100%; 
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+.slide_text{
+	color: #FFF;
+	line-height: 2.3em;
+	padding:270px 10px 0 10px;
+	text-align: center;
+}
+.slide_text_room{
+	widows: 100%;
+	height: 278px;
+	position: relative;
+	background:#242424; 
+}
+#but_booking{
+	background: #a99a6f;
+	color: #FFF;
+	border-radius:5px;
+	line-height: 2em; 
+	padding: 7px 20px 7px 20px;
+}
+#but_booking:hover{
+	background:#FFF;
+}
+#but_booking:hover a{
+	color: #a99a6f;
+}
+
+.slide:nth-of-type(1){
+	background-image: url('../image/promotions/hotel02.jpg');
+}
+.slide:nth-of-type(2){
+	background-image: url('../image/index_banner/banner02.jpg');
+}
+.slide:nth-of-type(3){
+	background-image: url('../image/index_banner/banner03.jpg');
+}
+
+@media only screen and (min-width: 767px) {
+	#slides{
+		height: 380px;
+	}
+	.slide_text{
+		padding: 400px 10px 0 10px;
+	}
+}
+
+@media only screen and (min-width: 1023px) {
+
+	.slide_text_room{
+		display: none;
+	}
+	#but_booking{
+		padding: 15px 20px 15px 20px;
+	}
+	
+	#slideText_color{
+		color: #444;
+	}
+	#slides{
+		height: 100vh;
+	}
+	.slide_text{
+		padding: 18% 18% 0 18%;
+		line-height: 3em;
+	}
+}
+
+@media only screen and (min-width: 1439px) {
+	.slide_text{
+		line-height: 4em;
+	}
+	.slide_text h1{
+		font-size: 5em;
+		line-height: 1.3em;
+	}
+	.slide_text h2{
+		font-size: 3em;
+	}
+	.slide_text h3{
+		font-size: 2em;
+	}
+}
