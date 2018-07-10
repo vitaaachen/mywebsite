@@ -81,7 +81,7 @@ a{
     width: 100%;
     height:600px;
     position: relative;
-    background: url(../img/banner-2.jpeg);
+    background: url(../img/banner-3.jpg);
     background-size: cover;
     background-position:top;
     background-attachment: fixed;
@@ -111,7 +111,7 @@ a{
     width: 40%;
     height: 300px;
     float: right;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.5);
     box-shadow: 2px 1px 7px #1d1b1b;
     padding:  20px;
     box-sizing:  border-box;
@@ -130,8 +130,8 @@ a{
 }
 .sub-area .con{
     font-size: 18px;
-    font-style:  italic;
     border-radius:10px;
+    color:#ad0000;
 }
 .sub-area p{
     font-size: 27px;
@@ -158,7 +158,7 @@ a{
     cursor: pointer;
 }
 #sub-area-contact:hover{
-    background: #FFF;
+    background: transparent;
     color: #6f0202;
 }
 #pintoo{
@@ -214,6 +214,25 @@ a{
     color: #FFF;
     box-sizing: border-box;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu ul li::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background: #FFF;
+    transition: all 0.3s ease;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+.menu ul li:hover{
+    font-weight: bold;
+}
+.menu ul li:hover::before{
+    width: 100%;
+    opacity: 1;
 }
 .section{
     padding: 150px 0;
