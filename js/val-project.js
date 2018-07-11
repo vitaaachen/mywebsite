@@ -260,7 +260,7 @@ var valPorject = [
         "d-val-category": [
             { "category": "網站" },
             { "category": "靜態獨立站" },
-            { "category": "商業" },
+            { "category": "法務" },
             { "category": "形象網站" },
             { "category": "RWD" },
         ],
@@ -272,7 +272,7 @@ var valPorject = [
             { "image": "img/icon/icon-rwd.png", "title": "RWD" },
         ],
         "d-val-charge": "網站設計,切版,客戶的需求討論,進度確認與修改,JS與JQ設定。",
-        "d-val-exp": "這個網站正在製作中。在製作和信網站的時候，花了很多時間跟客戶確認需求和討論他們所期待的樣子，雙方達到共識後才開始進行，因為行前準備充足所以在製作時只花約3天的時間就把網頁都做好了。現在剩下聯絡表單還沒完成因客戶有項目想要修改正等待修改項目。",
+        "d-val-exp": "在製作和信網站的時候，花了很多時間跟客戶確認需求和討論他們所期待的樣子，雙方達到共識後才開始進行，因為行前準備充足所以在製作時只花約3天的時間。有此可見事前規劃真的很重要呢。",
         "d-val-link": "http://www.he-xin.com.tw/make/index.html",
         "d-val-cover": "./img/work/he-xin/a.png",
     },
