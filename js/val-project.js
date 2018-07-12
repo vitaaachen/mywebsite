@@ -117,7 +117,7 @@ var valPorject = [
         ],
         "d-val-charge": "切版,JQ與JS製作。",
         "d-val-exp": "這個網站經過兩次改版，最後才演變成今天的樣子。在 SEO 部門會需要做大量的推廣網站，為了增加瀏覽器的收錄。比較特別的地方是這個網站手機和電腦分為兩個網頁，不是以 RWD 的方式下去切。原因是希望手機版可以呈現像 APP 的樣子為了不要讓頁面太長讓使用者感到乏味，只列出最精簡的功能。又礙於兩個版本樣子相差太多所以製作成兩個網頁依照不同解析度去切換是最快的。這樣子的做法也算是蠻有趣的。",
-        "d-val-link": "http://x18818.com/",
+        "d-val-link": "./website/cowstock/index.html",
         "d-val-cover": "./img/work/stock/a.jpg",
     },
     {
@@ -229,7 +229,7 @@ var valPorject = [
         ],
         "d-val-charge": "網頁視覺設計,製圖 (Banner) ,切版,管理網站。",
         "d-val-exp": "這個專案的視覺和網站開發是由我獨立製作。以往都是我和視覺互相配合製作網站這次由於時間較緊迫的緣故改將網站的設計由我負責，在製作的過程中因為設計和開發都是我自己所以更能明白區塊如何表達節省了不少時間。為了能夠提供更彈性的管理和擴充方式，我在製作的時候有特別規範 CSS 和 HTML 讓網站在編修的時候更容易新增。 ",
-        "d-val-link": "https://www.cla999.com/",
+        "d-val-link": "./website/baccarat/index.html",
         "d-val-cover": "./img/work/baccarat/a.png",
     },
     {
@@ -272,7 +272,7 @@ var valPorject = [
             { "image": "img/icon/icon-rwd.png", "title": "RWD" },
         ],
         "d-val-charge": "網站設計,切版,客戶的需求討論,進度確認與修改,JS與JQ設定。",
-        "d-val-exp": "在製作和信網站的時候，花了很多時間跟客戶確認需求和討論他們所期待的樣子，雙方達到共識後才開始進行，因為行前準備充足所以在製作時只花約3天的時間。有此可見事前規劃真的很重要呢。",
+        "d-val-exp": "在製作和信網站的時候，花了很多時間跟客戶確認需求和討論他們所期待的樣子，雙方達到共識後才開始進行。在製作這個網站的時候有運用新的技術，像是判斷網址決定頁面顯示內容和切換效果，是用JQ寫。",
         "d-val-link": "http://www.he-xin.com.tw/make/index.html",
         "d-val-cover": "./img/work/he-xin/a.png",
     },

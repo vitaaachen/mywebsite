@@ -1,0 +1,256 @@
+*{
+	font-family: "微軟正黑體";
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.wrap{
+	position: relative;
+	overflow: hidden;
+	max-width: 1000px;
+}
+.header img {
+	width: 100%;
+	margin-top: -100px;
+}
+.section img{
+	width: 100%;
+}
+.banner{
+	background-image: url(../img/bannerbg.png);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 350px;	
+	text-align: center;
+	z-index: 999;
+	position: relative;
+	margin-bottom: -100px;
+}
+.section{
+	position: relative;
+	width: 100%;
+}
+#IntegrateData{
+	background-image: url(../img/bg01.png);
+	background-size: cover;
+	background-position: center;
+	height: 1100px;
+}
+#turntable{
+	position: absolute;
+	animation:rotation 10s infinite;
+	animation-timing-function:linear;
+}
+@keyframes rotation{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+.btn{
+	position: absolute;
+	bottom: 10%;
+	left: 25%;
+	cursor: pointer;
+	animation:BigSmall 0.5s linear infinite;
+}
+#RecommendedStock{
+	background-image: url(../img/bg02.png);
+	background-size: cover;
+	background-position: center;
+	margin-top: -2px;
+	height: 1200px;
+}
+.footer{
+	position: fixed;
+	background: #203585;
+	/*background: #da505b;btn紅*/
+	/*background: #c54747;*/
+	bottom: 0;
+	width: 100%;
+	max-width: 1000px;
+}
+.footer .menu{
+	display: flex;
+	text-align: center;
+	height: 190px;
+}
+.menu-icon{
+	flex: 1;
+}
+.menu-icon img{
+	width: 230px;
+}
+.QQCon{
+	display: none;
+	width: 75%;
+	height: 400px;
+	margin:auto;
+	text-align: center; 
+	position: fixed;
+	top:12%;
+	left: 14%;
+	z-index: 999;
+}
+.showQQAnim{
+	animation:ShowAnim 0.3s ease-in 1;
+}
+.hideQQAnim{
+	animation:HideAnim 0.3s ease-out 1;
+}
+@keyframes ShowAnim{
+	from{
+		transform:scale(0);
+		opacity: 0;
+	}
+	to{
+		transform:scale(1);
+		opacity: 1;
+	}
+}
+@keyframes HideAnim{
+	from{
+		transform:scale(1);
+		opacity: 1;
+	}
+	to{
+		transform:scale(0);
+		opacity: 0;
+	}
+}
+@keyframes BigSmall{
+	0%{
+		transform:scale(0.9);
+	}
+	50%{
+		transform:scale(1);
+	}
+	100%{
+		transform:scale(0.9);
+	}
+}
+#btn_QQ_hide{
+	display: none;
+    position: fixed;
+    top: 6%;
+    right: 3%;
+    z-index: 9;
+    background: url(../img/close.png) center no-repeat;
+    width: 100px;
+    height: 100px;
+    z-index: 9999;
+    background-size:cover;
+}
+.listbox{
+	width: 85%;
+	position: relative;
+	margin: auto;
+	height: 575px;
+	overflow: hidden;
+}
+.listbox ul{
+	margin:0;
+	padding: 0;
+}
+.listbox ul li{
+	list-style-type: none;
+	margin:5px;
+}
+.stockList{
+	background: rgba(87,108,184,0.7);
+	height: 50px;
+	padding: 20px;
+	display: flex;
+}
+.stockListbg{
+	background: rgba(198,159,68,0.7);
+}
+.stockList span{
+	display: inline-block;
+	flex: 1;
+	margin:0 20px;
+	line-height: 25px;
+	font-family: "微軟正黑體";
+	font-weight: bold;
+	color: #FFF;
+	font-size: 1.2em;
+}
+.lineH{
+	line-height: 45px!important;
+}
+#StockList{
+	padding-top: 280px;
+}
+.flexBig{
+	flex:3!important;
+}
+.flexBigest{
+	flex:4!important;
+}
+#QQtext{
+	position: relative;
+	top: -193px;
+	text-align: center;
+}
+#QQtext span{
+	font-size: 3.5em;
+	font-weight: bold;
+	color:  #c67242;
+}
+#CustomerSer{
+	background-image: url(../img/bg04.png);
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 250px;
+	padding-top: 50px;
+}
+.ser-list{
+	display: flex;
+	padding: 10px 50px;
+}
+.ser{
+	flex: 1;
+	margin:0 30px;
+}
+.communication{
+	text-align:center;
+	margin-top: 30px;
+	position: relative;
+}
+.communication span{
+	position: absolute;
+	top: 44px;
+	left: 130px;
+	font-weight: bolder;
+	font-size: 2.5em;
+	letter-spacing: 1px;
+}
+#IntegrateDataText{
+	position: absolute;
+    top: 143px;
+    width: 90%;
+    left: 50px;
+}
+#copok{
+	background:#FFF;
+	padding: 10px 30px;
+	position: fixed;
+	top: 35%;
+	left: 34%;
+	font-size: 3em;
+	display: none;
+}
+#mark{
+    color:#ffc600;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+}

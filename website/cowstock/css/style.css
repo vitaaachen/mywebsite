@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微軟正黑體";
+    box-sizing: border-box;
+}
+.wrap {
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+}
+.banner{
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    height:330px;
+    text-align: center;
+}
+.banner img{
+   height:300px;
+}
+.section{
+    position: relative;
+    width:100%;
+}
+#digitalarea{
+    background-image: url(../img/bigdata-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+#digital-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+}
+#btn-qq{
+    position: absolute;
+    bottom: 10%;
+    left: 40.5%;
+    width:280px;
+    animation: BigSmall 0.5s infinite;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+#digital-circle{
+    position: relative;
+    width:100%;
+    animation: around 15s infinite;
+    animation-timing-function: linear;
+}
+@keyframes around{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes BigSmall{
+	0%{
+		transform:scale(0.9);
+	}
+	50%{
+		transform:scale(1);
+	}
+	100%{
+		transform:scale(0.9);
+	}
+}
+#stockarea{
+    background-image: url(../img/stock-bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+#stockarea img{
+   padding-top:30px; 
+   width:600px;
+}
+/*stock-list*/
+.listbox{
+	width: 75%;
+	position: relative;
+	margin: auto;
+	height: 550px;
+    overflow: hidden;
+    text-align: left;
+}
+.listbox ul{
+	margin:0;
+	padding: 0;
+}
+.listbox ul li{
+	list-style-type: none;
+	margin:10px;
+}
+.stockList{
+	background: rgba(87,108,184,0.7);
+	height: 80px;
+	padding: 15px;
+	display: flex;
+}
+.stockList:hover{
+    background: rgba(198,159,68,0.7);
+    cursor: pointer;
+}
+.stockList span{
+	display: inline-block;
+	flex: 1;
+	margin:0 20px;
+	line-height: 25px;
+	font-family: "微軟正黑體";
+	color: #FFF;
+	font-size: 1.1em;
+}
+.lineH{
+	line-height: 45px!important;
+}
+#StockList{
+	padding-top: 280px;
+}
+.flexBig{
+	flex: 1.5!important;
+}
+/*stock-list-end*/
+#stragearea{
+    background-image: url(../img/profit-bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    padding: 50px 0;
+}
+#strage-text{
+    padding-top: 30px;
+    width:600px;
+}
+/*widget-list*/
+.widget-list{
+    position: relative;
+    display: flex;
+    padding: 50px;
+}
+.widget{
+    flex: 1;
+}
+#profitarea h2{
+    color: #ffc600;
+    padding: 0;
+    margin: 0 0  20px;
+    font-size: 2em;
+}
+#profitarea p{
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/*widget-list-end*/
+.footer{
+    background: #213686;
+    color: #FFF; 
+    height: 200px;
+}
+.footer-con{
+    display: flex;
+    text-align: left;
+}
+.ft-con{
+    margin-right: 10px;
+}
+.ft-con img{
+    width: 80px;
+}
+.ft-con h2{
+    margin: 10px 0 3px 0;
+    font-weight: 500;
+    color: #ffc600;
+}
+.top-icon{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#sidebar{
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+#sidebar img{
+    display: block;
+    width: 130px;
+}
+#sidebar a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+#sidebar a:hover{
+    color: #ffc600;
+    font-size: 1.1em;
+}
+#sidebar p{
+    background: #FFF;
+    padding: 10px 0;
+}
+#mark{
+    color:red;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0px 0px 0px #FFF;
+}
