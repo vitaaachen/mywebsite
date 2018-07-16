@@ -10,7 +10,7 @@ document.write('<li id="pc-menu04"><a href="waterdance.html">水舞間</a></li>'
 document.write('<li id="pc-menu05"><a href="shop.html">購物</a></li>');
 document.write('<li id="pc-menu06"><a href="#">機票</a></li>');
 document.write('<li id="pc-menu07"><a href="casino.html">賭場</a></li>');
-document.write('<li id="pc-menu08"><a href="#">新濠皇璽會</a></li>');
+document.write('<li id="pc-menu08"><a href="cityculb.html">新濠皇璽會</a></li>');
 document.write('<li id="pc-menu09"><a href="#">新濠影匯</a></li>');
 document.write('<li id="pc-menu10"><a href="#">澳門自由行</a></li></ul></div>');
 document.write('<div class="JoinNow"><span><a href="#">立即加入</a></span></div>');

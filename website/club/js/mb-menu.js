@@ -5,6 +5,6 @@ document.write('<p><a href="waterdance.html">水舞間</a></p>');
 document.write('<p><a href="shop.html">購物</a></p>');
 document.write('<p><a href="#">機票</a></p>');
 document.write('<p><a href="casino.html">賭場</a></p>');
-document.write('<p><a href="#">新濠皇璽會</a></p>');
+document.write('<p><a href="cityculb.html">新濠皇璽會</a></p>');
 document.write('<p><a href="#">新濠影匯</a></p>');
 document.write('<p><a href="#">澳門自由行</a></p></div>');
