@@ -233,7 +233,7 @@ a{
     border:10px solid #fedb40;
     box-shadow:2px 2px 10px #c19802;
     position: relative;
-    height: 270px;
+    height: 210px;
     overflow: hidden;
 }
 .game p{
@@ -242,7 +242,7 @@ a{
     z-index:  9;
     left: 50%;
     background: rgba(0,0,0,0.5);
-    padding: 5px 20px;
+    padding: 5px 10px;
     border-radius: 20px;
     border: 2px solid #fedb40;
     color:  #FFF;
