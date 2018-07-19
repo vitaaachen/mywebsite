@@ -41,6 +41,7 @@ var valPorject = [
     {
         "d-val-porject": "新濠皇璽會",
         "d-val-category": [
+            { "category": "非原創" },
             { "category": "網站" },
             { "category": "靜態獨立站" },
             { "category": "飯店" },
@@ -83,6 +84,7 @@ var valPorject = [
     {
         "d-val-porject": "點點盈",
         "d-val-category": [
+            { "category": "非原創" },
             { "category": "網站" },
             { "category": "靜態獨立站" },
             { "category": "金融" },
@@ -123,6 +125,7 @@ var valPorject = [
     {
         "d-val-porject": "88老虎",
         "d-val-category": [
+            { "category": "非原創" },
             { "category": "網站" },
             { "category": "Wordpress" },
             { "category": "靜態獨立站" },
@@ -214,6 +217,7 @@ var valPorject = [
     {
         "d-val-porject": "百家樂娛樂城",
         "d-val-category": [
+            { "category": "獨立製作" },
             { "category": "網站" },
             { "category": "靜態獨立站" },
             { "category": "娛樂" },
@@ -279,6 +283,7 @@ var valPorject = [
     {
         "d-val-porject": "皇璽會娛樂城",
         "d-val-category": [
+            { "category": "非原創" },
             { "category": "網站" },
             { "category": "靜態獨立站" },
             { "category": "娛樂" },

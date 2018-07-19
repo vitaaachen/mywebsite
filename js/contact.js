@@ -4,7 +4,7 @@ document.write('<div class="area">');
 document.write('<div data-aos="zoom-in-right" class="ch-area ft-mb" id="myphoto"><img src="img/my.jpeg" alt="陳巧萱個人作品集網站"></div>');
 document.write('<div data-aos="zoom-in-left"  class="ch-area ft-mb">');
 document.write('<h3 class="tit">此網站為個人作品集展示，若有任何問題歡迎來信詢問：</h3>');
-document.write('<div class="btn-contact"><a href="javascript:void(0);" target="blank">履歷表</a></div>');
+document.write('<div class="btn-contact"><a href="work-list.html">作品列表</a></div>');
 document.write('<div class="btn-contact"><a href="mailto:vitaaachen@gmail.com">vitaaachen@gmail.com</a></div>');
 document.write('<div class="btn-contact"><a href="javascript:void(0);" target="blank">Wechat : caio_shun</a></div>');
 document.write('</div></div></div></div>');
