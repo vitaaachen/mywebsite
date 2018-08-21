@@ -788,6 +788,9 @@ a{
         color: #FFF;
         box-sizing: border-box;
     }
+    .mb-menu ul .no-border-bot{
+        border-bottom: 0px;
+    }
 }
 @media only screen and (max-width:426px){
     .sub-area .tit{

@@ -277,7 +277,7 @@ var valPorject = [
         ],
         "d-val-charge": "網站設計,切版,客戶的需求討論,進度確認與修改,JS與JQ設定。",
         "d-val-exp": "在製作和信網站的時候，花了很多時間跟客戶確認需求和討論他們所期待的樣子，雙方達到共識後才開始進行。在製作這個網站的時候有運用新的技術，像是判斷網址決定頁面顯示內容和切換效果，是用JQ寫。",
-        "d-val-link": "http://www.he-xin.com.tw/make/index.html",
+        "d-val-link": "http://www.he-xin.com.tw/index.html",
         "d-val-cover": "./img/work/he-xin/a.png",
     },
     {
