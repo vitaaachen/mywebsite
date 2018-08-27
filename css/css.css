@@ -684,6 +684,115 @@ a{
         transform: translate(0,0);
     }
 }
+.stickysidebar{
+    position: fixed;
+    top: 30%;
+    z-index: 9999;
+    background: #6f0202;
+    right: 5px;
+    width: 40px;
+    text-align:  center;
+    padding: 15px 10px;
+    font-size:  15px;
+    border-radius:  5px;
+    cursor:  pointer;
+    opacity: 0.85;
+}
+.stickysidebar:hover{
+    opacity: 1;
+}
+.stickysidebar>p{
+    color: #FFF;
+    cursor:  pointer;
+}
+.stickysidebar>i{
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight:  bold;
+    color:  #FFF;
+    cursor:  pointer;
+}
+.btn-close{
+    position:  absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.popup-page{
+    position:  fixed;
+    z-index:  999999;
+    width: 900px;
+    background: #fffce3;
+    border-radius: 4px;
+    height: 600px;
+    top: calc(50% - 300px);
+    left: calc(50% - 450px);
+    padding:  20px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+}
+.popup-page-bg{
+    background: rgba(0,0,0,0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: none;
+}
+.popup-page .content .title{
+    text-align:  center;
+    font-size:  22px;
+    font-weight:  bold;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+.popup-page .content .title .sub{
+    font-size: 18px;
+}
+.step-list{
+    display: flex;
+    width: 100%;
+    background:#6f0202;
+}
+.step{
+    flex:1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.step:hover{
+    background: #000;
+}   
+.step>p{
+    color: #FFF;
+    cursor: pointer;
+}
+.step-active{
+    background: #000;
+}
+.step-detail{
+    padding:  10px 20px;
+    border: 1px solid;
+    height: 415px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 15px;
+    line-height: 25px;
+    overflow: auto;
+    display: none;
+}
+.step-detail-active{
+    display: block;
+}
+.step-detail img{
+    width: 100%;
+}
 @media only screen and (max-width:1200px){
     .header,.wraper,.footer{
         overflow: hidden;
@@ -696,6 +805,9 @@ a{
     }
 }
 @media only screen and (max-width:769px){
+    .stickysidebar{
+        display: none;
+    }
     .skill-con{
         width: 100%;
         border-radius: 0;
@@ -860,4 +972,10 @@ a{
         margin-top: 10%;
     }
 
+    .stickysidebar{
+        width: 29px;
+        left: 0;
+        right: initial;
+        padding: 5px;
+    }
 }

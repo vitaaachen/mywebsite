@@ -79,6 +79,27 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: top - 150 + 'px' }, 900);
     });
 
+    /*popup-step*/
+    $(".step").click(function () {
+        $(".step-detail").hide();
+        $(".step").removeClass("step-active");
+        var step=$(this).attr("data-step");
+        $(this).addClass("step-active");
+        //console.log(step);
+        $("#"+step).fadeIn();
+    });
+    /*show-popup*/
+    $(".stickysidebar").click(function () {
+        $(".popup-page-bg").fadeIn();
+        $(".popup-page").fadeIn();
+    });
+    /*hide-popup*/
+    $(".btn-close").click(function () {
+        $(".popup-page-bg").fadeOut();
+        $(".popup-page").fadeOut();
+    });
+
+
 
 });
 
