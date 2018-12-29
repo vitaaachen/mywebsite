@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/head.js"></script>
-    <script src="js/typingeffect.js"></script>
+    <!-- <script src="js/typingeffect.js"></script> -->
     <title>陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
@@ -129,12 +129,14 @@
         <div class="banner">
             <div class="container">
                 <div class="sub-area">
-                    <p class="tit">歡迎來到巧萱的個人作品集</p>
+                    <p class="tit">歡迎來到CiaoSyuan的個人作品集</p>
                     <span class="sub-tit">Welcome to Ciaosyuan's portfolio.</span>
                     <br>
                     <br>
                     <span class="con">
-                        -
+                        我是一位網頁前端開發設計師
+                        <br>
+                        擅長網頁視覺呈現，希望您喜歡我的作品！
                     </span>
                     <a href="#contact">
                         <div id="sub-area-contact">聯絡我</div>
@@ -157,14 +159,27 @@
                         <div class="swiper-slide">
                             <div id="slider-about">
                                 <div class="photo">
-                                     <img class="lazyload" data-original="img/about-3-rgb.jpeg" alt="陳巧萱個人作品集網站">
+                                     <img class="lazyload" data-original="img/about-2-rgb.jpeg">
+                                </div>
+                                <div class="text">
+                                    <p class="sub-tit">— 關於我的經驗</p>
+                                    <p>
+                                        在業界有約 2 年的網頁開發經驗，製作網站約有 3 年的經驗， 擅長 RWD 切版和網頁動態效果。 使用 HTML、CSS 和 JQuery 完成使用者互動的介面。目前製作了1個平台網站、2個資訊網站、8個形象網站、1個活動網站與其他多項網站。在網頁前端開發這個領域不斷的學習的新技術提升自己的能力。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="slider-about">
+                                <div class="photo">
+                                        <img class="lazyload" data-original="img/about-3-rgb.jpeg">
                                 </div>
                                 <div class="text">
                                     <p class="sub-tit">
                                         — 我與網頁的相遇
                                     </p>
                                     <p>
-                                        我的名字是陳巧萱（CiaoSyuan,Chen）於 106 年 06 月畢業於國立臺中科技大學的多媒體設計系。 大三在網頁公司實習時開啟了我對網頁製作的興趣與熱忱，寫網頁需要靠經驗和時間的累積， 一點一滴地雕琢，而在研究技術與實踐技術的過程中讓我非常有成就感，因此開啟我的網頁旅程。
+                                        大三在網頁公司實習時開啟了我對網頁製作的興趣與熱忱，寫網頁需要靠經驗和時間的累積， 一點一滴地雕琢，而在研究技術與實踐技術的過程中讓我非常有成就感，因此開啟我的網頁旅程。
                                     </p>
                                 </div>
                             </div>
@@ -172,23 +187,10 @@
                         <div class="swiper-slide">
                             <div id="slider-about">
                                 <div class="photo">
-                                     <img class="lazyload" data-original="img/about-2-rgb.jpeg" alt="陳巧萱個人作品集網站">
+                                     <img class="lazyload" data-original="img/about-4-rgb.jpeg">
                                 </div>
                                 <div class="text">
-                                    <p class="sub-tit">— 關於我的經驗</p>
-                                    <p>
-                                        在業界有約 1 年的網頁開發的製作經驗，製作網站約有 2 年的經驗， 擅長切版和以 CSS3 製作特效。 熟悉 HTML、CSS、Javascript 和 JQuery 語法之應用知悉如何修改 WordPress 模板並依照其需求修改樣式達成所需外貌， 有多樣作品皆以 WordPress 為基準製作。在網頁前端開發這個領域不斷的學習的新技術提升自己的能力。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="slider-about">
-                                <div class="photo">
-                                     <img class="lazyload" data-original="img/about-4-rgb.jpeg" alt="陳巧萱個人作品集網站">
-                                </div>
-                                <div class="text">
-                                    <p class="sub-tit">— 我對網頁的感想</p>
+                                    <p class="sub-tit">— 我對網站的想法</p>
                                     <p>網頁是最快連結網路世界的平台，它呈現了許多資訊也最快傳達資訊，隨著時間推演技術的進步，網站已經能夠支援不同設備有不同的樣貌，如此多變的特性令我著迷，我熱愛寫網頁，它可以是一個溝通的橋樑也可以是一個樣貌的展示，一個好的網站，需要有很多技術的配合，精雕細琢後才能完美地呈現給使用者。</p>
                                 </div>
                             </div>
@@ -589,9 +591,9 @@
         var swiperAbout = new Swiper('#about .swiper-container', {
             autoHeight: true,
             loop: true,
-            autoplay: {
-                delay: 3000,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 type: 'progressbar',

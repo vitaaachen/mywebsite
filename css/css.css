@@ -115,7 +115,7 @@ a{
     box-shadow: 2px 1px 7px #1d1b1b;
     padding:  20px;
     box-sizing:  border-box;
-
+    border-radius: 20px;
 }
 .sub-area .tit{
     font-size: 27px;
@@ -156,6 +156,7 @@ a{
     color: #FFF;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 20px;
 }
 #sub-area-contact:hover{
     background: transparent;
@@ -373,7 +374,7 @@ a{
     flex-direction: column;
 }
 .deck{
-    height: 130px;
+    height: 80px;
     background: #6f0202;
     margin:  0 10px 10px 0;
     opacity: 0.65;
@@ -412,8 +413,7 @@ a{
 }
 .box-work .inside{
     position: relative;
-    flex: 1;
-    height: 270px;
+    height: 245px;
     overflow: hidden;
     margin: 0 10px 10px 0;
     box-shadow:1px 1px 1px #a9a0a0;
@@ -448,7 +448,7 @@ a{
 .box-work .inside .info .dec-tit{
     font-size:  28px;
     border-bottom:  2px solid;
-    margin: 6% 15% 3%;
+    margin: 2% 15% 3%;
     padding-bottom: 3%;
     color: #FFF;
 }
@@ -815,7 +815,6 @@ a{
     }
     .box-work .inside{
         height: 230px;
-        flex: auto;
     }
     .box-work-big .inside{
         height:340px;
@@ -860,6 +859,7 @@ a{
         height:300px;
         top: 100px;
         overflow: auto;
+        border-radius: 0;
     }
     #slider-about{
         height: auto;
