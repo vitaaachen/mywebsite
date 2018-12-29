@@ -66,9 +66,11 @@
     .box-work .inside {
         height: 200px;
         width: 370px;
-        float: left;
-        margin: 0 30px 30px 0;
+        margin: 0 20px 20px 0;
         opacity: 0.95;
+        background: #000;
+        border: 1px solid lightgray;
+        box-shadow: 1px 1px 12px #8c8686;
     }
 
     .box-work .inside .info .dec-tit {
@@ -128,6 +130,7 @@
         border: 1px solid #6f0202;
         background: rgba(255, 255, 255, 0.5);
         color: #6f0202;
+        border-radius: 20px;
     }
 
     input[type="checkbox"]+label:hover {
@@ -144,21 +147,25 @@
         position: absolute;
         width: 0;
         height: 0;
-        border-top: 70px solid #6f0202;
+        border-top: 55px solid #6f0202;
         border-right: 55px solid transparent;    
     }
     .recommend i{
         position: absolute;
-        top: -60px;
+        top: -48px;
         left: 7px;
         color: #FFF;
         font-size: 18px;
+        transform: scale(0.85);
     }
 
     @media only screen and (max-width:1199px) {
         .box-work {
-            width: 800px;
+            width: 785px;
             margin: auto;
+        }
+        .point{
+            opacity: 0;
         }
     }
 
@@ -168,15 +175,31 @@
             display: none;
         }
         .box-work .inside .info .btn-workmore {
-            bottom: 83px;
-            right: 134px;
+            bottom: 10px;
+            right: 5px;
+            background: #6f0202;
+            color: #FFF;
+            transform: scale(0.8);
+            border: 0px;
+        }
+        .box-work .inside .info{
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .recommend{
+            z-index: 99;
         }
     }
 
 
     @media only screen and (max-width:769px) {
         .box-work {
-            width: 400px;
+            width: 634px;
+        }
+        .box-work .inside{
+            width: 310px;
+            height: 180px;
+            margin: 0 5px 5px 0;
         }
     }
 
@@ -184,20 +207,17 @@
         .con-cate {
             margin: 0;
         }
+        .box-work {
+            width: 312px;
+        }
         .box-work .inside {
             width: 310px;
             height: 180px;
-        }
-        .box-work {
-            width: 320px;
+            margin: auto;
         }
         .box-work .inside .info .dec-tit {
             margin-top: 35px;
             font-size: 18px;
-        }
-        .box-work .inside .info .btn-workmore {
-            bottom: 68px;
-            right: 104px;
         }
     }
 </style>
@@ -207,7 +227,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/logo2.png" alt="陳巧萱個人作品集網站 Logo">
+                    <img class="lazyload" data-original="img/logo4.png" alt="Logo">
                 </a>
             </div>
         </div>
@@ -216,22 +236,22 @@
                 <ul id="pc-menu">
                     <li id="nav-indicator"></li>
                     <li data-id="about">
-                        <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 關於我
+                        <img class="lazyload" data-original="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 關於我
                     </li>
                     <li data-id="skill">
-                        <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 技能
+                        <img class="lazyload" data-original="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 技能
                     </li>
                     <li data-id="work">
-                        <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 網站作品
+                        <img class="lazyload" data-original="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 網站作品
                     </li>
                     <li data-id="more">
-                        <img src="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 更多作品
+                        <img class="lazyload" data-original="img/icon/icon-home.png" alt="陳巧萱個人作品集網站"> 更多作品
                     </li>
                     <!--<li data-id="more">
-                        <img src="img/icon/icon-home.png" alt=""> 心路歷程
+                        <img data-original="img/icon/icon-home.png" alt=""> 心路歷程
                     </li>
                     <li data-id="more">
-                        <img src="img/icon/icon-home.png" alt=""> 此站製作過程
+                        <img data-original="img/icon/icon-home.png" alt=""> 此站製作過程
                     </li>-->
                 </ul>
                 <div id="mb-menu">
@@ -259,7 +279,7 @@
                     <a href="#contact">
                         <div id="sub-area-contact">ContactMe</div>
                     </a>
-                    <img id="pintoo" src="img/icon/icon-home-red.png" alt="陳巧萱個人作品集網站">
+                    <img id="pintoo" class="lazyload" src="img/icon/icon-home-red.png" alt="陳巧萱個人作品集網站">
                 </div>
             </div>
         </div>
@@ -326,7 +346,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/he-xin/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/he-xin/cover-min.png" alt="和信智慧產權事務所">
                             <div class="info">
                                 <p class="dec-tit">和信智慧產權事務所</p>
                                 <div class="con-cate">
@@ -341,28 +361,28 @@
                             </div>
                         </div>
                         <div class="inside kind1 industry2 skill4">
-                            <p class="point">
-                                <i class="fas fa-info"></i>
-                            </p>
-                            <img src="img/work/dot/cover.png" alt="陳巧萱個人作品集網站">
-                            <div class="info">
-                                <p class="dec-tit">點點盈</p>
-                                <div class="con-cate">
-                                    <span>獨立站</span>
-                                    <span>金融</span>
-                                    <span>資訊網站</span>
+                                <p class="point">
+                                    <i class="fas fa-info"></i>
+                                </p>
+                                <img class="lazyload" data-original="img/work/dot/cover-min.png" alt="點點盈">
+                                <div class="info">
+                                    <p class="dec-tit">點點盈</p>
+                                    <div class="con-cate">
+                                        <span>獨立站</span>
+                                        <span>金融</span>
+                                        <span>資訊網站</span>
+                                    </div>
+                                    <a href="work-con.html?type=4">
+                                        <div class="btn-workmore">了解更多</div>
+                                    </a>
                                 </div>
-                                <a href="work-con.html?type=4">
-                                    <div class="btn-workmore">了解更多</div>
-                                </a>
-                            </div>
                         </div>
                         <div class="inside kind1 industry1 skill1 skill2">
                             <div class="recommend"><i class="fas fa-star"></i></div>
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/g2e/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/g2e/cover-min.png" alt="AI人工智能彩票整合平台系統">
                             <div class="info">
                                 <p class="dec-tit">AI人工智能彩票整合平台系統</p>
                                 <div class="con-cate">
@@ -380,7 +400,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/crown/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/crown/cover-min.png" alt="新濠皇璽會">
                             <div class="info">
                                 <p class="dec-tit">新濠皇璽會</p>
                                 <div class="con-cate">
@@ -399,7 +419,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/baccarat/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/baccarat/cover-min.png" alt="百家樂娛樂城">
                             <div class="info">
                                 <p class="dec-tit">百家樂娛樂城</p>
                                 <div class="con-cate">
@@ -417,7 +437,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/signature/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/signature/cover-min.png" alt="皇璽會娛樂城">
                             <div class="info">
                                 <p class="dec-tit">皇璽會娛樂城</p>
                                 <div class="con-cate">
@@ -431,12 +451,12 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="inside kind1 industry2 skill1 skill4">
+                       <div class="inside kind1 industry2 skill1 skill4">
                             <div class="recommend"><i class="fas fa-star"></i></div>
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/stock/0.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/stock/cover-min.png" alt="錢進牛股">
                             <div class="info">
                                 <p class="dec-tit">錢進牛股</p>
                                 <div class="con-cate">
@@ -454,7 +474,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/tiger/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/tiger/cover-min.png" alt="88老虎娛樂網">
                             <div class="info">
                                 <p class="dec-tit">88老虎娛樂網</p>
                                 <div class="con-cate">
@@ -472,7 +492,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/ug/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/ug/cover-min.png" alt="UltraEGaming奧創娛樂">
                             <div class="info">
                                 <p class="dec-tit">Ultra EGaming 奧創娛樂</p>
                                 <div class="con-cate">
@@ -490,7 +510,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/dafa-act/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/dafa-act/cover-min.png" alt="大發金服活動頁">
                             <div class="info">
                                 <p class="dec-tit">大發金服 活動頁</p>
                                 <div class="con-cate">
@@ -507,7 +527,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/dafa-mip/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/dafa-mip/cover-min.png" alt="大發金服導覽頁">
                             <div class="info">
                                 <p class="dec-tit">大發金服 導覽頁</p>
                                 <div class="con-cate">
@@ -525,7 +545,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/dafa/cover.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/dafa/cover-min.png" alt="大發金服文章推廣">
                             <div class="info">
                                 <p class="dec-tit">大發金服 文章推廣</p>
                                 <div class="con-cate">
@@ -542,7 +562,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/financial/0.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/financial/cover-min.png" alt="錢進牛股金融論壇">
                             <div class="info">
                                 <p class="dec-tit">錢進牛股 金融論壇</p>
                                 <div class="con-cate">
@@ -558,7 +578,7 @@
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
-                            <img src="img/work/ug-ad/0.png" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/ug-ad/cover-min.png" alt="UltraEGaming廣告專案">
                             <div class="info">
                                 <p class="dec-tit">UltraEGaming 廣告專案</p>
                                 <div class="con-cate">
@@ -573,9 +593,9 @@
                             </div>
                         </div>
                         <div class="inside kind2 kind3 kind4 kind5">
-                            <img src="img/work/work-coming-soon.jpg" alt="陳巧萱個人作品集網站">
+                            <img class="lazyload" data-original="img/work/work-coming-soon-min.jpg" alt="敬啟期待">
                             <div class="info">
-                                <p class="dec-tit">敬啟期待</p>
+                                <p class="dec-tit">敬請期待</p>
                             </div>
                         </div>
                     </div>
@@ -599,6 +619,11 @@
     <script src="js/index.js"></script>
     <!--篩選-->
     <script src="js/loading.js"></script>
+    <script>
+        $("img.lazyload").lazyload({
+            effect : "fadeIn",
+        });
+    </script>
 </body>
 
 </html>

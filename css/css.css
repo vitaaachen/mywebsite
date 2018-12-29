@@ -209,12 +209,15 @@ a{
 .menu ul li{
     position: relative;
     float: left;
-    width:300px;
+    width:240px;
     padding: 20px;
     color: #FFF;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.menu ul li i{
+    color: #FFF;
 }
 .menu ul li::before{
     content: '';
@@ -610,16 +613,23 @@ a{
 }
 .point{
     position:  absolute;
-    bottom: -24px;
-    right: -24px;
-    width: 0px;
-    height: 0px;
+    bottom: -20px;
+    right: -20px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     opacity: 0;
-    border-color:transparent #1b1a1a transparent transparent;
-    border-style:solid solid solid solid;
-    border-width:60px 60px 0px 0px;
-    border-radius:50%;
+    background: rgba(0,0,0,0.6);
+    /* border-color:transparent #1b1a1a transparent transparent; */
+    /* border-style:solid solid solid solid; */
+    /* border-width:60px 60px 0px 0px; */
+    color: #FFF;
+}
+.point a{
+    color: #FFF;
+    position: absolute;
+    bottom: 32px;
+    left: 11px;
 }
 .point i{
     color: #FFF;
@@ -689,7 +699,7 @@ a{
     top: 30%;
     z-index: 9999;
     background: #6f0202;
-    right: 5px;
+    left: 5px;
     width: 40px;
     text-align:  center;
     padding: 15px 10px;
@@ -793,17 +803,39 @@ a{
 .step-detail img{
     width: 100%;
 }
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:1199px){
     .header,.wraper,.footer{
         overflow: hidden;
     }
     .menu ul li{
-        width: 256px;
+        width: 204.8px;
     }
     .area-name{
         top: -150px;
     }
+    .box-work .inside{
+        height: 230px;
+        flex: auto;
+    }
+    .box-work-big .inside{
+        height:340px;
+    }
+    .deck{
+        height: 120px;
+    }
+    .point{
+        opacity: 1;
+        z-index: 99;
+    }
+    .box-work .inside:hover .info{
+        opacity: 0;
+    }
+    .box-work .inside:hover::after,.box-work .inside:hover::before{
+        width: 0%;
+        height: 0%;
+    }
 }
+
 @media only screen and (max-width:769px){
     .stickysidebar{
         display: none;
@@ -852,7 +884,7 @@ a{
         margin: 10px 0;
         overflow: hidden;
         height: 20px;
-        height: 430px;
+        height: 390px;
     }
     #contact .ch-area img{
         width: 100%;
@@ -907,9 +939,6 @@ a{
 @media only screen and (max-width:426px){
     .sub-area .tit{
         font-size: 24px;
-    }
-    .point{
-        opacity: 1;
     }
     .skill-con .photo{
         display: none;

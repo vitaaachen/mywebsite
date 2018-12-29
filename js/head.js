@@ -22,3 +22,4 @@ document.write('<link rel="stylesheet" href="css/aos.css">');
 document.write('<script src="https://code.jquery.com/jquery-3.3.1.js"></script>');
 document.write('<script src="js/main.js"></script>');
 document.write('<script src="js/aos.js"></script>');
+document.write('<script src="js/jquery.lazyload.js"></script>');
