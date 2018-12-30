@@ -263,6 +263,7 @@ a{
 }
 #about{
     background: url(../img/ab-bg.png);
+    background-size: 50%;
 }
 #slider-about{
     display: flex;
@@ -536,7 +537,7 @@ a{
    margin: auto;
 }
 #contact .ch-area{
-    flex: 0 0 50%;
+    flex: 0 0 100%;
 }
 #contact .ch-area img{
     width:100%
@@ -545,7 +546,7 @@ a{
     color: #FFF;
     font-weight: 500;
     margin: 10px 10px 10px 15px;
-    font-size: 16px;
+    font-size: 15px;
 }
 #contact .ch-area .tit  img{
     width:20px;
@@ -555,6 +556,9 @@ a{
 }
 #contact .ch-area ul li a{
     color: #FFF;
+}
+#myphoto{
+    display: none;
 }
 #myphoto img{
     opacity: 0.9;
