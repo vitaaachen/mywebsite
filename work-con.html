@@ -9,18 +9,21 @@
         crossorigin="anonymous">
 </head>
 <style>
+    .swiper-container{
+        width: 100%;
+    }
     .swiper-slide img {
         width: 100%;
         height: 100%;
         cursor: pointer;
     }
 
-    .swiper-slide {
+    #slider-otherwork .swiper-slide {
         text-align: center;
         cursor: pointer;
     }
 
-    .swiper-slide::before {
+    #slider-otherwork .swiper-slide::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -32,17 +35,17 @@
         cursor: pointer;
     }
 
-    .swiper-slide:hover:before {
+    #slider-otherwork .swiper-slide:hover:before {
         opacity: 0;
         transform: scale(1);
         display: none;
     }
 
-    .swiper-slide p {
+    #slider-otherwork .swiper-slide p {
         padding: 10px 0;
     }
 
-    .swiper-wrapper {
+    #slider-otherwork .swiper-wrapper {
         width: 90%;
     }
 
@@ -72,7 +75,7 @@
     }
 
     #work-content .pic img {
-        width: 80%;
+        width: 100%;
         cursor: pointer;
     }
 
@@ -150,7 +153,7 @@
 
     .back-worklist {
         position: relative;
-        width: 80%;
+        width: 89%;
         text-align: right;
         margin: 10px auto;
         transition: all 0.3s ease;
@@ -332,14 +335,28 @@
             var exp = data["d-val-exp"];
             $("#val-exp").append(exp);
 
+            //網站圖片
+            var covers = data["d-val-cover"];
+            for (var i = 0; i < covers.length; i++) {
+                var cover = covers[i];
+                var diva = '<div class="swiper-slide"><a class="val-pic-link" href="" target="blank">';
+                var divb = '<img id="val-cover" src="'
+                var divc = '"></a></div>';
+                $("#w-p-area").append(diva + divb + cover + divc);
+                // $("#val-cover").attr("src", cover);
+            }
+            
             //網站連結
             var link = data["d-val-link"];
             $("#val-link").attr("href", link)
-            $("#val-pic-link").attr("href", link)
+            $(".val-pic-link").attr("href", link)
 
-            //網站圖片
-            var cover = data["d-val-cover"];
-            $("#val-cover").attr("src", cover)
+            var swiper = new Swiper('#work-pic>.swiper-container', {
+                spaceBetween: 0,
+                centeredSlides: true,
+                autoplay: true,
+                // autoHeight:true,
+            });
 
         });
 
@@ -387,8 +404,8 @@
                     <p>Content</p>
                     <span>作品內容</span>
                 </div>
-                <div class="flex-list">
-                    <div class="flex-box" data-aos="zoom-in-right">
+                <div class="flex-list" style="overflow: hidden;">
+                    <div class="flex-box" style="flex: 0 0 50%;" data-aos="zoom-in-right">
                         <div class="name">
                             <p id="val-porject"></p>
                         </div>
@@ -410,20 +427,21 @@
                             <div id="btn-go">查看網站</div>
                         </a>
                     </div>
-                    <div class="flex-box" data-aos="zoom-in-left">
+                    <div class="flex-box" style="flex: 0 0 50%;" data-aos="zoom-in-left">
                         <div class="back-worklist pc">
                             <a href="work-list.html">
                                 回作品列表 <i class="fas fa-arrow-alt-circle-right"></i>
                             </a>
                         </div>
-                        <div class="pic">
-                            <a id="val-pic-link" href="" target="blank">
-                                <img id="val-cover" src="">
-                            </a>
-                        </div>
                         <div class="back-worklist mb">
                             <a href="work-list.html">回作品列表
                             </a>
+                        </div>
+                        <div class="pic" id="work-pic" style="max-width: 533px;margin: auto;">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper" id="w-p-area">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -436,38 +454,38 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="work-con.html?type=3">
-                                    <img src="img/work/ug/0.png" alt="Ultra EGaming奧創娛樂">
+                                    <img src="img/work/ug/cover-min.png" alt="Ultra EGaming奧創娛樂">
                                     <p>Ultra EGaming奧創娛樂</p>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="work-con.html?type=0">
-                                    <img src="img/work/dafa-act/cover.png" alt="大發金服">
+                                    <img src="img/work/dafa-act/cover-min.png" alt="大發金服">
                                     <p>大發金服 活動頁</p>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="work-con.html?type=6">
-                                    <img src="img/work/tiger/0.png" alt="88老虎">
+                                    <img src="img/work/tiger/cover-min.png" alt="88老虎">
                                     <p>88老虎</p>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="work-con.html?type=7">
-                                    <img src="img/work/ug-ad/0.png" alt="UltraEGaming 廣告專案">
-                                    <p>UltraEGaming 廣告專案</p>
+                                <a href="work-con.html?type=15">
+                                    <img src="img/work/ueo/cover-min.png" alt="優博UEO">
+                                    <p>優博UEO</p>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="work-con.html?type=4">
-                                    <img src="img/work/dot/0.png" alt="點點盈">
+                                    <img src="img/work/dot/cover-min.png" alt="點點盈">
                                     <p>點點盈</p>
                                 </a>
                             </div>
 
                             <div class="swiper-slide">
                                 <a href="work-con.html?type=1">
-                                    <img src="img/work/g2e/0.png" alt="AI人工智能彩票整合平台系統">
+                                    <img src="img/work/g2e/cover-min.png" alt="AI人工智能彩票整合平台系統">
                                     <p>AI人工智能彩票整合平台系統</p>
                                 </a>
                             </div>
