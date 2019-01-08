@@ -112,9 +112,9 @@ function manageCheckbox($checkbox) {
   // reset filter group if the all box was checked
   if (isAll) {
     delete filters[group];
-    if (!checkbox.checked) {
-      checkbox.checked = 'checked';
-    }
+    // if (!checkbox.checked) {
+    //   checkbox.checked = 'checked';
+    // }
   }
   // index of
   var index = $.inArray(checkbox.value, filterGroup);
@@ -122,14 +122,16 @@ function manageCheckbox($checkbox) {
   if (checkbox.checked) {
     var selector = isAll ? 'input' : 'input.all';
     $checkbox.siblings(selector).removeAttr('checked');
-
+    console.log("000");
 
     if (!isAll && index === -1) {
       // add filter to group
       filters[group].push(checkbox.value);
+      console.log("111");
     }
 
   } else if (!isAll) {
+    console.log("222");
     // remove filter from group
     filters[group].splice(index, 1);
     // if unchecked the last box, check the all
