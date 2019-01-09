@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo_live-entertainment</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/gamearea.css">
+    <link rel="stylesheet" href="../css/listbox.css">
+    <link rel="stylesheet" href="../css/sticky-sidebar.css">
+    <link rel="stylesheet" href="../css/live-entertainment.css">
+    <link rel="stylesheet" href="../css/main.css?v20180101">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dropmenu.js"></script>
+</head>
+<style>
+    .swiper-button-next,.swiper-button-prev{
+        display: none;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="datetime">
+                    <i class="far fa-clock"></i>
+                    <p>
+                        <span class="date">GMT+8 2018-07-09 星期日</span>   
+                        <span class="time">23:53:59</span>
+                    </p>
+                </div>
+                <div class="userdata">
+                    <input type="text" placeholder="會員帳號">
+                    <input type="text" placeholder="密碼">
+                    <div class="btn-submit">
+                        <p>登入</p>
+                    </div>
+                    <div class="btn-submit blue-bg">
+                        <p>免費開戶</p>
+                    </div>
+                    <div class="online-service">
+                        <i class="fas fa-headset"></i>
+                        <span>線上客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navgition menu-bg">
+            <div class="container">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="通發Logo">
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="index.html">首頁</a>
+                        </li>
+                        <li data-droplist="lottery-menu">
+                            <a href="lottery.html">彩票投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="sports-menu">
+                            <a href="sports.html">體育投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="slot-menu">
+                            <a href="">電子遊戲 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li id="menu-active" data-droplist="live-menu">
+                            <a href="live-entertainment.html">真人視訊 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="fishing-menu">
+                            <a href="fishing.html">捕魚對戰 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li>
+                            <a href="">優惠活動</a>
+                        </li>
+                        <li>
+                            <a href="">任務專區</a>
+                        </li>
+                        <li>
+                            <a href="">VIP俱樂部</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-list" id="lottery-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="sports-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="slot-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="live-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="fishing-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">捕魚名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sectioner">
+        <div class="page-banner" id="live-lobby">
+            <div class="container">
+                
+            </div>
+        </div>
+        <div class="hall-list">
+            <div class="container">
+                <div class="swiper-hall">
+                    <div class="swiper-container" id="hall">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="hall">
+                                    <img class="hall-img" src="../img/allbet-logo.png" >
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hall">
+                                    <img class="hall-img" src="../img/og-logo.png" >
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hall">
+                                    <img class="hall-img" src="../img/sa-logo.png" >
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hall">
+                                    <img class="hall-img" src="../img/sa-logo.png" >
+                                </div>
+                            </div>
+                            <!--<div class="swiper-slide">
+                                <div class="hall">
+                                    <p>敬請期待</p>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">→</div>
+                    <div class="swiper-button-prev">←</div>
+                </div>
+            </div>
+        </div>
+        <div class="game-list">
+            <div class="container">
+                <div class="game">
+                    <div class="game-img">
+                        <div class="game-text-hover">
+                            <div class="btn-game">
+                                <a href=""><p>進入遊戲</p></a>
+                            </div>
+                            <div class="btn-game">
+                                <a href=""><p>相關活動</p></a>    
+                            </div>
+                        </div>
+                       <img src="http://www.mocha8.info/wp-content/uploads/2017/07/%E7%9C%9F%E4%BA%BA%E4%BC%98%E6%83%A02.jpg">
+                    </div>
+                    <div class="game-text">
+                        <p class="game-text-tit">
+                            GameName
+                        </p>
+                        <p class="game-text-des">
+                            GameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescription
+                        </p>
+                        <div class="game-vendor">
+                            <p>SA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <div class="game-text-hover">
+                            <div class="btn-game">
+                                <a href=""><p>進入遊戲</p></a>
+                            </div>
+                            <div class="btn-game">
+                                <a href=""><p>相關活動</p></a>    
+                            </div>
+                        </div>
+                        GamePhoto
+                    </div>
+                    <div class="game-text">
+                        <p class="game-text-tit">
+                            GameName
+                        </p>
+                        <p class="game-text-des">
+                            GameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescription
+                        </p>
+                        <div class="game-vendor">
+                            <p>OG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <div class="game-text-hover">
+                            <div class="btn-game">
+                                <a href=""><p>進入遊戲</p></a>
+                            </div>
+                            <div class="btn-game">
+                                <a href=""><p>相關活動</p></a>    
+                            </div>
+                        </div>
+                        GamePhoto
+                    </div>
+                    <div class="game-text">
+                        <p class="game-text-tit">
+                            GameName
+                        </p>
+                        <p class="game-text-des">
+                            GameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescription
+                        </p>
+                        <div class="game-vendor">
+                            <p>歐博</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <div class="game-text-hover">
+                            <div class="btn-game">
+                                <a href=""><p>進入遊戲</p></a>
+                            </div>
+                            <div class="btn-game">
+                                <a href=""><p>相關活動</p></a>    
+                            </div>
+                        </div>
+                        GamePhoto
+                    </div>
+                    <div class="game-text">
+                        <p class="game-text-tit">
+                            GameName
+                        </p>
+                        <p class="game-text-des">
+                            GameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescriptionGameDescription
+                        </p>
+                        </p>
+                        <div class="game-vendor">
+                            <p>DG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cooperation">
+            <div class="container">
+                <img src="../img/ft-coop.png">
+            </div>
+        </div>
+        <div class="ft-nav">
+            <div class="container">
+                <div class="ft-nav-content">
+                    <a href="#"><p>關於我們</p></a>
+                    <a href="#"><p>新手指南</p></a>
+                    <a href="#"><p>價值理念</p></a>
+                    <a href="#"><p>聯繫我們</p></a>
+                    <a href="#"><p>合作聯盟</p></a>
+                    <a href="#"><p>VIP俱樂部</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="ft-content">
+            <div class="container">
+                <div class="ft-content-limit">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="ft-browser">
+                                <span>最佳瀏覽器1920X1080</span>
+                                <img src="../img/ft-browser.png">
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="ft-age">
+                                <span>年齡限制</span>
+                                <img src="../img/ft-age.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="coopright">通發娛樂官方網站    Copyright © 2018 TongFa Online Game. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-sidebar">
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-01.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-02.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-03.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-04.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-05.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="../img/sidebar-06.png"></a>
+        </div>
+    </div>
+    <script src="../js/swiper.min.js"></script>
+    <script>
+        /*Hall*/
+        var swiperBanner = new Swiper('#hall', {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            loop:true,
+            /*autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },*/
+            navigation: {
+                nextEl: '.hall-list .swiper-button-next',
+                prevEl: '.hall-list .swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

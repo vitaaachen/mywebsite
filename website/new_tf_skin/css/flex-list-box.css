@@ -1,0 +1,223 @@
+#lottery-sectioner{
+    overflow: hidden;
+}
+.flex-list-box{
+    position: relative;
+    padding: 100px 0;
+}
+.sports-list::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/sports-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(0px);
+}
+.lottery-list::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/lottery-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0px);
+}
+.sports-list .f-box{
+    width: 70%;
+}
+.f-box{
+    position: relative;
+    margin: auto;
+    display: flex;
+    height: 450px;
+    padding: 50px 0;
+}
+.box-content{
+    flex: 1;
+    height: 100%;
+    transform: skewX(-15deg);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+#sports01{
+    background: rgba(255,255,255,0.6);
+}
+#sports02{
+    background: rgba(255,255,255,0.6);
+}
+#sports03{
+    background: rgba(255,255,255,0.6);
+}
+.sports-list .box-content:hover{
+    flex-grow: 1.5;
+    transform: skewX(-15deg) scale(1.1);
+    z-index: 9;
+}
+#lottery01{
+    background: rgba(255,255,255,0.6);
+}
+#lottery01 .box-content-img{
+    background: url(../img/item-lottery.png);
+}
+#lottery02{
+    background: rgba(255,255,255,0.6);
+}
+#lottery02 .box-content-img{
+    background: url(../img/item-lottery02.png);
+}
+#lottery03{
+    background: rgba(255,255,255,0.6);
+}
+#lottery03 .box-content-img{
+    background: url(../img/item-lottery03.png);
+}
+#sports01 .box-content-img , #sports02 .box-content-img{ 
+    background: url(../img/sportsbetting.jpg);
+}
+.box-content-img{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 70%;
+    height:70%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background-size:contain!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    transform: skewX(15deg);
+}
+.box-content-text{
+    display: none;
+}
+.lottery-list .box-content:hover .box-content-img{
+    filter: grayscale(0%);
+    transform: scale(1.3) skewX(15deg);
+}
+.lottery-list .box-content-hover,.sports-list .box-content-hover{
+    width:  100%;
+    height: 100%;
+    position:  absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    z-index:  99;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding-top: 110px;
+}
+.btn-lottery,.btn-sports{
+    width: 50%;
+    margin: 22px auto 0px auto;
+    padding: 8px 10px;
+    text-align:  center;
+    border: 1px solid #FFF;
+    font-size: 20px;
+    position: relative;
+}
+.btn-lottery::before,.btn-sports::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #007cff;
+    transition: all 0.3s ease;
+}
+.btn-lottery a,.btn-sports a{
+    color: #FFF;
+    position: relative;
+}
+.lottery-list .box-content:hover .box-content-hover,.sports-list .box-content:hover .box-content-hover{ 
+    opacity: 1;
+}
+.btn-lottery:hover:before,.btn-sports:hover:before{
+    width: 100%;
+}
+.mb-btn-lottery,.mb-btn-sports{
+    display: none;
+}
+@media only screen and (max-width:1025px){
+    .flex-list-box{
+        padding: 150px 0;
+    }
+    .box-content{
+        transform: skewX(0deg);
+        padding: 20px;
+    }
+    .box-content-img{
+        transform: skewX(0deg);
+        top: 0;
+    }
+    .lottery-list .box-content:hover .box-content-img{
+        transform: scale(1) skewX(0deg);
+    }
+    .sports-list .box-content:hover{
+        flex-grow: 1;
+        transform: skewX(0deg) scale(1);
+    }
+    .box-content-hover,.fishing-hover{
+        display: none;
+    }
+    .f-box{
+        height: 300px;
+        padding: 0;
+    }
+    .mb-btn-lottery,
+    .mb-btn-sports{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .mb-btn-lottery a,
+    .mb-btn-sports a
+    {
+        color: #FFF;
+    }
+    .mb-btn-lottery-game,
+    .mb-btn-lottery-activity,
+    .mb-btn-sports-game,
+    .mb-btn-sports-activity
+    {
+        width: 100px;
+        background:#007cff;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+@media only screen and (max-width:600px){
+    .f-box{
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .box-content{
+        margin: 0 0 20px 0;
+        height: 300px;
+        flex: 0 0 100%;
+    }
+    .flex-list-box{
+        padding: 75px 0;
+    }
+    .fishing-content{
+        width: 45%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .fishing-box{
+        flex: 0 0 100%;
+    }   
+}

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo_Slot</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/gamearea.css">
+    <link rel="stylesheet" href="css/listbox.css">
+    <link rel="stylesheet" href="css/sticky-sidebar.css">
+    <link rel="stylesheet" href="css/slot.css">
+    <link rel="stylesheet" href="css/smilpe-user-door.css">
+    <link rel="stylesheet" href="css/main.css?v20180101">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dropmenu.js"></script>
+</head>
+<body>
+    <div class="body-popup-bg"></div> 
+    <div class="login-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">用戶登入</p>
+            <p class="popup-eng">USER LOGIN</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員帳號</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="請輸入8-12位帳號字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 此帳號不存在</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員密碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="password" placeholder="密碼長度8-16字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 密碼錯誤</p>
+                    </div>
+                </div>
+            </div>
+            <div class="door-btn-submit">
+                <p>登入</p>
+            </div>
+            <div class="door-btn-submit door-btn-submit-orange">
+                <p>立即註冊</p>
+            </div>
+            <div class="memo-text">
+                <p><span><a href="">忘記帳號/密碼</a></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="datetime">
+                    <i class="far fa-clock"></i>
+                    <p>
+                        <span class="date">GMT+8 2018-07-09 星期日</span>   
+                        <span class="time">23:53:59</span>
+                    </p>
+                </div>
+                <div class="userdata">
+                    <div class="topbar-input-area">
+                        <input type="text" placeholder="會員帳號">
+                        <p>忘記?</p>
+                    </div>
+                    <div class="topbar-input-area">
+                        <input type="text" placeholder="密碼">
+                        <p>忘記?</p>
+                    </div>
+                    <div class="btn-submit">
+                        <p>登入</p>
+                    </div>
+                    <div class="btn-submit blue-bg">
+                        <p class="register-door-open">免費開戶</p>
+                    </div>
+                    <div class="online-service">
+                        <i class="fas fa-headset"></i>
+                        <span>線上客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navgition menu-bg">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png"></a>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="index.html">首頁</a>
+                        </li>
+                        <li data-droplist="lottery-menu">
+                            <a href="lottery.html">彩票投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="sports-menu">
+                            <a href="sports.html">體育投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li id="menu-active" data-droplist="slot-menu">
+                            <a href="slot.html">電子遊戲 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="live-menu">
+                            <a href="live.html">真人視訊 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="fishing-menu">
+                            <a href="fishing.html">捕魚對戰 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li>
+                            <a href="promotions.html">優惠活動</a>
+                        </li>
+                        <li>
+                            <a href="task.html">任務專區</a>
+                        </li>
+                        <li>
+                            <a href="vipclub.html">VIP俱樂部</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-menu-content">
+                    <div class="mb-btn-service">
+                        <i class="fas fa-headset"></i>
+                        <span>線上客服</span>
+                    </div>
+                    <div class="mb-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="lottery-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="sports-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="slot-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="live-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="fishing-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">捕魚名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-menu-list-bg">
+        </div>
+        <div class="mb-menu-list">
+            <ul class="mb-list-content">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="promotions.html">優惠活動</a></li>
+                <li><a href="lottery.html">彩票投注</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 彩票廳01</li>
+                        <li><span class="dot"></span> 彩票廳02</li>
+                        <li><span class="dot"></span> 彩票廳03</li>
+                    </ul>
+                </li>
+                <li><a href="sports.html">體育投注</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 體育廳01</li>
+                    </ul>
+                </li>
+                <li><a href="live.html">真人視訊</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 真人廳01</li>
+                        <li><span class="dot"></span> 真人廳02</li>
+                    </ul>
+                </li>
+                <li><a href="slot.html">電子遊戲</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 電子廳01</li>
+                        <li><span class="dot"></span> 電子廳02</li>
+                    </ul>
+                </li>
+                <li><a href="fishing.html">捕魚對戰</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 捕魚廳01</li>
+                    </ul>
+                </li>
+                <li><a href="">任務專區</a></li>
+                <li><a href="">風雲榜</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sectioner" id="solt-sectioner">
+        <div class="page-banner" id="slot-game-banner">
+            <div class="container">
+            </div>
+        </div>
+        <div class="hall-list" id="slot-game-hall">
+            <div class="container">
+                <div class="flex-list" id="slot-lobby-list">
+                    <div class="flex-ch slot-lobby-ch have-left-border">
+                        <p>熱門老虎機</p>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>PT老虎機</span>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>SW老虎機</span>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>MG老虎機</span>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>DT老虎機</span>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>BBIN老虎機</span>
+                    </div>
+                    <div class="flex-ch slot-lobby-ch">
+                        <span>QT老虎機</span>
+                    </div>
+                    <div class="slot-right-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="area">
+                <div class="areaA">
+                    <div class="gamename row7">
+                        <div class="image"></div>
+                        <span class="text">BBIN老虎機</span>
+                    </div>
+                    <div class="search row3">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="請輸入名稱">
+                        <div class="btn-submit">搜尋</div>
+                    </div>
+                </div>
+                <div class="areaB">
+                    <div class="sort-father row7">
+                        <div class="sort">
+                            <p class="name" data-species="species01">
+                                <strong>遊戲類型</strong>  
+                                <i class="fas fa-angle-down species-arrow"></i>
+                            </p>
+                            <div class="species" id="species01">
+                                <span class="species-blue">遊戲類型1</span>
+                                <span>遊戲類型2</span>
+                                <span>遊戲類型3</span>
+                                <span>遊戲類型4</span>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <p class="name" data-species="species02">
+                                <strong>遊戲風格</strong>
+                                <i class="fas fa-angle-down species-arrow"></i>
+                            </p>
+                            <div class="species" id="species02">
+                                <span>遊戲風格1</span>
+                                <span>遊戲風格2</span>
+                                <span>遊戲風格3</span>
+                                <span>遊戲風格4</span>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <p class="name" data-species="species03">
+                                <strong>其它類型</strong>
+                                <i class="fas fa-angle-down species-arrow"></i>
+                            </p>
+                            <div class="species" id="species03">
+                                <span>其它1</span>
+                                <span>其它2</span>
+                                <span>其它3</span>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <p class="name" data-species="species04">
+                                <strong>遊玩方式</strong>
+                                <i class="fas fa-angle-down species-arrow"></i>
+                            </p>
+                            <div class="species" id="species04">
+                                <span>遊玩方式1</span>
+                                <span>遊玩方式2</span>
+                                <span>遊玩方式3</span>
+                                <span>遊玩方式4</span>
+                                <span>遊玩方式5</span>
+                                <span>遊玩方式6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-banner row3"></div>
+                </div>
+                <div class="areaC no-border">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="slot-box hot-slot">
+                                <div class="hot-slot-img"></div>
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white login-door-open">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active login-door-open">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="slot-box">
+                                <div class="cover">
+                                    <div class="cover-hover">
+                                        <p class="btn-white">開始遊戲</p>
+                                        <p class="btn-white">遊戲試玩</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <div class="detail-text">
+                                        <p class="slot-name">遊戲名字</p>
+                                        <i class="fas fa-star myfavourite"></i>
+                                    </div>
+                                    <div class="mb-btn">
+                                        <p class="mb-btn-slot mb-btn-slot-active">開始遊戲</p>
+                                        <p class="mb-btn-slot">遊戲試玩</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-footer">
+            <!--登入前手機版的sidebar-->
+            <div class="flex-list">
+                <div class="flex-ch mb-ft-menu">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar06.png">
+                    </div>
+                    <p class="mb-ft-menu-text">首頁</p>
+                </div>
+                <div class="flex-ch mb-ft-menu">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar07.png">
+                    </div>
+                    <p class="mb-ft-menu-text">註冊</p>
+                </div>
+                <div class="flex-ch mb-ft-menu">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar05.png">
+                    </div>
+                    <p class="mb-ft-menu-text">客戶服務</p>
+                </div>
+                <div class="flex-ch mb-ft-menu">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar08.png">
+                    </div>
+                    <p class="mb-ft-menu-text">優惠</p>
+                </div>
+                <div class="flex-ch mb-ft-menu">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar09.png">
+                    </div>
+                    <p class="mb-ft-menu-text">VIP</p>
+                </div>
+            </div>
+    </div>
+    <div class="mb-footer-login">
+        <!--登入後手機版的sidebar-->
+        <div class="flex-list">
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar01.png">
+                </div>
+                <p class="mb-ft-menu-text">存款教學</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar02.png">
+                </div>
+                <p class="mb-ft-menu-text">提款教學</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar03.png">
+                </div>
+                <p class="mb-ft-menu-text">錢包教學</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar04.png">
+                </div>
+                <p class="mb-ft-menu-text">會員中心</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar05.png">
+                </div>
+                <p class="mb-ft-menu-text">客戶服務</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cooperation">
+            <div class="container">
+                <img src="img/ft-coop.png">
+            </div>
+        </div>
+        <div class="ft-nav">
+            <div class="container">
+                <div class="ft-nav-content">
+                    <a href="#"><p>關於我們</p></a>
+                    <a href="#"><p>新手指南</p></a>
+                    <a href="#"><p>價值理念</p></a>
+                    <a href="#"><p>聯繫我們</p></a>
+                    <a href="#"><p>合作聯盟</p></a>
+                    <a href="#"><p>VIP俱樂部</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="ft-content">
+            <div class="container">
+                <div class="ft-content-limit">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="ft-browser">
+                                <span>最佳瀏覽器1920X1080</span>
+                                <img src="img/ft-browser.png">
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="ft-age">
+                                <span>年齡限制</span>
+                                <img src="img/ft-age.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="coopright">通發娛樂官方網站    Copyright © 2018 TongFa Online Game. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-sidebar">
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-01.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-02.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-03.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-04.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-05.png"></a>
+        </div>
+        <div class="sticky-sidebar-item">
+            <a href="#"><img src="img/sidebar-06.png"></a>
+        </div>
+    </div>
+</body>
+</html>

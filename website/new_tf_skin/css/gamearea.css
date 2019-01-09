@@ -1,0 +1,95 @@
+    .gamearea{
+        position: relative;
+        height: 400px;
+    }
+    .gamearea-ch{
+        display: inline-block;
+        float: left;
+        height: 100%;
+        width: 100%;
+    }
+    .ga1{
+        width: 35%;
+    }
+    /*.recommendation>.container>.gamearea>.ga1{
+        width: 62%;
+    }*/
+    .ga2{
+        width: 65%;
+    }
+    /*.recommendation>.container>.gamearea>.ga2{
+        width: 38%;
+    }*/
+    .gamearea-box{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .gamearea .gamearea-box img{
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+        object-fit: cover;
+    }
+    .gamearea-content{
+        position: relative;
+        height: 97%;
+        width: 97%;
+        cursor: pointer;
+        overflow: hidden;
+        background: lightgray;
+        margin: 0 10px 10px 10px;
+        border-radius: 5px;
+    }
+    .ga2>.gamearea-box>.gamearea-content{
+        flex-basis: 48.7%;
+        height: 47%;
+        margin: 0 9px 9px 0;
+        border-radius: 5px;
+    }
+    /*.recommendation>.container>.gamearea>.ga2>.gamearea-box>.gamearea-content{
+        flex-basis: 100%;
+        height: 165px;
+        margin: 10px;
+        border-radius: 10px;
+    }*/
+    /*.recommendation>.container>.gamearea>.ga1>.gamearea-box>.gamearea-content{
+        margin: 10px;
+        border-radius: 10px;
+    }*/
+    .gamearea-content:hover img{
+        transform: scale(1.2);
+    }
+    .gamearea-des{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #FFF;
+        padding: 10px;
+    }
+    .gamearea-des-name{
+        font-size: 22px;
+    }
+    .gamearea-des-info{
+        font-size: 14px;
+        opacity: 0.6;
+    }
+    @media only screen and (max-width:1128px){
+        .gamearea{
+            width: 100%;
+        }
+        .ga2>.gamearea-box>.gamearea-content{
+            flex-basis: 48%;
+        }
+    }
+    @media only screen and (max-width:769px){
+        .ga1,.ga2{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width:426px){
+
+    }

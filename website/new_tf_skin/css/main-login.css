@@ -1,0 +1,1341 @@
+.userdata{
+    /*登入前topbar*/
+    /*display: none;*/
+}    
+.login-userdata{
+    float: right;
+    display: flex;
+    line-height: 26px;
+}
+.login-userdata .btn-submit{
+    width: 80px;
+    border:1px solid #006dff;
+    color: #006dff;
+}
+.login-userdata .btn-submit:hover{
+    background: #006dff;
+    color: #FFF;
+}
+.login-userdata .welcome, 
+.login-userdata .center-finance,
+.login-userdata .center-personal,
+.login-userdata .btn-submit,
+.login-userdata .center-finance-deposit,
+.login-userdata .center-withdrawal
+{
+    margin: 0 10px 0 0;
+    cursor: default;
+}
+.login-userdata .account{
+    margin: 0 20px 0 0;
+    cursor: default;
+}
+.login-userdata .welcome .login-user,
+.login-userdata .account .balance{
+    margin: 0 0 0 5px;
+    color: #6398c6;
+    font-size: 15px;
+}
+
+.login-userdata .btn-submit{
+    height: 27px;
+}
+
+.btn-submit p{
+    line-height: 25px;
+}
+
+.login-userdata .center-finance,
+.login-userdata .center-personal{
+    cursor: pointer;
+    background: #006dff;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login-userdata .center-finance-deposit{
+    cursor: pointer;
+    background: orange;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login-userdata .center-withdrawal{
+    cursor: pointer;
+    background: #1daf43;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login-userdata .center-finance a,
+.login-userdata .center-personal a,
+.login-userdata .center-withdrawal a,
+.login-userdata .center-finance-deposit a
+{
+    color: #FFF;
+}
+
+.login-userdata .center-finance:hover,
+.login-userdata .center-personal:hover,
+.login-userdata .center-finance-deposit:hover,
+.login-userdata .center-withdrawal:hover
+{
+    opacity: 0.85;
+}
+
+.Zebra_DatePicker_Icon_Wrapper{
+    width: 100%;
+}
+
+/*-----CenterPage-----*/
+
+#center-sectioner{
+    background: #f8f8f8;
+}
+.center-prompt{
+    display:  flex;
+    justify-content: space-between;
+    margin: 30px 0 10px 0;
+    border: 1px solid lightgray;
+    font-weight:  bold;
+    background: #FFF;
+}
+.center-prompt .text{
+    padding: 20px 30px;
+    line-height: 35px;
+}
+.login-time{
+    font-size:  12px;
+    color:  gray;
+}
+
+.center-content{
+    border: 1px solid lightgray;
+    display:  flex;
+    margin: 0 0 100px 0;
+}
+.box-menu{
+    flex: 0 0 20%;
+    border-right: 1px solid lightgray;
+    background: #FFF;
+}
+.box-name{
+    border-bottom: 1px solid lightgray;
+    padding:  20px;
+    font-size: 17px;
+}
+.box-name a{
+    color:  #909090;
+}
+.box-menu .no-border-bottom{
+    border-bottom: 0px;
+}
+.box-title{
+    color: #006dff;
+    cursor: default;
+    text-align: center;
+    font-weight: bold;
+}
+.box-name-active{
+    background: #006dff;
+}
+.box-name-active a{
+    color: #FFF;
+}
+.box-con{
+    position: relative;
+    flex: 0 0 80%;
+    background: #FFF;
+    overflow: hidden;
+}
+.box-nav{
+    display:  flex;
+    padding: 0 20px;
+    border-bottom: 1px solid lightgray;
+    height: 63px;
+    align-items:  center;
+}
+.box-title{
+    height: 63px;
+}
+.box-nav a{
+    color: #000;
+    text-align: center;
+}
+.box-nav-item{
+    margin: 0 10px 0 0;
+    padding: 0 25px;
+    border-radius:  6px;
+    display:  block;
+    line-height:  35px;
+    height: 35px;
+    cursor: pointer;
+}
+.box-nav-item-active{
+    background: #006dff;
+    color:  #FFF;
+}
+.box-detail{
+    position: relative;
+    background: #FFF;
+    padding:  20px 20px 80px 20px;
+    height: 100%;
+}
+.box-detail-input{
+    flex: 0 0 50%;
+}
+.box-detail-other{
+    margin:  0 0 0 2%;
+    flex: 0 0 48%;
+}
+.box-detail-other .box-banner{
+    width: 100%;
+    height: 160px;
+    background: lightgray;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+}
+.tip-text{
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0 0 5px 10px;
+}
+.tip-text a{
+    color: #403e3e;
+    float: right;
+    margin: 0 0 0 10px;
+}
+.tip-text a i{
+    color:#006dff; 
+}
+.box-detail .userinput{
+    position: relative;
+    margin: 0 0 10px 0 ;
+    align-items: center;
+    /*height: 45px;*/
+    display: flex;
+}
+.box-detail .userinput .userinput-typing{
+    width: 100%;
+}
+.box-detail .userinput input:placeholder{
+    /*:placeholder，更改input內提示字顏色*/
+    color: #b7b7b7;
+}
+.box-detail .userinput input:focus{
+    /*focus，當點擊到此input時*/
+    border-color: #0070e5;
+}
+.box-detail .userinput input:focus::placeholder{
+    color: #006eff;
+}
+.box-detail .btn-userinput{
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    background: #006dff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #FFF;
+    padding: 10px 20px;
+}
+.box-detail .door-btn-submit{
+    margin: 20px 0 10px 0;
+    float:  right;
+    width: 100%;
+    text-align:  center;
+    background: gray;
+}
+.box-detail .door-btn-submit:hover{
+    background: #006dff;
+}
+.box-detail .wram-tip{
+    padding: 0 0 0 10px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #403e3e;
+    margin: 20px 0 0 0;
+    cursor: default;
+}
+.box-detail .wram-tip .tit{
+    font-size: 16px;
+    color: #ffa800;
+    font-weight: bold;
+}
+.user-level{
+    /*積分等級提示*/
+    position: relative;
+}
+.user-level::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 110px;
+    height: 100%;
+    background: #006dff;
+    border-radius: 100%;
+}
+
+.integral{
+    position: relative;
+    display: flex;
+    background:#006dff;
+    color: #FFF;
+    height: 100%;
+}
+
+.integral .component{
+    border-right: 1px solid #FFF;
+    padding: 20px 65px 20px 20px;
+    font-size: 15px;
+    cursor: default;
+    line-height: 35px;
+    position: relative;
+}
+.integral .component .imgae{
+    width: 60px;
+    height: 60px;
+    background: lightgray;
+    float:  left;
+    position: relative;
+    top: 5px;
+    left: -30px;
+}
+.integral .component .now-integral {
+    float:  left;
+}
+.integral .component .now-integral-metal{
+    font-size: 18px;
+    position:  relative;
+}
+.integral .component .info-text{
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    margin:0 0 0 5px;
+    color:#FFF;
+    font-weight:unset;
+    opacity: 0.85;
+    cursor: pointer;
+}
+.integral .component .info-text:hover{
+    opacity: 1;
+}
+.integral .component .btn-integral-share{
+    background: #FFF;
+    border: 1px solid #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 0 0 5px;
+    color: #006dff;
+    cursor: pointer;
+    
+}
+.integral .component .btn-integral-share:hover{
+    color: #FFF;
+    background: transparent;
+}
+.account-book{
+    position: relative;
+    width: 100%;
+}
+.book{
+    display: flex;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin:  0 0 10px 0;
+    height: 45px;
+    line-height: 45px;
+    color: #444;
+    padding: 0 25px;
+    font-size: 14px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.book:hover{
+    background: #f0f0f0;
+    cursor: default;
+}
+.account-book .book .bank{
+    width: 30%;
+}
+.account-book .book .idnumber{
+    width: 49%;
+}
+.account-book .book .status{
+    width: 21%;
+    text-align: right;
+}
+.book-ing .status .mark{
+    color: #1daf43;
+}
+.book-ok{
+    border: 1px solid #006dff;
+}
+.book-ok .status .mark{
+    color: #006dff;
+}
+.book-notok{
+    border: 1px solid red;
+}
+.book-notok .status .mark{
+    color: red;
+}
+
+
+/*---------VIP----------*/
+#vip-explain{
+    display: block;
+}
+.vip-explain-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.explain-box-ch{
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    color: #444;
+    padding: 10px 5px;
+}
+.explain-box-ch-metal{
+    line-height:initial;
+    padding: 0;
+}
+.bg-lightgray{
+    background: #f5f5f5;
+}
+.bg-lightwhite{
+    background: #FFF;
+}
+.explain-box-tit{
+    flex: 0 0 15%;
+    text-align: left;
+}
+.vip-explain-image{
+    width: 100px;
+    height: 100px;
+    background: lightgray;
+    margin: auto;
+}
+.vip-explain-name{
+    margin: 5px 0;
+    color: gray;
+    font-size: 14px;
+}
+.vip-explain-line{
+    padding: 5px;
+    background:gray;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0 0 0;
+}
+.vip-explain-line::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 101px;
+    height: 100%;
+    background: #006dff;
+    transform: skewX(35deg);
+}
+.vip-explain-line>p{
+    position:  relative;
+    padding: 0 0 0 5px;
+}
+.member-level-text{
+    text-align:  left;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+#vip-promo{
+    display: block;
+    position: relative;
+}
+.vip-promo-box{
+    flex: 0 0 100%;
+    position: relative;
+}
+.vip-promo-box-tit{
+    /*標題*/
+    flex: initial;
+    font-weight: bold;
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+    font-size: 15px;
+}
+
+.vip-promo-box .promo-box-ch{
+    text-align: center;
+    line-height: 40px;
+    color: #444;
+    padding: 0 0 0 5px;
+}
+.user-now-level .promo-box-ch{
+    color: #006dff;
+    font-weight: bold;
+}
+.user-level-border{
+    z-index: 9;
+    cursor: default;
+    position:  absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #006dff;
+    border-radius:  5px;
+}
+.user-level-border .triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 0;
+    border-color: transparent #006dff  transparent transparent;
+}
+.user-level-border .triangle>p{
+    transform: rotate(45deg);
+    position:  relative;
+    top: -4px;
+    left: 26px;
+    font-size:  14px;
+    color:  #FFF;
+}
+.vip-promo-box-tit .promo-box-ch{
+    text-align: left;
+}
+.vip-promo-box .metal-image{
+    width: 100%;
+    height: 150px;
+    /*background: lightgray;*/
+    position: relative;
+    margin: 0 0 40px 0;
+}
+.vip-promo-box .metal-image .img{
+    width: 100px;
+    height: 100px;
+    background: gray;
+    margin: auto;
+    top:calc(50% - 50px);
+    position: relative;
+}
+.vip-promo-box .metal-image::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: #b5b5b5;
+    bottom: -25px;;
+}
+
+.vip-promo-box>.promo-box-ch:nth-of-type(even){
+    background: #f5f5f5;
+}
+.vip-promo-box-tit>.promo-box-ch:nth-of-type(even){
+    background: transparent;
+}
+.vip-promo-box>.promo-box-ch:nth-of-type(odd){
+    background: #FFF;
+}
+.vip-promo-box-tit>.promo-box-ch:nth-of-type(odd){
+    background: transparent;
+}
+.vip-promo-dot{
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border-radius: 100%;
+    position: relative;
+    margin: auto;
+    bottom:-55px;
+    position: relative;
+    border: 4px solid #b5b5b5;
+}
+.user-now-level .vip-promo-dot::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8);
+    background: #006dff;
+    border-radius: 100%;
+
+}
+#slide-vip-promo .swiper-button-next, 
+#slide-vip-promo .swiper-button-prev{
+    top: calc(18% - 40px);
+    width: 80px;
+    height: 80px;
+    z-index: 99;
+}
+#slide-vip-promo .swiper-button-next{
+    background:url(../img/vip-right-arrow-hover.png);
+    background-size: contain;
+}
+#slide-vip-promo .swiper-button-prev{
+    background:url(../img/vip-right-arrow-hover.png);
+    background-size: contain;
+    transform: rotate(-180deg);
+}
+.user-level .no-border-right{
+    border-right: 0px;
+}
+.rectangle{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.75);
+    margin-top: 14px;
+    border-radius:  5px; 
+}
+.rectangle-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 1;
+    background: #FFF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    animation: fill 1s linear 1;
+    animation-fill-mode: forwards;
+}
+.rectangle-proportion{
+    position: absolute;
+    bottom: 19px;
+    right: 20px;
+}
+.rectangle-value{
+    position: absolute;
+    bottom: 0;
+}
+@keyframes fill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 79%;
+    }
+}
+/*---存款---*/
+.box-record{
+    margin: 40px 0 0 10px;
+}
+.box-record .tit{
+    font-weight: bold;
+    color: #797979;
+    overflow: hidden;
+    border-top: 1px solid lightgray;
+    padding:  20px 0;
+}
+.box-record .tit .name{
+    float: left;
+    line-height: 34px;
+}
+.box-record .tit .choice{
+    float: left;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius:  5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.box-record .tit .choice-active,.box-record .tit .choice:hover{
+    border: 1px solid #006eff;
+    color: #006eff;
+}
+.box-record .tit .data{
+    float: right;
+    padding: 6px 15px;
+    background: #006eff;
+    color:  #FFF;
+    border-radius:  6px;
+    cursor: pointer;
+}
+.box-record{
+    width: 100%;
+}
+.flex-table{
+    width: 100%;
+}
+.box-record .flex-table-tr{
+    display: flex;
+}
+.box-record .flex-table-th{
+    flex: 1;
+    padding: 0 0 0 10px; 
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.box-record .flex-table-tr:nth-of-type(odd){
+    background: #e6e6e6;
+}
+.box-record  .table-tit .flex-table-th{
+    height: 30px;
+    line-height: 30px;
+    background: #757575;
+    color:  #FFF;
+    font-size: 15px;
+    font-weight: bold;
+}
+.box-record .tablerecord-btn{
+    cursor: pointer;
+    display: block;
+    float: right;
+    background: #a6a6a6;
+    color: #FFF;
+    border-radius: 6px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px 10px 0 0 ;
+    padding: 0 10px;
+}
+.box-record .tabrec-blue{
+    background: #006dff;
+    color: #FFF;
+}
+.amount{
+    display: flex;
+    align-items: center;
+}
+.box-amount{
+    width: 250px;
+    height: 90%;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 0 10px 0 0;
+    position: relative;
+}
+.amount .total{
+    background: #0086ff;
+    color: #FFF;
+}
+.amount .drawn{
+    background: #1daf43;
+    color: #FFF;
+}
+.btn-amount{
+    cursor: pointer;
+    background: #FFF;
+    border: 1px solid #FFF;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.box-amount .btn-amount:hover{
+    background: transparent;
+    color: #FFF;
+}
+.total .btn-amount{
+    color: #0086ff;
+}
+.drawn .btn-amount{
+    color: #1daf43;
+}
+.box-amount .icon{
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.box-amount .text-large{
+    color: #FFF;
+    font-size: 38px;
+}
+.box-amount .text-sum{
+    margin-top: 12px;
+}
+.userinput-con .choice-box{
+    display: flex;
+}
+.userinput-con .choice-box .choice-ch{
+    margin: 0 10px 0 0;
+    flex:0 0 35%;
+}
+.userinput-con .dropmenu{
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+    background: #f0f0f0;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+    color: #757373;
+    position: relative;
+    cursor: pointer;
+}
+.userinput-con .dropmenu .icon{
+    position: absolute;
+    right: 10px;
+}
+.userinput-con .dropmenu .dropmenu-cnotent{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 46px;
+    z-index: 9;
+    background: #f0f0f0;
+}
+.userinput-con .dropmenu .dropmenu-cnotent p{
+    padding: 10px 12px;
+    border-bottom: 1px solid lightgray;
+}
+.userinput-con .dropmenu .dropmenu-cnotent p:hover{
+    background: #e4e4e4;
+}
+.convenience-store{
+    position: relative;
+    border: 1.5px solid lightgray;
+    border-radius: 6px;
+    padding: 20px 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.convenience-store-active,.convenience-store:hover{
+    border: 1.5px solid #006dff;
+}
+.convenience-store .img{
+    margin: auto;
+    width: 65px;
+    height: 65px;
+    background: lightgray;
+}
+.convenience-store .text{
+    text-align: center;
+}
+.pagenum{
+    display: flex;
+    margin: 10px 0 0 10px;
+}
+.pagenum .num{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: lightgray;
+    color: #FFF;
+    line-height: 30px;
+    border-radius: 6px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.pagenum .num-active,.pagenum .num:hover {
+    background: #006eff;
+}
+/*---錢包總覽---*/
+.wallet-add{
+    display:  flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+.wallet-add .btn-add{
+    width: 130px;
+    height: 130px;
+    border: 3px solid #006dff;
+    border-radius:  5px;
+    text-align: center;
+    color: #006dff;
+    font-size: 75px;
+    line-height: 110px;
+    cursor: pointer;
+    position: relative;
+}
+.wallet-add .btn-add:hover{
+    background: rgb(0,110,255,0.1);
+}
+.wallet-add .btn-teach{
+    width: 250px;
+    height: 130px;
+    background: lightgray;
+    border-radius: 5px;
+}
+.wallet-box{
+    position:  relative;
+    width: 100%;
+    display:  flex;
+    border: 1px solid #78ff1a;
+    border-radius:  5px; 
+}
+.wallet-box .img{
+    width: 30%;
+    background: #daf1d1;
+}
+.wallet-box  .text{
+    width: 70%;
+    position:  relative;
+}
+.wallet-box  .text .fa-question-circle{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #daf1d1;
+    cursor: pointer;
+}
+.wallet-box .detail{
+    display:  flex;
+    padding:  10px;
+    color: #595959;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
+.wallet-box .message{
+    width: 60%;
+}
+.wallet-box .message .title{
+    margin: 0 0 3px 0;
+}
+.wallet-box .message .timer{
+    display:  flex;
+    line-height: 30px;
+    margin: 10px 0 10px -5px;
+}
+.timer .num-box{
+    width: 30px;
+    height: 30px;
+    background: #44b718;
+    color:  #FFF;
+    text-align:  center;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: default;
+}
+.wallext-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wallet-box {
+    flex: 0 0 49.5%;
+    margin: 10px 0 0 0;
+}
+.wallet-box .tag-list{
+    font-size:  12px;
+    display:  flex;
+    color: #FFF;
+}
+.wallet-box .tag-list .tag{
+    background: #4cc426;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin: 0 5px 0 0;
+    cursor: default;
+}
+.wallet-box .rate .circle{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.wallet-box .rate .circle strong {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: #44b718;
+  }
+.wallet-box .rate .text{
+    font-size: 14px;
+    line-height: 14px;
+    width: 100%;
+    text-align: center;
+}
+.wallet-box .rate .text .money{
+    color: #1daf43;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+.wallet-box .rate{
+    width: 40%;
+}
+.wallet-box  .tool{
+    padding:  10px;
+    display:  flex;
+    justify-content: space-between;
+}
+.wallet-box  .tool .money{
+    font-size:  28px;
+    font-weight:  bold;
+    color: #53c340;
+}
+.wallet-box .processing-wallet-btn{
+    display:  flex;
+    width: 115px;
+    justify-content:  space-between;
+}
+.wallet-box  .btn-wallet{
+    padding: 0 10px;
+    border-radius:  5px;
+    line-height: 40px;
+    height: 40px;
+    color: #27be00;
+    background: #daf1d1;
+    border: 1px solid #daf1d1;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.wallet-box  .btn-wallet:hover{
+    border: 1px solid #27be00;
+}
+
+@media only screen and (max-width:1025px){
+    #slide-vip-promo .swiper-button-next, #slide-vip-promo .swiper-button-prev{
+        top: calc(18% - 25px);
+        width: 50px;
+        height: 50px;
+    }
+    .rectangle-proportion{
+        bottom: 0px;
+    }
+    .vip-promo-box .promo-box-ch{
+        text-align: right;
+        padding-right: 10px;
+    }
+    .vip-promo-box-tit .promo-box-ch{
+        text-align: left;
+    }
+    .integral{
+        justify-content: flex-end;
+    }
+    .integral .component{
+        padding: 20px;
+    }
+    .center-prompt{
+        display: block;
+    }
+    .box-detail-input{
+        flex: 0 0 100%;
+    }
+    .box-detail-other{
+        margin: 0 0 20px 0;
+        flex: 0 0 100%;
+    }
+    .box-name{
+        padding: 15px 10px;
+        text-align: left;
+    }
+    .box-nav{
+        height: 55px;
+        padding: 0 15px;
+    }
+    .box-title{
+        height: 55px;
+    }
+    .box-detail .flex-list{
+        flex-wrap: wrap-reverse;
+    }
+    #vip-explain{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .vip-explain-box{
+        flex-wrap: wrap;
+        flex: 0 0 20%;
+        align-items: center;
+    }
+    .vip-explain-line{
+        display: none;
+    }
+    .member-level-text{
+        top: 0;
+        text-align: center;
+        font-size:15px;
+        font-weight: 500;
+    }
+    .explain-box-ch{
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .explain-box-ch-metal{
+        display: block;
+    }
+    .explain-box-tit{
+        flex: 0 0 100%;
+        text-align: center;
+        height: 50px;
+    }
+    .vip-explain-image{
+        width: 80px;
+        height: 80px;
+    }
+    .box-detail{
+        padding: 20px 15px 20px 15px;
+    }
+    .center-prompt{
+        margin: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+    .box-amount{
+        border-radius: 0px;
+        margin: 0;
+        width: 50%;
+    }
+    .table-over{
+        overflow: auto;
+    }
+    .box-record{
+        margin:40px 0 0 0px;
+    }
+    .flex-table{
+        width: 918px;
+    }
+    .userinput-con .choice-box .choice-ch{
+        margin:1%;
+       flex: 0 0 48%;
+    }
+    .userinput-con .choice-box{
+        flex-wrap: wrap;
+    }
+    .convenience-store{
+        padding: 10px 5px
+    }
+    .box-detail-other .box-banner{
+        width: 50%;
+        float: left;
+        margin: 0;
+    }
+    .wallet-box{
+        flex: 0 0 100%;
+    }
+}
+@media only screen and (max-width:600px){
+    .user-level::before{
+        display: none;
+    }
+    .integral .component{
+        padding: 10px;
+    }
+    .integral .component{
+        padding: 10px 25px 10px 10px;
+    }
+    .vip-explain-box{
+        flex: 0 0 48%;
+    }
+    .rectangle{
+        margin-top: 6px;
+    }
+    .box-name  .icon{
+        display: none;
+    }
+    .book{
+        padding: 0 15px;
+    }
+    .account-book .book .idnumber{
+        width: 40%;
+    }
+    .account-book .book .status{
+        width: 30%;
+    }
+}
+@media only screen and (max-width:426px){
+    .rectangle{
+        margin-top: 10px;
+    }
+    .rectangle-value{
+        bottom: 5px;
+    }
+    .rectangle-proportion{
+        right: 5px;
+        bottom: 5px;
+    }
+    .center-prompt .text{
+        padding: 10px;
+        line-height: 22px;
+        font-size: 15px;
+    }
+    .integral{
+        justify-content: center;
+    }
+    .integral .component{
+        padding: 18px 5px 28px 5px;
+        line-height: 22px;
+        font-size: 12px;
+    }
+    .integral .component .imgae{
+        width: 40px;
+        height: 40px;
+        top: 4px;
+        left: -5px;
+    }
+    .integral .component .info-text{
+        top:27px;
+        left: -5px;
+        font-size: 12px; 
+    }
+    .box-name{
+        padding: 15px 5px;
+        font-size: 15px;
+    }
+    .box-nav{
+        font-size: 15px;
+        height: 51px;
+        padding: 0 10px;
+        overflow: auto;
+    }
+    .box-title{
+        height: 51px;
+    }
+    .box-nav-item{
+        height: auto;
+        margin: 0;
+        padding: 0 10px;
+    }
+    .vip-promo-box-tit{
+        font-size: 13px;
+    }
+    .explain-box-ch{
+        padding: 15px 0;
+    }
+    .box-nav a{
+        flex: 0 0 40%;
+    }
+    .box-amount{
+        font-size: 14px;
+    }
+    .box-amount .text-large{
+        font-size: 25px;
+    }
+    .box-record .tit{
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .box-record .tit .choice{
+        margin:0 0 0 10px;
+        padding:5px;
+    }
+    .box-record .tit .name{
+        line-height: 30px;
+    }
+    .box-record .tit .data{
+        margin:10px 0 0 0;
+    }
+    .pagenum .num{
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .convenience-store .img{
+        width: 50px;
+        height: 50px;
+    }
+    .convenience-store .text{
+        font-size: 15px;
+    }
+    .box-detail .wram-tip{
+        font-size: 13px;
+    }
+    .wallet-box .img{
+        display: none;
+    }
+    .wallet-box .text{
+        width: 100%;
+    }
+    .wallet-box .rate .circle{
+        transform: scale(0.8);
+    }
+    .wallet-box .btn-wallet{
+        height: 30px;
+        line-height: 30px;
+    }
+    .wallet-box .tool .money{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .wallet-add .btn-teach{
+        height: 100px;
+    }
+    .wallet-add .btn-add{
+        height: 100px;
+        line-height: 85px;
+    }
+    .wallet-box .rate .text{
+        font-size: 12px;
+    }
+    .book{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width:321px){
+    .integral .component .imgae{
+        display: none;
+    }
+    .integral{
+        justify-content:space-evenly;
+    }
+    .box-name{
+        padding: 15px 0 15px 2px;
+    }
+    .box-detail .btn-userinput{
+        padding: 10px 5px;
+    }
+    .btn-amount{
+        margin: 5px 0;
+        text-align: center;
+        display: block;
+    }
+    .box-amount .text-sum{
+        margin: 0;
+    }
+    .box-detail-other .box-banner{
+        width: 100%;
+        float: none;
+    }
+    .wallet-box{
+        font-size: 15px;
+    }
+    .wallet-box .btn-wallet{
+        font-size: 14px;
+    }
+    .wallet-box .tool .money{
+        font-size: 20px;
+    }
+    .wallet-box .processing-wallet-btn{
+        width: 105px;
+    }
+    .wallet-box .tool{
+        padding: 5px;
+    }
+    .wallet-box .rate .circle{
+        transform: scale(0.65);
+    }
+    .wallet-box .rate .circle strong{
+        left: 7px;
+    }
+    .timer .num-box{
+        font-size: 12px;
+        margin:  0 1px;
+    }
+    .book{
+        padding: 0 5px;
+    }
+}

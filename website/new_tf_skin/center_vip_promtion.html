@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo_VIP_優惠</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/gamearea.css">
+    <link rel="stylesheet" href="css/listbox.css">
+    <link rel="stylesheet" href="css/sticky-sidebar.css">
+    <link rel="stylesheet" href="css/flex-list-box.css">
+    <link rel="stylesheet" href="css/promotions.css?0831">
+    <link rel="stylesheet" href="css/smilpe-user-door.css">
+    <link rel="stylesheet" href="css/main.css?v20180101">
+    <link rel="stylesheet" href="css/main-login.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dropmenu.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="datetime">
+                    <i class="far fa-clock"></i>
+                    <p>
+                        <span class="date">GMT+8 2018-07-09 星期日</span>   
+                        <span class="time">23:53:59</span>
+                    </p>
+                </div>
+                <div class="userdata" style="display: none;">
+                    <!--登入前Topbar-->
+                    <div class="topbar-input-area">
+                        <input type="text" placeholder="會員帳號">
+                        <p>忘記?</p>
+                    </div>
+                    <div class="topbar-input-area">
+                        <input type="text" placeholder="密碼">
+                        <p>忘記?</p>
+                    </div>
+                    <div class="btn-submit">
+                        <p>登入</p>
+                    </div>
+                    <div class="btn-submit blue-bg">
+                        <p class="register-door-open">免費開戶</p>
+                    </div>
+                    <div class="online-service">
+                        <i class="fas fa-headset"></i>
+                        <span>線上客服</span>
+                    </div>
+                </div>
+                <div class="login-userdata af-login-show">
+                    <!--登入後Topbar-->
+                    <div class="welcome">
+                        <span>歡迎回來</span>
+                        <span class="login-user">USERNAME</span>
+                    </div>
+                    <div class="account">
+                        <span>帳戶餘額</span>
+                        <a href="center_finance_wallet.html"><span class="balance">1,000,000</span></a>
+                    </div>
+                    <div class="center-finance-deposit">
+                        <a href="center_finance.html">
+                            <span>存款</span>
+                        </a>
+                    </div>
+                    <div class="center-withdrawal">
+                        <a href="center_finance_withdrawal.html">
+                            <span>提款</span>
+                        </a>
+                    </div>
+                    <div class="center-finance">
+                        <a href="center_finance.html">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>財務中心</span>
+                        </a>
+                    </div>
+                    <div class="center-personal">
+                        <a href="center_personal.html">
+                            <i class="fas fa-user"></i>
+                            <span>個人中心</span>
+                        </a>
+                    </div>
+                    <a href="index.html"><div class="btn-submit">
+                        <p>登出</p>
+                    </div></a>
+                    <div class="online-service">
+                        <i class="fas fa-headset"></i>
+                        <span>線上客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navgition menu-bg">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png"></a>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="index.html">首頁</a>
+                        </li>
+                        <li data-droplist="lottery-menu">
+                            <a href="lottery.html">彩票投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="sports-menu">
+                            <a href="sports.html">體育投注 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="slot-menu">
+                            <a href="slot.html">電子遊戲 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="live-menu">
+                            <a href="live.html">真人視訊 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li data-droplist="fishing-menu">
+                            <a href="fishing.html">捕魚對戰 <i class="fas fa-angle-down droplist-arrow"></i></a>
+                        </li>
+                        <li>
+                            <a href="promotions.html">優惠活動</a>
+                        </li>
+                        <li>
+                            <a href="task.html">任務專區</a>
+                        </li>
+                        <li>
+                            <a href="vipclub.html">VIP俱樂部</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-menu-content">
+                    <div class="mb-hd-notify">
+                        <span id="client">客服 </span>
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="mb-hd-notify af-login-show">
+                        <span id="player">USERNAME </span>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="mb-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="lottery-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">彩票名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="sports-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">體育名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="slot-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">電子名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="live-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">真人名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-list" id="fishing-menu">
+                <div class="container">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="dropdown-list-con no-border">
+                                <div class="conimg"></div>
+                                <div class="contitle">捕魚名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-menu-list-bg">
+        </div>
+        <div class="mb-menu-list">
+            <ul class="mb-list-content">
+                <li id="mb-menu-userdata af-login-show">
+                    <p class="mb-prompt"><span>歡迎回來</span><span class="mb-username">USENAME</span></p>
+                    <p class="mb-prompt"><span>帳戶餘額</span><span class="mb-account">$ <strong class="money">68,888</strong></span></p>
+                    <div class="btn-mb-deposit">存款</div>
+                    <div class="btn-mb-withdrawal">提款</div>
+                </li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="promotions.html">優惠活動</a></li>
+                <li><a href="lottery.html">彩票投注</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 彩票廳01</li>
+                        <li><span class="dot"></span> 彩票廳02</li>
+                        <li><span class="dot"></span> 彩票廳03</li>
+                    </ul>
+                </li>
+                <li><a href="sports.html">體育投注</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 體育廳01</li>
+                    </ul>
+                </li>
+                <li><a href="live.html">真人視訊</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 真人廳01</li>
+                        <li><span class="dot"></span> 真人廳02</li>
+                    </ul>
+                </li>
+                <li><a href="slot.html">電子遊戲</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 電子廳01</li>
+                        <li><span class="dot"></span> 電子廳02</li>
+                    </ul>
+                </li>
+                <li><a href="fishing.html">捕魚對戰</a> <i class="fas fa-angle-down droplist-arrow"></i>
+                    <ul class="mb-list-drop">
+                        <li><span class="dot"></span> 捕魚廳01</li>
+                    </ul>
+                </li>
+                <li><a href="">任務專區</a></li>
+                <li><a href="">風雲榜</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sectioner" id="center-sectioner">
+        <div class="activity-list">
+            <div class="container">
+                <div class="flex-list activity-catalog">
+                    <div class="flex-ch catalog-title">
+                        <p>帳戶中心</p>
+                    </div>
+                    <div class="flex-ch activity-catalog-active">
+                        <a href="center_personal.html"><p>個人中心</p></a>
+                    </div>
+                    <div class="flex-ch">
+                        <a href="center_finance.html"><p>財務中心</p></a>
+                    </div>
+                    <div class="arrow-right">
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center-prompt">
+                <div class="text">
+                    <p>上午好，<span class="blue-text" id="username"> USERNAME </span>歡迎回來！</p>
+                    <p class="login-time">上次登入時間：2018/07/25 11:50:29</p>
+                </div>
+                <div class="user-level">
+                    <div class="integral">
+                        <div class="component">
+                            <div class="imgae"></div>
+                            <div class="now-integral">                            
+                                <p>目前等級</p>
+                                <p class="now-integral-metal">黃金級<i class="info-text far fa-question-circle"></i></p>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <p>距離升級<span class="btn-integral-share">分享賺積分</span></p>
+                            <div class="rectangle">
+                                <div class="rectangle-con"></div>
+                            </div>
+                            <span class="rectangle-proportion">79%</span>
+                            <p class="rectangle-value">790/1000</p>
+                        </div>
+                        <div class="component no-border-right">
+                            <p>本月積分 <span>456</span></p>
+                            <p>晉級積分 <span>456</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-content" id="center-box">
+                <div class="box-menu">
+                    <div class="box-name box-title">
+                        <p>個人中心</p>
+                    </div>
+                    <div class="box-name">
+                        <a href="center_personal.html"><p><i class="fas fa-user icon"></i> 用戶資料</p></a>
+                    </div>
+                    <div class="box-name no-border-bottom  box-name-active">
+                        <a href="center_vip_promtion.html"><p><i class="fas fa-medal icon"></i> VIP等級</p></a>
+                    </div>
+                </div>
+                <div class="box-con">
+                    <div class="box-nav">
+                        <a href="center_vip_promtion.html"><p class="box-nav-item box-nav-item-active">VIP優惠</p></a>
+                        <a href="center_vip_explain.html"><p class="box-nav-item">VIP說明</p></a>
+                    </div>
+                    <div class="box-detail">
+                        <div class="flex-list" id="vip-promo">
+                            <div class="vip-promo-box vip-promo-box-tit">
+                                <!--<div class="metal-image"> 
+                                </div>-->
+                                <div class="promo-box-ch">電子返水</div>
+                                <div class="promo-box-ch">真人返水</div>
+                                <div class="promo-box-ch">彩票返水</div>
+                                <div class="promo-box-ch">體育返水</div>
+                                <div class="promo-box-ch">單日提款上限</div>
+                                <div class="promo-box-ch">VIP晉級獎金</div>
+                                <div class="promo-box-ch">生日獎金</div>
+                                <div class="promo-box-ch">保級獎金</div>
+                                <div class="promo-box-ch">節慶獎金</div>
+                            </div>
+                            <div class="swiper-container" id="slide-vip-promo">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="vip-promo-box">
+                                            <div class="metal-image"> 
+                                                <div class="img">銅</div>
+                                                <div class="vip-promo-dot"></div>
+                                            </div>
+                                            <div class="promo-box-ch">0.4</div>
+                                            <div class="promo-box-ch">11</div>
+                                            <div class="promo-box-ch">123</div>
+                                            <div class="promo-box-ch">0</div>
+                                            <div class="promo-box-ch">1</div>
+                                            <div class="promo-box-ch">1,000</div>
+                                            <div class="promo-box-ch">0.4%</div>
+                                            <div class="promo-box-ch">0.8%</div>
+                                            <div class="promo-box-ch">1.358</div> 
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="vip-promo-box">
+                                            <div class="metal-image"> 
+                                                <div class="img">銀</div>
+                                                <div class="vip-promo-dot"></div>
+                                            </div>
+                                            <div class="promo-box-ch">0.4</div>
+                                            <div class="promo-box-ch">11</div>
+                                            <div class="promo-box-ch">0</div>
+                                            <div class="promo-box-ch">1</div>
+                                            <div class="promo-box-ch">1,000</div>
+                                            <div class="promo-box-ch">0.4%</div>
+                                            <div class="promo-box-ch">0.8%</div>
+                                            <div class="promo-box-ch">888</div>
+                                            <div class="promo-box-ch">1.358</div> 
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="user-level-border">
+                                            <div class="triangle">
+                                                <p>Now</p>
+                                            </div>
+                                        </div>
+                                        <div class="vip-promo-box user-now-level">
+                                            <div class="metal-image"> 
+                                                <div class="img">金</div>
+                                                <div class="vip-promo-dot"></div>
+                                            </div>
+                                            <div class="promo-box-ch">0.4</div>
+                                            <div class="promo-box-ch">11</div>
+                                            <div class="promo-box-ch">0</div>
+                                            <div class="promo-box-ch">1</div>
+                                            <div class="promo-box-ch">1,000</div>
+                                            <div class="promo-box-ch">0.4%</div>
+                                            <div class="promo-box-ch">0.8%</div>
+                                            <div class="promo-box-ch">888</div>
+                                            <div class="promo-box-ch">1.358</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-footer" style="display:none;">
+        <!--登入前手機版的sidebar-->
+        <div class="flex-list">
+            <div class="flex-ch mb-ft-menu">
+                <a href="index.html">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar06.png">
+                    </div>
+                    <p class="mb-ft-menu-text">首頁</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu register-door-open">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar07.png">
+                </div>
+                <p class="mb-ft-menu-text">註冊</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar05.png">
+                </div>
+                <p class="mb-ft-menu-text">客戶服務</p>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <a href="promotions.html">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar08.png">
+                    </div>
+                    <p class="mb-ft-menu-text">優惠</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <a href="vipclub.html">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar09.png">
+                    </div>
+                    <p class="mb-ft-menu-text">VIP</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mb-footer-login af-login-show">
+        <!--登入後手機版的sidebar-->
+        <div class="flex-list">
+            <div class="flex-ch mb-ft-menu">
+                <a href="center_finance.html" title="財務中心-存款-銀行轉帳">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar01.png">
+                    </div>
+                    <p class="mb-ft-menu-text">存款</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <a href="center_finance_withdrawal.html" title="財務中心-提款">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar02.png">
+                    </div>
+                    <p class="mb-ft-menu-text">提款</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <a href="center_finance_wallet.html" title="財務中心-錢包總覽">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar03.png">
+                    </div>
+                    <p class="mb-ft-menu-text">錢包</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <a href="center_personal.html" title="個人中心-用戶資料-基本資料">
+                    <div class="mb-ft-menu-img">
+                        <img src="img/icon/icon-mb-sidebar04.png">
+                    </div>
+                    <p class="mb-ft-menu-text">會員中心</p>
+                </a>
+            </div>
+            <div class="flex-ch mb-ft-menu">
+                <div class="mb-ft-menu-img">
+                    <img src="img/icon/icon-mb-sidebar05.png">
+                </div>
+                <p class="mb-ft-menu-text">客戶服務</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cooperation">
+            <div class="container">
+                <img src="img/ft-coop.png">
+            </div>
+        </div>
+        <div class="ft-nav">
+            <div class="container">
+                <div class="ft-nav-content">
+                    <a href="#"><p>關於我們</p></a>
+                    <a href="#"><p>新手指南</p></a>
+                    <a href="#"><p>價值理念</p></a>
+                    <a href="#"><p>聯繫我們</p></a>
+                    <a href="#"><p>合作聯盟</p></a>
+                    <a href="#"><p>VIP俱樂部</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="ft-content">
+            <div class="container">
+                <div class="ft-content-limit">
+                    <div class="flex-list">
+                        <div class="flex-ch">
+                            <div class="ft-browser">
+                                <span>最佳瀏覽器1920X1080</span>
+                                <img src="img/ft-browser.png">
+                            </div>
+                        </div>
+                        <div class="flex-ch">
+                            <div class="ft-age">
+                                <span>年齡限制</span>
+                                <img src="img/ft-age.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="coopright">通發娛樂官方網站    Copyright © 2018 TongFa Online Game. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-sidebar">
+        <div class="sticky-sidebar-item login-door-open">
+            <img src="img/sidebar-01.png" title="暫時拿來demo登入popup">
+        </div>
+        <div class="sticky-sidebar-item">
+            <img src="img/sidebar-02.png" title="客服">
+        </div>
+        <div class="sticky-sidebar-item">
+            <img src="img/sidebar-03.png" title="Wechat">
+            <div class="sticky-sidebar-content">
+                <img src="img/sidebar_line_qr.jpg" >
+            </div>
+        </div>
+        <div class="sticky-sidebar-item">
+            <img src="img/sidebar-04.png" title="LINE">
+            <div class="sticky-sidebar-content">
+                <img src="img/sidebar_line_qr.jpg" >
+            </div>
+        </div>
+        <div class="sticky-sidebar-item">
+            <img src="img/sidebar-05.png" title="幫助中心">
+        </div>
+        <div class="sticky-sidebar-item gotop">
+            <img src="img/sidebar-06.png" title="Gotop">
+        </div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        /*---Slide-vip-promo---*/
+        var swiperBanner = new Swiper('#slide-vip-promo', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            breakpoints: {
+                600: {
+                slidesPerView: 1,
+                spaceBetween: 20
+                },
+            },
+            loop:true,
+            disableOnInteraction: true,
+            navigation: {
+                nextEl: '#slide-vip-promo .swiper-button-next',
+                prevEl: '#slide-vip-promo .swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

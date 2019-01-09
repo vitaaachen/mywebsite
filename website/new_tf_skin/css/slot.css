@@ -1,0 +1,378 @@
+#slot-game-hall{
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: gray;
+}
+#slot-lobby-list {
+    height: 100%;
+}
+#slot-lobby-list .slot-lobby-ch{
+    text-align: center;
+    border-right:1px solid #FFF;
+    height: 100%;
+}
+#solt-sectioner{
+    background: url(../img/bg01.png);
+    background-size: contain;
+}
+.slot-right-arrow{
+    display: none;
+}
+.area{
+    margin: 40px auto 60px auto;
+    border: 1px solid lightgray;
+    background: #FFF;
+}
+.areaA,.areaB,.areaC{
+    overflow: hidden;
+    padding:  20px 30px;
+    border-bottom: 1px solid lightgray;
+}
+.row7{
+    float: left;
+    width: 70%;
+}
+.row3{
+    float: left;
+    width: 30%;
+}
+.gamename>.image{
+    width: 100px;
+    height: 40px;
+    background: lightgray;
+    display: inline-block;
+    float: left;
+}
+.gamename>.text{
+    line-height: 40px;
+    display: inline-block;
+    float:  left;
+    margin: 0 10px;
+    color: #006eff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.search{
+    display: flex;
+}
+.search>i{
+    color:  #006eff;
+    font-size:  26px;
+    position:  relative;
+    top: 10px;
+    margin: 0 10px;
+}
+.search>input{
+    background: #f0f0f0;
+    box-shadow:  none;
+    border: none;
+    height: 40px;
+    border-radius:  5px;
+    width:  70%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.search>.btn-submit{
+    background: #006eff;
+    color:  #FFF;
+    height: 39px;
+    width:  30%;
+    font-size: 16px;
+    line-height: 37px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+.search>.btn-submit:hover{
+    opacity: 0.85;
+}
+.ad-banner {
+    background: lightgray;
+    height: 150px;
+    border-radius:  5px;
+}
+.sort{
+    overflow: hidden;
+    margin: 5px 0;
+    padding: 5px;
+}
+.sort .name{
+    font-weight: bold;
+    color: #006eff;
+    float: left;
+    margin:  0 20px 0 0;
+    font-size: 18px;
+}
+.sort .species{
+    float: left;
+}
+.sort>.species>span{
+    color: #717171;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+.sort>.species>span:hover,.sort>.species>.species-blue{
+    background: #006eff;
+    color: #FFF;
+}
+.areaC>.flex-list{
+    margin: 0 -20px;
+    flex-wrap: wrap;
+}
+.areaC>.flex-list>.flex-ch{
+    position: relative;
+    flex: 0 0 20%;
+}
+.slot-box{
+    margin: 20px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.slot-box>.cover{
+    width:  100%;
+    height: 190px;
+    background: lightgray;
+    position: relative;
+}
+.cover-hover{
+    position:  absolute;
+    background: #006eff;
+    width: 100%;
+    height: 0%;
+    opacity:  0;
+    transition: all 0.3s ease;
+}
+.slot-box:hover .cover-hover{
+    opacity:  0.8;
+    height: 100%;
+}
+.slot-box>.detail{
+    color: gray;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    position: relative;
+}
+.slot-box>.detail .slot-name{
+    float: left;
+    font-weight: bold;
+}
+.slot-box>.detail .myfavourite{
+    float: right;
+    opacity: 0.7;
+}
+.hot-slot{
+    border: 1px solid #ff6600;
+}
+.hot-slot .detail{
+    color: #ff6600;
+    background: #fff6e0;
+} 
+.hot-slot-img{
+    position:  absolute;
+    width:  70px;
+    height: 50px;
+    background:url(../img/icon//icon-hot.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 10px;
+    left: 0px;
+    z-index: 9;
+}
+.btn-white{
+    background: #FFF;
+    padding:  8px 20px;
+    text-align:  center;
+    border-radius:  6px;
+    margin:  10px auto;
+    width: 80%;
+    position: relative;
+    top: 25px;
+    color: #006eff;
+    opacity: 0.85;
+}
+.btn-white:hover{
+    opacity: 1;
+}
+.detail-text{
+    overflow: hidden;
+}
+.mb-btn,.species-arrow{
+    display: none;
+}
+@media only screen and (max-width:1025px){
+    #slot-lobby-list{
+        overflow: auto;
+        margin-right: 26px;
+    }
+    .slot-right-arrow{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 100%;
+        background: #000;
+        color: #FFF;
+        font-size: 22px;
+        line-height: 95px;
+        text-align: center;
+    }
+    #slot-lobby-list .slot-lobby-ch{
+        flex: 0 0 30%;
+    }
+    .gamename>.image,.ad-banner,.cover-hover{
+        display: none;
+    }
+    .species-arrow{
+        display: inline-block;
+    }
+    .hot-slot-img{
+        width: 60px;
+        height: 50px;
+        left: 6px;
+        top: -6px;
+    }
+    .areaC>.flex-list>.flex-ch{
+        flex: 0 0 50%;
+    }
+    .areaC{
+        position: relative;
+    }
+    .areaC::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.85);
+        z-index: 99;
+        display: none;
+    }
+    .areaB>.sort-father{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .areaB>.sort-father>.sort{
+        flex:initial;
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+    }
+    .slot-box{
+        display: flex;
+    }
+    .slot-box>.cover{
+        flex: 0.5;
+        height: 130px;
+    }
+    .slot-box>.detail{
+        flex: 0.7;
+    }
+    .sort .name{
+        float: none;
+        color: gray;
+        margin: 0;
+        font-size: 16px;
+    }
+    .sort .name-active{
+        color: #006eff;
+    }
+    .sort .species{
+        float: none;
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        top: 154px;
+        left: 0;
+        background: #e4e4e4;
+        text-align:  center;
+    }
+    .sort .species-active{
+       /* float: none;
+        display:  block;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+        top: 156px;
+        left: 0;
+        background: #FFF;
+        text-align:  center;*/
+    }
+    .sort>.species>span{
+        display: block;
+        margin: 5px 10px;
+        padding: 10px;
+    }
+    .row7{
+        width: 60%;
+    }
+    .row3{
+        width: 40%;
+    }
+    .mb-btn{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .mb-btn-slot{
+        border-radius:  5px;
+        flex: 0.5;
+        padding:  8px 0;
+        text-align:  center;
+        border: 1px solid #006eff;
+        color: #006eff;
+        margin: 5px;
+        background: #FFF;
+    }
+    .mb-btn-slot-active{
+        background: #006eff;
+        color: #FFF;
+    }
+}
+@media only screen and (max-width:426px){
+    .sort .species{
+        top: 152px;
+    }
+    .areaB>.sort-father>.sort{
+        flex: 0 0 25%;
+    }
+    .areaC>.flex-list>.flex-ch{
+        flex: 0 0 100%;
+    }
+    .row3,.row7{
+        width: 100%;
+    }
+    .gamename>.text{
+        margin: 0 0 0 10px;
+    }
+    .areaA, .areaB, .areaC{
+        padding: 10px;
+    }
+    .slot-box{
+        margin: 5px 20px;
+    }
+    .slot-box>.cover{
+        height: 100px;
+    }
+    .sort .name{
+        font-size: 14px;
+    }
+    .sort>.species>span{
+        font-size: 14px;
+        padding: 5px;
+    }
+}

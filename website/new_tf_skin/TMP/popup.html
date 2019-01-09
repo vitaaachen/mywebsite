@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo_彈窗展示</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/smilpe-user-door.css">
+    <link rel="stylesheet" href="../css/main.css?v0831v2">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            var w = $(window).width();
+            var h = $(window).height();
+            $("#show").html("目前解析度："+w+":"+h);
+        });
+    </script>
+
+    <div id="show"></div>
+
+    <h2>以下為彈窗Demo</h2>
+    <p class="register-door-open" style="margin:20px 0;cursor:pointer">註冊彈窗</p>
+    <p class="login-door-open" style="margin:20px 0;cursor:pointer">登入彈窗</p>
+    <p class="forgive-popup-open" style="margin:20px 0;cursor:pointer">驗證碼彈窗</p>
+    <p class="expgold-popup-open" style="margin:20px 0;cursor:pointer">購買體驗金彈窗</p>
+    <p class="system-popup-open" style="margin:20px 0;cursor:pointer">系統訊息</p>
+
+    </p>
+    <div class="body-popup-bg"></div> 
+    <div class="register-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">用戶註冊</p>
+            <p class="popup-eng">USER REGISTERATION</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員帳號</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="請輸入8-12位帳號字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 4-8個字元</p>
+                        <p class="tip-safe"><i class="fas fa-check-circle"></i> 由數字或字母組成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員密碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="password" placeholder="密碼長度8-16字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">密碼確認</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="password" placeholder="請再輸入一次密碼">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">手機號碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="您的手機號碼">
+                    <div class="btn-certification btn-certification-blue">
+                        <p>發送驗證碼 <!--倒數，重發驗證碼--> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title smiple-door-text-three">驗證碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="手機驗證碼">
+                    <div class="btn-certification btn-certification-blue">
+                        <p>確定驗證碼</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-doing"><i class="fas fa-minus-circle"></i> 驗證中</p>
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 驗證碼錯誤</p>
+                        <p class="tip-safe"><i class="fas fa-check-circle"></i> 驗證完成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput" id="proxy-friend">
+                <!--直接輸入好友情碼，使用者無法更改-->
+                <div class="userinput-tit">
+                    <span class="userinput-title smiple-door-text-three">友情代碼</span>
+                </div>
+                <div class="userinput-con">
+                    <div class="userinput-con userdata-text">
+                        <span>AYYRE57Y</span>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput" id="proxy-fix">
+                <!--直接輸入好代理碼的，使用者無法更改-->
+                <div class="userinput-tit">
+                    <span class="userinput-title smiple-door-text-three">代理碼</span>
+                </div>
+                <div class="userinput-con">
+                    <div class="userinput-con userdata-text">
+                        <span>AQTY</span>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput" id="proxy-cantype">
+                <!--可以自己打的驗證碼，可打/可不打-->
+                <div class="userinput-tit">
+                    <span class="userinput-title smiple-door-text-three">代理碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="代理碼">
+                </div>
+            </div>
+            <div class="memo-text">
+                <p>
+                    <input class="userinput-checkbox" type="checkbox" checked="checked"/>
+                    <span class="checkmark"></span>
+                    <span>我確認我已經年滿18歲，並已閱讀和接受本網站各</span><span><a href="">條款及聲明</a>
+                </p> 
+            </div>
+            <div class="door-btn-submit">
+                <p>確定</p>
+            </div>
+        </div>
+    </div>
+    <div class="login-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">用戶登入</p>
+            <p class="popup-eng">USER LOGIN</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員帳號</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="請輸入8-12位帳號字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 此帳號不存在</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">會員密碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="password" placeholder="密碼長度8-16字元">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 密碼錯誤</p>
+                    </div>
+                </div>
+            </div>
+            <div class="door-btn-submit">
+                <p>登入</p>
+            </div>
+            <div class="memo-text">
+                <p><span>還不是會員？</span><span><a href="">立即註冊</a><span><a href="">忘記密碼</a></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="expgold-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">購買體驗金</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">金額</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="金額">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-wrong"><i class="fas fa-exclamation-circle"></i> 任何錯誤訊息</p>
+                        <p class="tip-safe"><i class="fas fa-check-circle"></i> 任何成功提示訊息</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">數量</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="password" placeholder="數量">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <p class="other-tip-right">總金額：$1,000</p>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="door-btn-submit btn-submit-gray">
+                    <p>取消</p>
+                </div>
+                <div class="door-btn-submit">
+                    <p>立即購買</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="forgive-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">驗證碼</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <span class="userinput-title">驗證碼</span>
+                </div>
+                <div class="userinput-con">
+                    <input class="userinput-typing" type="text" placeholder="請輸入驗證碼">
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                    <p class="userinput-title"></p>
+                </div>
+                <div class="userinput-con">
+                    <p class="other-tip-left">重新發送驗證碼</p>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="userinput-tit">
+                </div>
+                <div class="userinput-con">
+                    <div class="tip-area">
+                        <p class="tip-doing"><i class="fas fa-minus-circle"></i> 請於60秒後再按</p>
+                    </div>
+                </div>
+            </div>
+            <div class="userinput">
+                <div class="door-btn-submit btn-submit-gray">
+                    <p>取消</p>
+                </div>
+                <div class="door-btn-submit">
+                    <p>確定送出</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="system-popup simple-user-door">
+        <div class="close-simple-user-door">
+            <span>×</span>
+        </div>
+        <div class="popup-bg">
+            <p class="popup-tw">系統訊息</p>
+        </div>
+        <div class="door-content">
+            <div class="userinput">
+                <p>任何系統提示訊息。</p>
+            </div>
+            <div class="door-btn-submit">
+                <p>確定</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
