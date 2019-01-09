@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/head.js"></script>
-    <title>作品列表 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <title>作品列表 | CiaoSyuan's 個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
 </head>
@@ -132,15 +132,27 @@
         color: #6f0202;
         border-radius: 20px;
     }
+    input[type="checkbox"]+label a{
+        color: #6f0202;
+    }
 
     input[type="checkbox"]+label:hover {
         color: #FFF;
         background: #6f0202;
     }
 
+    input[type="checkbox"]+label:hover a{
+        color: #FFF;
+    }
+
     input[type="checkbox"]:checked+label {
         color: #FFF;
         background: #6f0202;
+    }
+
+    
+    input[type="checkbox"]:checked+label a{
+        color: #FFF;
     }
 
     .recommend{
@@ -299,14 +311,10 @@
                         <label for="kind-all">全部</label> -->
                         <input type="checkbox" value=".kind1" id="kind1" />
                         <label for="kind1">網站</label>
-                        <!--<input type="checkbox" value=".kind2" id="kind2" />
-                        <label for="kind2">影片</label>
-                        <input type="checkbox" value=".kind3" id="kind3" />
-                        <label for="kind3">遊戲</label>
                         <input type="checkbox" value=".kind4" id="kind4" />
-                        <label for="kind4">平面</label>
-                        <input type="checkbox" value=".kind5" id="kind5" />
-                        <label for="kind5">攝影</label>-->
+                        <label for="kind4"><a href="https://goo.gl/L4aXFV" target="blank">平面</a></label>
+                        <input type="checkbox" value=".kind2" id="kind2" />
+                        <label for="kind2">練習作品</label>
                     </div>
                     <div class="option-set" data-group="industry">
                         <p>網站類別</p>
@@ -337,6 +345,8 @@
                         <label for="skill4">靜態網站</label>
                         <input type="checkbox" value=".skill5" id="skill5" />
                         <label for="skill5">MIP</label>
+                        <input type="checkbox" value=".skill6" id="skill6" />
+                        <label for="skill6">AJAX</label>
                     </div>
                 </div>
                 <div class="box-area">
@@ -351,7 +361,7 @@
                             <div class="info">
                                 <p class="dec-tit">優博UEO</p>
                                 <div class="con-cate">
-                                    <span>現金網平台</span>
+                                    <span>平台</span>
                                     <span>娛樂</span>
                                     <span>RWD</span>
                                 </div>
@@ -379,21 +389,40 @@
                             </div>
                         </div>
                         <div class="inside kind1 industry2 skill4">
-                                <p class="point">
-                                    <i class="fas fa-info"></i>
-                                </p>
-                                <img class="lazyload" data-original="img/work/dot/cover-min.png" alt="點點盈">
-                                <div class="info">
-                                    <p class="dec-tit">點點盈</p>
-                                    <div class="con-cate">
-                                        <span>獨立站</span>
-                                        <span>金融</span>
-                                        <span>資訊網站</span>
-                                    </div>
-                                    <a href="work-con.html?type=4">
-                                        <div class="btn-workmore">了解更多</div>
-                                    </a>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img class="lazyload" data-original="img/work/dot/cover-min.png" alt="點點盈">
+                            <div class="info">
+                                <p class="dec-tit">點點盈</p>
+                                <div class="con-cate">
+                                    <span>獨立站</span>
+                                    <span>金融</span>
+                                    <span>資訊網站</span>
                                 </div>
+                                <a href="work-con.html?type=4">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="inside kind2 skill6">
+                            <div class="recommend"><i class="fas fa-star"></i></div>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img class="lazyload" data-original="img/work/meg/cover-min.png" alt="留言版">
+                            <div class="info">
+                                <p class="dec-tit">留言版</p>
+                                <div class="con-cate">
+                                    <span>練習作品</span>
+                                    <span>AJAX</span>
+                                    <span>JSON</span>
+                                    <span>JQuery</span>
+                                </div>
+                                <a href="website/meg/index.html">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
                         </div>
                         <div class="inside kind1 industry1 skill1 skill2">
                             <div class="recommend"><i class="fas fa-star"></i></div>
@@ -610,7 +639,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="inside kind2 kind3 kind4 kind5">
+                        <div class="inside">
                             <img class="lazyload" data-original="img/work/work-coming-soon-min.jpg" alt="敬啟期待">
                             <div class="info">
                                 <p class="dec-tit">敬請期待</p>

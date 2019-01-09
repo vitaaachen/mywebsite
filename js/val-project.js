@@ -3,10 +3,10 @@ var valPorject = [
         "d-val-no":"0",
         "d-val-porject": "大發金服 活動頁",//專案名稱
         "d-val-category": [//專案分類
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "金融" },
-            { "category": "活動網站" },
+            "網站",
+            "靜態獨立站",
+            "金融",
+            "活動網站",
         ],
         "d-val-skill": [//使用/支援技術
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -14,7 +14,7 @@ var valPorject = [
             { "image": "img/icon/icon-js-red.png", "title": "JavaScript" },
         ],
         "d-val-charge": "網頁開發（切版,功能,特效等）。",//負責項目
-        "d-val-exp": "這個網站比較有挑戰性的地方是滾動數字程式設定的部分，程式是設定每日的累積人數以及每日更新所剩數量，以 JavaScript 撰寫。此站為單頁式，配合視覺做出來的網站。不使用第三方套件寫出一個功能和特效是非常需要有一定基礎的，這個網站是很好的練習。",//專案心得
+        "d-val-exp": "這個網站比較有挑戰性的地方是滾動數字程式設定的部分，程式是設定每日的累積人數以及'每日更新'所剩數量，以JavaScript撰寫。",//專案心得
         "d-val-link": "./website/dafaginfu/activity/a_dafa.html",//查看網站
         "d-val-cover": ["./img/work/dafa-act/a.png",]
     },
@@ -22,10 +22,10 @@ var valPorject = [
         "d-val-no":"1",
         "d-val-porject": "AI人工智能彩票整合平台系统",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "Wordpress" },
-            { "category": "娛樂" },
-            { "category": "形象網站" },
+            "網站",
+            "Wordpress",
+            "娛樂",
+            "形象網站",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-wp2.png", "title": "Wordpress" },
@@ -44,12 +44,12 @@ var valPorject = [
         "d-val-no":"2",
         "d-val-porject": "新濠皇璽會",
         "d-val-category": [
-            { "category": "非原創" },
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "飯店" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "非原創",
+            "網站",
+            "靜態獨立站",
+            "飯店",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -67,10 +67,10 @@ var valPorject = [
         "d-val-no":"3",
         "d-val-porject": "UltraEGaming 奧創娛樂",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "Wordpress" },
-            { "category": "娛樂" },
-            { "category": "形象網站" },
+            "網站",
+            "Wordpress",
+            "娛樂",
+            "形象網站",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-wp2.png", "title": "Wordpress" },
@@ -89,11 +89,11 @@ var valPorject = [
         "d-val-no":"4",
         "d-val-porject": "點點盈",
         "d-val-category": [
-            { "category": "非原創" },
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "金融" },
-            { "category": "資訊網站" },
+            "非原創",
+            "網站",
+            "靜態獨立站",
+            "金融",
+            "資訊網站",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -110,11 +110,11 @@ var valPorject = [
         "d-val-no":"5",
         "d-val-porject": "錢進牛股",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "金融" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "網站",
+            "靜態獨立站",
+            "金融",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -132,12 +132,12 @@ var valPorject = [
         "d-val-no":"6",
         "d-val-porject": "88老虎",
         "d-val-category": [
-            { "category": "非原創" },
-            { "category": "網站" },
-            { "category": "Wordpress" },
-            { "category": "靜態獨立站" },
-            { "category": "娛樂" },
-            { "category": "形象網站" },
+            "非原創",
+            "網站",
+            "Wordpress",
+            "靜態獨立站",
+            "娛樂",
+            "形象網站",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -154,11 +154,11 @@ var valPorject = [
         "d-val-no":"7",
         "d-val-porject": "UltraEGaming 廣告專案",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "Wordpress" },
-            { "category": "娛樂" },
-            { "category": "活動網站" },
-            { "category": "RWD" },
+            "網站",
+            "Wordpress",
+            "娛樂",
+            "活動網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-wp2.png", "title": "Wordpress" },
@@ -180,10 +180,10 @@ var valPorject = [
         "d-val-no":"8",
         "d-val-porject": "大發金服 導覽頁",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "金融" },
-            { "category": "目錄網站" },
+           "網站",
+           "靜態獨立站",
+           "金融",
+           "目錄網站",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -198,9 +198,9 @@ var valPorject = [
         "d-val-no":"9",
         "d-val-porject": "大發金服 文章推廣",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "金融" },
+            "網站",
+            "靜態獨立站",
+            "金融",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -215,9 +215,9 @@ var valPorject = [
         "d-val-no":"10",
         "d-val-porject": "錢進牛股 金融論壇",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "Discuz論壇" },
-            { "category": "金融" },
+            "網站",
+            "Discuz論壇",
+            "金融",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -232,12 +232,12 @@ var valPorject = [
         "d-val-no":"11",
         "d-val-porject": "百家樂娛樂城",
         "d-val-category": [
-            { "category": "獨立製作" },
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "娛樂" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "獨立製作",
+            "網站",
+            "靜態獨立站",
+            "娛樂",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -256,11 +256,11 @@ var valPorject = [
         /*暫時隱藏*/
         "d-val-porject": "鳳凰國際",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "Worpress" },
-            { "category": "直播網站" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "網站",
+            "Worpress",
+            "直播網站",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-wp2.png", "title": "Wordpress" },
@@ -279,11 +279,11 @@ var valPorject = [
         "d-val-no":"13",
         "d-val-porject": "和信智慧產權事務所",
         "d-val-category": [
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "法務" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "網站",
+            "靜態獨立站",
+            "法務",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -301,12 +301,12 @@ var valPorject = [
         "d-val-no":"14",
         "d-val-porject": "皇璽會娛樂城",
         "d-val-category": [
-            { "category": "非原創" },
-            { "category": "網站" },
-            { "category": "靜態獨立站" },
-            { "category": "娛樂" },
-            { "category": "形象網站" },
-            { "category": "RWD" },
+            "非原創",
+            "網站",
+            "靜態獨立站",
+            "娛樂",
+            "形象網站",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
@@ -324,9 +324,9 @@ var valPorject = [
         "d-val-no":"15",
         "d-val-porject": "優博UEO",
         "d-val-category": [
-            { "category": "現金網平台" },
-            { "category": "娛樂" },
-            { "category": "RWD" },
+            "平台",
+            "娛樂",
+            "RWD",
         ],
         "d-val-skill": [
             { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },

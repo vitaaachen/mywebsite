@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/head.js"></script>
-    <title>作品內容 | 陳巧萱個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
+    <title>作品內容 | CiaoSyuan's 個人作品集網站 | 前端網頁設計與開發（Font-End Design & Devlopment）</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
 </head>
@@ -302,11 +302,12 @@
             }
 
             //使用技術
+            //物件裡的陣列的物件
             var skills = data["d-val-skill"];
             for (var i = 0; i < skills.length; i++) {
-                var skill = skills[i];
-                var image = skill["image"];
-                var title = skill["title"];
+                // var skill = skills[i];
+                var image =skills[i]["image"];
+                var title = skills[i]["title"];
                 var diva = '<div class="flex-box">';
                 var image = '<img src="' + image + '" alt="' + title + '" title="' + title + '">';
                 var divb = '</div>';
@@ -322,9 +323,8 @@
             for (var i = 0; i < categorys.length; i++) {
                 var category = categorys[i];
                 var diva = '<div class="sort-ch">';
-                var categoryCh = category["category"];
                 var divb = '</div>';
-                $("#val-category").append(diva + categoryCh + divb);
+                $("#val-category").append(diva + category + divb);
             }
 
             //負責項目
