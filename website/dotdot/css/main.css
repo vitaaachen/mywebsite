@@ -143,25 +143,25 @@ a{
 	display: none;
 }
 .sideImg01{
-	background: url(../image/slidetool/sideimg01a.png);
+	background: url(../image/slidetool/sideimg01a.webp);
 }
 .sideImg01:hover{
 	background: url(../image/slidetool/sideimg01b.png);
 }
 .sideImg02{
-	background: url(../image/slidetool/sideimg02a.png);
+	background: url(../image/slidetool/sideimg02a.webp);
 }
 .sideImg02:hover{
 	background: url(../image/slidetool/sideimg02b.png);
 }
 .sideImg03{
-	background: url(../image/slidetool/sideimg03a.png);
+	background: url(../image/slidetool/sideimg03a.webp);
 }
 .sideImg03:hover{
 	background: url(../image/slidetool/sideimg03b.png);
 }
 .sideImg04{
-	background: url(../image/slidetool/sideimg04a.png);
+	background: url(../image/slidetool/sideimg04a.webp);
 }
 .sideImg04:hover{
 	background: url(../image/slidetool/sideimg04b.png);
