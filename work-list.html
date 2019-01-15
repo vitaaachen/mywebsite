@@ -170,6 +170,13 @@
         font-size: 18px;
         transform: scale(0.85);
     }
+    .recommend p{
+        font-size: 22px;
+        color: #FFF;
+        position: absolute;
+        top: -50px;
+        left: 5px;
+    }
 
     @media only screen and (max-width:1199px) {
         .box-work {
@@ -311,7 +318,7 @@
                         <label for="kind-all">全部</label> -->
                         <input type="checkbox" value=".kind1" id="kind1" />
                         <label for="kind1">網站</label>
-                        <input type="checkbox" value=".kind4" id="kind4" />
+                        <input type="checkbox" value=".kind4" id="kind4"  disabled/>
                         <label for="kind4"><a href="https://goo.gl/L4aXFV" target="blank">平面</a></label>
                         <input type="checkbox" value=".kind2" id="kind2" />
                         <label for="kind2">練習作品</label>
@@ -352,8 +359,27 @@
                 <div class="box-area">
                     <!--<p id="filter-display"></p>-->
                     <div class="box-work" id="container">
+                        <div class="inside kind2 skill6">
+                            <div class="recommend"><p>新</p></div>
+                            <p class="point">
+                                <i class="fas fa-info"></i>
+                            </p>
+                            <img class="lazyload" data-original="img/work/meg/cover-min.png" alt="留言版">
+                            <div class="info">
+                                <p class="dec-tit">留言版</p>
+                                <div class="con-cate">
+                                    <span>練習作品</span>
+                                    <span>AJAX</span>
+                                    <span>JSON</span>
+                                    <span>JQuery</span>
+                                </div>
+                                <a href="work-con.html?type=16" target="blank">
+                                    <div class="btn-workmore">了解更多</div>
+                                </a>
+                            </div>
+                        </div>
                         <div class="inside kind1 industry1 skill1">
-                            <div class="recommend"><i class="fas fa-star"></i></div>
+                            <div class="recommend"><p>新</p></div>
                             <p class="point">
                                 <i class="fas fa-info"></i>
                             </p>
@@ -401,25 +427,6 @@
                                     <span>資訊網站</span>
                                 </div>
                                 <a href="work-con.html?type=4">
-                                    <div class="btn-workmore">了解更多</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="inside kind2 skill6">
-                            <div class="recommend"><i class="fas fa-star"></i></div>
-                            <p class="point">
-                                <i class="fas fa-info"></i>
-                            </p>
-                            <img class="lazyload" data-original="img/work/meg/cover-min.png" alt="留言版">
-                            <div class="info">
-                                <p class="dec-tit">留言版</p>
-                                <div class="con-cate">
-                                    <span>練習作品</span>
-                                    <span>AJAX</span>
-                                    <span>JSON</span>
-                                    <span>JQuery</span>
-                                </div>
-                                <a href="website/meg/index.html">
                                     <div class="btn-workmore">了解更多</div>
                                 </a>
                             </div>

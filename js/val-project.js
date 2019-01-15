@@ -340,4 +340,26 @@ var valPorject = [
         "d-val-link": "website/new_tf_skin/index.html",
         "d-val-cover": ["./img/work/ueo/pc-index.png","./img/work/ueo/pc-slot.png","./img/work/ueo/pc-fishing.png","./img/work/ueo/pc-sport.png","./img/work/ueo/pc-user.png","./img/work/ueo/pc-record.png"]
     },
+    {
+        "d-val-no":"16",
+        "d-val-porject": "留言版",
+        "d-val-category": [
+            "練習作品",
+            "AJAX",
+            "JSON",
+            "RWD",
+        ],
+        "d-val-skill": [
+            { "image": "img/icon/icon-html-red2.png", "title": "HTML5/HTML" },
+            { "image": "img/icon/icon-css2.png", "title": "CSS3/CSS" },
+            { "image": "img/icon/icon-jq-red.png", "title": "jQuery" },
+            { "image": "img/icon/icon-rwd.png", "title": "RWD" },
+            { "image": "img/icon/icon-ajax.png", "title": "AJAX" },
+            { "image": "img/icon/icon-json.png", "title": "JSON" },
+        ],
+        "d-val-charge": "RWD切版,抓取資料,傳送資料,篩選資料",
+        "d-val-exp": "由於在資料串接這方面的經驗較為薄弱，因此我寫了一個留言版來練習這個部分。<br><u>第一步，接收值並呈現：</u>抓取後台的JSON檔案(後台給我一串網址)，抓到檔案後，把檔案內容呈現在我製作好的版面上。<br><u>第二步，傳送值給後台：</u>當使用者填寫留言的時候，我要把使用者填寫的資料傳送到後台。<br><u>第三步，以AJAX的方式呈現最新留言：</u>把使用者填寫好的留言值傳給後台後，重新抓取後台的JSON檔案，將檔案以AJAX的方式呈現在我製作好的版面上。<br><u>第四步，篩選和排序資料：</u>使用主以JQ輔以JS完成，篩選留言類型與依照時間排序的功能。",
+        "d-val-link": "website/meg/index.html",
+        "d-val-cover": ["./img/work/meg/cover-min.png"]
+    },
 ]

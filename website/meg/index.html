@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言版</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<style>
+    body{
+        background: url(img01.jpg);
+        background-size: cover;
+    }
+    *{
+        font-family: "Microsoft JhengHei";
+        margin: 0;
+        padding: 0;
+    }
+    .section{
+        display: flex;
+        justify-content: center;
+        margin: 60px 0 0 0;
+        flex-wrap: wrap;
+    }
+    .block{
+        background: rgba(255,255,255,0.6);
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    .message-list{
+        width: 800px;
+        height: 600px;
+        margin: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.6);
+        overflow: auto;
+    }
+    .block select{
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+    }
+    select::-ms-expand { 
+        display: none;
+    }
+    .in-sty{
+        width: 100%;
+        min-height: 40px;
+        box-sizing: border-box;
+        padding: 10px;
+        background: rgba(255,255,255,0.6);
+        border: 1px solid #ccc;
+        color: #444;
+        margin: 0 0 10px 0;
+        border-radius: 5px;
+    }
+    .in-sty::placeholder{
+        color: #444;
+    }
+    .submit{
+        width: 100%;
+        line-height: 2.5;
+        text-align: center;
+        color: #444;
+        background: rgba(255,255,255,0.6);
+    }
+    .submit:hover{
+        background: #bbb;
+    }
+    .message-ch{
+        line-height: 2;
+        border: 1px solid #bbb;
+        padding: 10px;
+        font-size: 14px;
+        color: #444;
+        margin: 0 0 15px 0;
+    }
+    .message-ch .tit{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #bbb;
+    }
+    .message-ch .kind{
+        background: #666;
+        color: #FFF;
+        padding: 0 5px;
+    }
+    .nav{
+        display: flex;
+    }
+</style>
+<body>
+    <div class="section">
+        <div class="block">
+            <select class="in-sty sel" name="vu-select" id="vu-select">
+                <option value="message0">請選擇留言類型</option>
+                <option value="message1">留言類型1</option>
+                <option value="message2">留言類型2</option>
+                <option value="message3">留言類型3</option>
+            </select>
+            <input class="in-sty va" type="text" placeholder="請填寫主旨" name="vu-title" id="vu-title">
+            <textarea class="in-sty va" name="vu-message" cols="30" rows="10" placeholder="請填寫留言內容" id="vu-message"></textarea>
+            <div class="submit">送出</div>
+        </div>
+        <div class="message-list">
+            <div class="nav">
+                <select class="in-sty op-kind">
+                    <option value="kind0">篩選留言類型</option>
+                    <option value="kind1">留言類型1</option>
+                    <option value="kind2">留言類型2</option>
+                    <option value="kind3">留言類型3</option>
+                </select>
+                <select class="in-sty op-time">
+                    <option value="time0">依時間排序</option>
+                    <option value="time1">舊->新</option>
+                    <option value="messagetime2">新->舊</option>
+                </select>
+            </div>
+            <!-- <div class="message-ch" style="display:none;">
+                <div class="tit">
+                    <p><span>類型</span> <span>主旨</span></p>
+                    <p><span id="vu-data">日期</span></p>
+                </div>
+                <div class="con">留言內容</div>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+<script>
+    //Client to Server
+    var CTSMesg = {
+        "type" : "留言類型1",
+        "main" : "HI",
+        "content" : "hello"
+    };
+    //S to C
+    var STCMesg = [
+        {
+            "type" : "留言類型1",
+            "main" : "主旨12222",
+            "content" : "helloOOOO",
+            "time":"2019/01/01 9:00:00",
+        },
+        {
+            "type" : "留言類型2",
+            "main" : "主旨2",
+            "content" : "KAKA",
+            "time":"2019/01/09 11:00:00",
+        },
+        {
+            "type" : "留言類型3",
+            "main" : "主旨3",
+            "content" : ":)",
+            "time":"2019/01/05 21:50:00",
+        },
+        
+    ];
+
+
+   
+    $(".submit").click(function(){
+
+
+        //送出後抓取使用者填寫的內容
+        var kind = $("#vu-select").find(":selected").text();
+        // console.log("留言類型："+kind);
+        var subject = $("#vu-title").val();
+        // console.log("主旨："+subject);
+        var mescon = $("#vu-message").val();
+        // console.log("內容："+mescon);
+
+        //送出後清回預設值
+        $("#vu-select").val("message0");
+        $("#vu-title").val("");
+        $("#vu-message").val("");
+
+
+        //將使用者填寫的內容創立JSON
+        var CTSMesgObj; 
+
+        CTSMesgObj = {
+            "type" : kind,
+            "main" : subject,
+            "content" : mescon,
+        }; 
+
+        console.log(CTSMesgObj);
+
+        //傳資料到資料庫
+        $.post("http://testroom.dometi.com.tw/add",
+            JSON.stringify( CTSMesgObj ),
+            function(data,status){
+                console.log(data);
+                console.log("status"+status);
+                $.get("http://testroom.dometi.com.tw/getlist",
+                    function(data,status){
+                        data = JSON.parse(data);//字串轉成物件
+                        console.log(data);
+                        STCMesg = data;//將假資料取代為資料庫的資料
+                        latest();
+                        $(".message-list").find(".message-ch").remove();
+                        createList();//顯示資料
+                    }
+                );
+            }
+        );
+    });
+
+    
+
+
+    
+    // console.log(MesgOfArr);
+    function createList(){
+        //陣列裡的物件
+        var MesgOfArr = STCMesg.length; //陣列長度
+
+        for (var i = 0; i < MesgOfArr; i++) {
+            var divA = '<div class="message-ch"><div class="tit"><p><span class="kind">'
+            var divB = '</span> <span>'
+            var divC = '</span></p> <p><span class="time">'
+            var divD = '</span></p></div><div class="con">'
+            var divE = '</div>'
+            //創造HTML元素
+            //將JSON值帶入
+            $(".message-list").append(divA+STCMesg[i]["type"]+divB+STCMesg[i]["main"]+divC+STCMesg[i]["time"]+divD+STCMesg[i]["content"]+divE);
+            // console.log(STCMesg[i]["type"]);
+            // console.log(STCMesg[i]["main"]);
+            // console.log(STCMesg[i]["content"]);
+        }
+    }
+    
+    //createList();
+
+    $(".op-kind").change(function(){
+        $(".kind").each(function(){
+            var kindText = $(this).text();
+            // console.log("留言有的類型："+kindText);
+            var kindOp = $(".op-kind").find(":selected").text();
+            // console.log("篩選值："+kindOp);
+            if(kindOp!=kindText){
+                $(this).parents(".message-ch").css("display","none");
+            }else{
+                $(this).parents(".message-ch").css("display","block");
+            }
+            if(kindOp=="篩選留言類型"){
+                $(".message-ch").css("display","block");
+            }
+        });
+    });
+
+
+    $(".op-time").change(function(){
+        var timeOp = $(".op-time").find(":selected").text();
+        // console.log("選擇排序的時間："+timeOp);
+        if(timeOp!="舊->新"){
+            // console.log("新->舊");
+            STCMesg.sort(function(a,b){
+                if (new Date(a.time) > new Date(b.time)) {
+                    return -1;
+                    //由大到小
+                }else{
+                    return 1;
+                }
+            });
+        }else{
+            // console.log("舊->新");
+            STCMesg.sort(function(a,b){
+                if (new Date(a.time) > new Date(b.time)) {
+                    return 1;
+                    //由小到大
+                }else{
+                    return -1;
+                }
+            });
+        }
+        $(".message-list").find(".message-ch").remove();
+        createList();
+    });
+
+    //接收資料
+    $.get("http://testroom.dometi.com.tw/getlist",
+        function(data,status){
+            data = JSON.parse(data);//字串轉成物件
+            console.log(data);
+            STCMesg = data;//將假資料取代為資料庫的資料
+            latest();
+            createList();//顯示資料
+        }
+    );
+
+    function latest(){
+        STCMesg.sort(function(a,b){
+            if (new Date(a.time) > new Date(b.time)) {
+                return -1;
+            }else{
+                return 1;
+            }
+        });
+    }    
+
+    
+    
+
+
+</script>
+</html>

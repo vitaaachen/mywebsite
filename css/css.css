@@ -771,7 +771,7 @@ a{
 .step-list{
     display: flex;
     width: 100%;
-    background:#6f0202;
+    background:#000;
 }
 .step{
     flex:1;
@@ -781,14 +781,14 @@ a{
     transition: all 0.3s ease;
 }
 .step:hover{
-    background: #000;
+    background: gray;
 }   
 .step>p{
     color: #FFF;
     cursor: pointer;
 }
 .step-active{
-    background: #000;
+    background: #6f0202;
 }
 .step-detail{
     padding:  10px 20px;
@@ -837,6 +837,9 @@ a{
         width: 0%;
         height: 0%;
     }
+    #btn-more{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width:769px){
@@ -860,7 +863,7 @@ a{
     }
     .sub-area{
         width:100%;
-        height:300px;
+        height:335px;
         top: 100px;
         overflow: auto;
         border-radius: 0;
