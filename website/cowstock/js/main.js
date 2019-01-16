@@ -1,6 +1,6 @@
 function mymedia() {
     var myscreen=screen.availWidth; 
-    if(myscreen<769) {document.location.href="http://x18818.com/mb/index.html";return;}
+    if(myscreen<769) {document.location.href="./mb/index.html";return;}
     }
     mymedia();
 
